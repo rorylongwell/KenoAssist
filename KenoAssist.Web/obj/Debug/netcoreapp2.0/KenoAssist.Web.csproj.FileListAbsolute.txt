@@ -1,0 +1,11 @@
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/bin/Debug/netcoreapp2.0/KenoAssist.Web.deps.json
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/bin/Debug/netcoreapp2.0/KenoAssist.Web.runtimeconfig.json
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/bin/Debug/netcoreapp2.0/KenoAssist.Web.runtimeconfig.dev.json
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/bin/Debug/netcoreapp2.0/KenoAssist.Web.dll
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/bin/Debug/netcoreapp2.0/KenoAssist.Web.pdb
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.csprojResolveAssemblyReference.cache
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.csproj.CoreCompileInputs.cache
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.AssemblyInfoInputs.cache
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.AssemblyInfo.cs
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.dll
+/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.pdb

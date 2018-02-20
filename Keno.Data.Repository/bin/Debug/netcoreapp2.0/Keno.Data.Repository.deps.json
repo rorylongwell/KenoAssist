@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "5311b4121a5459e06abe1080b1fb9f93a5075bd4"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Keno.Data.Repository/1.0.0": {
+        "dependencies": {
+          "Keno.Data": "1.0.0",
+          "Keno.Data.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Keno.Data.Repository.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Keno.Data/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.2.0"
+        },
+        "runtime": {
+          "Keno.Data.dll": {}
+        }
+      },
+      "Keno.Data.Contracts/1.0.0": {
+        "dependencies": {
+          "Keno.Data": "1.0.0"
+        },
+        "runtime": {
+          "Keno.Data.Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Keno.Data.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityFramework/6.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "path": "entityframework/6.2.0",
+      "hashPath": "entityframework.6.2.0.nupkg.sha512"
+    },
+    "Keno.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Keno.Data.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

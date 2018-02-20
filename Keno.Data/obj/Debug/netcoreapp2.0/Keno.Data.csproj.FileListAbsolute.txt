@@ -1,0 +1,9 @@
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\bin\Debug\netcoreapp2.0\Keno.Data.deps.json
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\bin\Debug\netcoreapp2.0\Keno.Data.dll
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\obj\Debug\netcoreapp2.0\Keno.Data.csprojResolveAssemblyReference.cache
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\obj\Debug\netcoreapp2.0\Keno.Data.csproj.CoreCompileInputs.cache
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\obj\Debug\netcoreapp2.0\Keno.Data.AssemblyInfoInputs.cache
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\obj\Debug\netcoreapp2.0\Keno.Data.AssemblyInfo.cs
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\bin\Debug\netcoreapp2.0\Keno.Data.pdb
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\obj\Debug\netcoreapp2.0\Keno.Data.dll
+c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data\obj\Debug\netcoreapp2.0\Keno.Data.pdb
