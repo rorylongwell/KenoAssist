@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{5949FE19-AEFA-431C-9B29-1525DEBF9DC9}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Downloads/repos/KenoAssist.API/Keno.Data.Repository/UnitOfWork.cs">
+    <Files>
+      <File FileName="KenoAssist.Web/Controllers/HomeController.cs" Line="6" Column="1" NotebookId="1" />
+      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Business/IKenoService.cs" Line="8" Column="23" NotebookId="1" />
+      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Data/ClientCondition.cs" Line="4" Column="1" NotebookId="1" />
+      <File FileName="../../Downloads/repos/KenoAssist.API/KenoAssist.API/Controllers/ClientController.cs" Line="15" Column="16" NotebookId="1" />
+      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Business/Implementation/KenoService.cs" Line="11" Column="39" NotebookId="1" />
+      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Data.Repository/UnitOfWork.cs" Line="1" Column="1" NotebookId="1" />
+    </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="3" Y="23" Width="1917" Height="1035">
+        <Files>
+          <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Models/ClientViewModel.cs" Line="19" Column="1" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.KenoAssist.Web PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
