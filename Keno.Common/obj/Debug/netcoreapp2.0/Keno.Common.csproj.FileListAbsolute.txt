@@ -1,0 +1,11 @@
+C:\Git\KenoAssist\Keno.Common\bin\Debug\netcoreapp2.0\Keno.Common.deps.json
+C:\Git\KenoAssist\Keno.Common\bin\Debug\netcoreapp2.0\Keno.Common.dll
+C:\Git\KenoAssist\Keno.Common\bin\Debug\netcoreapp2.0\Keno.Common.pdb
+C:\Git\KenoAssist\Keno.Common\obj\Debug\netcoreapp2.0\Keno.Common.csprojResolveAssemblyReference.cache
+C:\Git\KenoAssist\Keno.Common\obj\Debug\netcoreapp2.0\Keno.Common.csproj.CoreCompileInputs.cache
+C:\Git\KenoAssist\Keno.Common\obj\Debug\netcoreapp2.0\Keno.Common.AssemblyInfoInputs.cache
+C:\Git\KenoAssist\Keno.Common\obj\Debug\netcoreapp2.0\Keno.Common.AssemblyInfo.cs
+C:\Git\KenoAssist\Keno.Common\obj\Debug\netcoreapp2.0\Keno.Common.dll
+C:\Git\KenoAssist\Keno.Common\obj\Debug\netcoreapp2.0\Keno.Common.pdb
+C:\Git\KenoAssist\Keno.Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Git\KenoAssist\Keno.Common\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.ViewFeatures.xml

@@ -864,28 +864,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/rorylongwell/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\devstudent1\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Models/Keno.Models.csproj",
+      "projectUniqueName": "C:\\Git\\KenoAssist\\Keno.Models\\Keno.Models.csproj",
       "projectName": "Keno.Models",
-      "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Models/Keno.Models.csproj",
-      "packagesPath": "/Users/rorylongwell/.nuget/packages/",
-      "outputPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Models/obj",
+      "projectPath": "C:\\Git\\KenoAssist\\Keno.Models\\Keno.Models.csproj",
+      "packagesPath": "C:\\Users\\devstudent1\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\KenoAssist\\Keno.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/rorylongwell/.config/NuGet/NuGet.Config"
+        "C:\\Users\\devstudent1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -905,12 +910,12 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
           "System.Collections": {
             "target": "Package",
-            "version": "4.3.0"
+            "version": "[4.3.0, )"
           }
         },
         "imports": [

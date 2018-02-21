@@ -1,25 +1,26 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenoAssist.Web", "KenoAssist.Web\KenoAssist.Web.csproj", "{5949FE19-AEFA-431C-9B29-1525DEBF9DC9}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenoAssist.Web", "KenoAssist.Web\KenoAssist.Web.csproj", "{5949FE19-AEFA-431C-9B29-1525DEBF9DC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenoAssist.API", "..\..\Downloads\repos\KenoAssist.API\KenoAssist.API\KenoAssist.API.csproj", "{181970FE-C423-4C21-ADE6-E508C8D6EC81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenoAssist.API", "KenoAssist.API\KenoAssist.API.csproj", "{181970FE-C423-4C21-ADE6-E508C8D6EC81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{F91EAD94-8071-4585-A48D-B6599CFF4A2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Business", "..\..\Downloads\repos\KenoAssist.API\Keno.Business\Keno.Business.csproj", "{93BE485A-DB42-4F14-8B88-184FFE1779F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Business", "Keno.Business\Keno.Business.csproj", "{93BE485A-DB42-4F14-8B88-184FFE1779F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data", "..\..\Downloads\repos\KenoAssist.API\Keno.Data\Keno.Data.csproj", "{B0328E93-C925-4320-8D65-874C77119A94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data", "Keno.Data\Keno.Data.csproj", "{B0328E93-C925-4320-8D65-874C77119A94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data.Contracts", "..\..\Downloads\repos\KenoAssist.API\Keno.Data.Contracts\Keno.Data.Contracts.csproj", "{746D74F5-C289-40EB-98D1-D382A2F91B5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data.Contracts", "Keno.Data.Contracts\Keno.Data.Contracts.csproj", "{746D74F5-C289-40EB-98D1-D382A2F91B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data.Repository", "..\..\Downloads\repos\KenoAssist.API\Keno.Data.Repository\Keno.Data.Repository.csproj", "{41675B0B-DDA0-45EB-95F6-B66AFA3D878D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data.Repository", "Keno.Data.Repository\Keno.Data.Repository.csproj", "{41675B0B-DDA0-45EB-95F6-B66AFA3D878D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Models", "..\..\Downloads\repos\KenoAssist.API\Keno.Models\Keno.Models.csproj", "{7E667DA9-C4AE-42AE-8BE6-922782FDCA84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Models", "Keno.Models\Keno.Models.csproj", "{7E667DA9-C4AE-42AE-8BE6-922782FDCA84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Consumer", "..\..\Downloads\repos\KenoAssist.API\Keno.Consumer\Keno.Consumer.csproj", "{3547C10F-9758-449A-B88F-F6ED204B5776}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Common", "Keno.Common\Keno.Common.csproj", "{15A936F0-6B97-457E-BC2D-52BCA4625C70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Common", "..\..\Downloads\repos\KenoAssist.API\Keno.Common\Keno.Common.csproj", "{15A936F0-6B97-457E-BC2D-52BCA4625C70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Consumer", "Keno.Consumer\Keno.Consumer.csproj", "{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,14 +56,17 @@ Global
 		{7E667DA9-C4AE-42AE-8BE6-922782FDCA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E667DA9-C4AE-42AE-8BE6-922782FDCA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E667DA9-C4AE-42AE-8BE6-922782FDCA84}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3547C10F-9758-449A-B88F-F6ED204B5776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3547C10F-9758-449A-B88F-F6ED204B5776}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3547C10F-9758-449A-B88F-F6ED204B5776}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3547C10F-9758-449A-B88F-F6ED204B5776}.Release|Any CPU.Build.0 = Release|Any CPU
 		{15A936F0-6B97-457E-BC2D-52BCA4625C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{15A936F0-6B97-457E-BC2D-52BCA4625C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15A936F0-6B97-457E-BC2D-52BCA4625C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15A936F0-6B97-457E-BC2D-52BCA4625C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{93BE485A-DB42-4F14-8B88-184FFE1779F9} = {F91EAD94-8071-4585-A48D-B6599CFF4A2B}
@@ -70,7 +74,10 @@ Global
 		{746D74F5-C289-40EB-98D1-D382A2F91B5C} = {F91EAD94-8071-4585-A48D-B6599CFF4A2B}
 		{41675B0B-DDA0-45EB-95F6-B66AFA3D878D} = {F91EAD94-8071-4585-A48D-B6599CFF4A2B}
 		{7E667DA9-C4AE-42AE-8BE6-922782FDCA84} = {F91EAD94-8071-4585-A48D-B6599CFF4A2B}
-		{3547C10F-9758-449A-B88F-F6ED204B5776} = {F91EAD94-8071-4585-A48D-B6599CFF4A2B}
 		{15A936F0-6B97-457E-BC2D-52BCA4625C70} = {F91EAD94-8071-4585-A48D-B6599CFF4A2B}
+		{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA} = {F91EAD94-8071-4585-A48D-B6599CFF4A2B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3871055-BFB7-4806-9F67-CEBDB3435C22}
 	EndGlobalSection
 EndGlobal

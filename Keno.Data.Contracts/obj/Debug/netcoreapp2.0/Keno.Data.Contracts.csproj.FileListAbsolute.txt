@@ -9,3 +9,14 @@ c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data.Contracts\obj\Debug\n
 c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.AssemblyInfo.cs
 c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.dll
 c:\users\devstudent1\source\repos\KenoAssist.API\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.pdb
+C:\Git\KenoAssist\Keno.Data.Contracts\bin\Debug\netcoreapp2.0\Keno.Data.Contracts.deps.json
+C:\Git\KenoAssist\Keno.Data.Contracts\bin\Debug\netcoreapp2.0\Keno.Data.Contracts.dll
+C:\Git\KenoAssist\Keno.Data.Contracts\bin\Debug\netcoreapp2.0\Keno.Data.Contracts.pdb
+C:\Git\KenoAssist\Keno.Data.Contracts\bin\Debug\netcoreapp2.0\Keno.Data.dll
+C:\Git\KenoAssist\Keno.Data.Contracts\bin\Debug\netcoreapp2.0\Keno.Data.pdb
+C:\Git\KenoAssist\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.csprojResolveAssemblyReference.cache
+C:\Git\KenoAssist\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.csproj.CoreCompileInputs.cache
+C:\Git\KenoAssist\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.AssemblyInfoInputs.cache
+C:\Git\KenoAssist\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.AssemblyInfo.cs
+C:\Git\KenoAssist\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.dll
+C:\Git\KenoAssist\Keno.Data.Contracts\obj\Debug\netcoreapp2.0\Keno.Data.Contracts.pdb

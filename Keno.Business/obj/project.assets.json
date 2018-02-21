@@ -300,10 +300,10 @@
       "type": "package",
       "path": "entityframework/6.2.0",
       "files": [
+        "EntityFramework.6.2.0.nupkg.sha512",
+        "EntityFramework.nuspec",
         "content/net40/App.config.transform",
         "content/net40/Web.config.transform",
-        "entityframework.6.2.0.nupkg.sha512",
-        "entityframework.nuspec",
         "lib/net40/EntityFramework.SqlServer.dll",
         "lib/net40/EntityFramework.SqlServer.xml",
         "lib/net40/EntityFramework.dll",
@@ -980,44 +980,49 @@
     ]
   },
   "packageFolders": {
-    "/Users/rorylongwell/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\devstudent1\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Business/Keno.Business.csproj",
+      "projectUniqueName": "C:\\Git\\KenoAssist\\Keno.Business\\Keno.Business.csproj",
       "projectName": "Keno.Business",
-      "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Business/Keno.Business.csproj",
-      "packagesPath": "/Users/rorylongwell/.nuget/packages/",
-      "outputPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Business/obj",
+      "projectPath": "C:\\Git\\KenoAssist\\Keno.Business\\Keno.Business.csproj",
+      "packagesPath": "C:\\Users\\devstudent1\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\KenoAssist\\Keno.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/rorylongwell/.config/NuGet/NuGet.Config"
+        "C:\\Users\\devstudent1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Models/Keno.Models.csproj": {
-              "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Models/Keno.Models.csproj"
+            "C:\\Git\\KenoAssist\\Keno.Data.Contracts\\Keno.Data.Contracts.csproj": {
+              "projectPath": "C:\\Git\\KenoAssist\\Keno.Data.Contracts\\Keno.Data.Contracts.csproj"
             },
-            "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data/Keno.Data.csproj": {
-              "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data/Keno.Data.csproj"
+            "C:\\Git\\KenoAssist\\Keno.Data\\Keno.Data.csproj": {
+              "projectPath": "C:\\Git\\KenoAssist\\Keno.Data\\Keno.Data.csproj"
             },
-            "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data.Contracts/Keno.Data.Contracts.csproj": {
-              "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data.Contracts/Keno.Data.Contracts.csproj"
+            "C:\\Git\\KenoAssist\\Keno.Data.Repository\\Keno.Data.Repository.csproj": {
+              "projectPath": "C:\\Git\\KenoAssist\\Keno.Data.Repository\\Keno.Data.Repository.csproj"
             },
-            "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data.Repository/Keno.Data.Repository.csproj": {
-              "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data.Repository/Keno.Data.Repository.csproj"
+            "C:\\Git\\KenoAssist\\Keno.Models\\Keno.Models.csproj": {
+              "projectPath": "C:\\Git\\KenoAssist\\Keno.Models\\Keno.Models.csproj"
             }
           }
         }
@@ -1034,12 +1039,12 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
           "System.Collections": {
             "target": "Package",
-            "version": "4.3.0"
+            "version": "[4.3.0, )"
           }
         },
         "imports": [

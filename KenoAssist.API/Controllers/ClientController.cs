@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Http;
+using Keno.Business.Implementation;
 using Keno.Common;
+using Keno.Data;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace KenoAssist.API.Controllers
 {
-    public class ClientController : KenoApiController
+    [Route("api/[controller]")]
+    public class ClientController : KenoController
     {
         KenoService service = new KenoService();
 
-        // GET: /<controller>/
-        public IHttpActionResult GetAllClients()
+        [HttpGet("GetAllClients")]
+        public IActionResult GetAllClients()
         {
-            var
-            return View();
+            var clients = service.GetAllClients();
+            return (clients != null && clients.Any()) ? CreateResponse(new ResultModel<List<ClientViewModel>>(clients, "Success")) : DataNotFoundResponse("Get Data Failed");
         }
     }
 }

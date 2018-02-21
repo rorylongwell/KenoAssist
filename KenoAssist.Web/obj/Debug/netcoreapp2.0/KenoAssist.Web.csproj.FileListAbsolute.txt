@@ -9,3 +9,14 @@
 /Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.AssemblyInfo.cs
 /Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.dll
 /Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj/Debug/netcoreapp2.0/KenoAssist.Web.pdb
+C:\Git\KenoAssist\KenoAssist.Web\bin\Debug\netcoreapp2.0\KenoAssist.Web.deps.json
+C:\Git\KenoAssist\KenoAssist.Web\bin\Debug\netcoreapp2.0\KenoAssist.Web.runtimeconfig.json
+C:\Git\KenoAssist\KenoAssist.Web\bin\Debug\netcoreapp2.0\KenoAssist.Web.runtimeconfig.dev.json
+C:\Git\KenoAssist\KenoAssist.Web\bin\Debug\netcoreapp2.0\KenoAssist.Web.dll
+C:\Git\KenoAssist\KenoAssist.Web\bin\Debug\netcoreapp2.0\KenoAssist.Web.pdb
+C:\Git\KenoAssist\KenoAssist.Web\obj\Debug\netcoreapp2.0\KenoAssist.Web.csproj.CoreCompileInputs.cache
+C:\Git\KenoAssist\KenoAssist.Web\obj\Debug\netcoreapp2.0\KenoAssist.Web.AssemblyInfoInputs.cache
+C:\Git\KenoAssist\KenoAssist.Web\obj\Debug\netcoreapp2.0\KenoAssist.Web.AssemblyInfo.cs
+C:\Git\KenoAssist\KenoAssist.Web\obj\Debug\netcoreapp2.0\KenoAssist.Web.dll
+C:\Git\KenoAssist\KenoAssist.Web\obj\Debug\netcoreapp2.0\KenoAssist.Web.pdb
+C:\Git\KenoAssist\KenoAssist.Web\obj\Debug\netcoreapp2.0\KenoAssist.Web.csprojResolveAssemblyReference.cache

@@ -1,13 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using Keno.Data;
+using Keno.Data.Contracts;
+using Keno.Data.Repository;
 
 namespace Keno.Business.Implementation
 {
     public class KenoService : IKenoService
     {
+        IUnitOfWork uow;
+        public KenoService(KenoEntities context)
+        {
+            uow = new UnitOfWork(context);
+
+        }
+
         public KenoService()
         {
+            uow = new UnitOfWork(new KenoEntities());
         }
 
         public List<ClientViewModel> GetAllClients()

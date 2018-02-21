@@ -921,35 +921,40 @@
     ]
   },
   "packageFolders": {
-    "/Users/rorylongwell/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\devstudent1\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data.Contracts/Keno.Data.Contracts.csproj",
+      "projectUniqueName": "C:\\Git\\KenoAssist\\Keno.Data.Contracts\\Keno.Data.Contracts.csproj",
       "projectName": "Keno.Data.Contracts",
-      "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data.Contracts/Keno.Data.Contracts.csproj",
-      "packagesPath": "/Users/rorylongwell/.nuget/packages/",
-      "outputPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data.Contracts/obj",
+      "projectPath": "C:\\Git\\KenoAssist\\Keno.Data.Contracts\\Keno.Data.Contracts.csproj",
+      "packagesPath": "C:\\Users\\devstudent1\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\KenoAssist\\Keno.Data.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/rorylongwell/.config/NuGet/NuGet.Config"
+        "C:\\Users\\devstudent1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data/Keno.Data.csproj": {
-              "projectPath": "/Users/rorylongwell/Downloads/repos/KenoAssist.API/Keno.Data/Keno.Data.csproj"
+            "C:\\Git\\KenoAssist\\Keno.Data\\Keno.Data.csproj": {
+              "projectPath": "C:\\Git\\KenoAssist\\Keno.Data\\Keno.Data.csproj"
             }
           }
         }
@@ -966,7 +971,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },
