@@ -28526,23 +28526,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/rorylongwell/.nuget/packages/": {},
+    "/Users/ambermcgregor/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/KenoAssist.Web.csproj",
+      "projectUniqueName": "/Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/KenoAssist.Web.csproj",
       "projectName": "KenoAssist.Web",
-      "projectPath": "/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/KenoAssist.Web.csproj",
-      "packagesPath": "/Users/rorylongwell/.nuget/packages/",
-      "outputPath": "/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/obj",
+      "projectPath": "/Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/KenoAssist.Web.csproj",
+      "packagesPath": "/Users/ambermcgregor/.nuget/packages/",
+      "outputPath": "/Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/rorylongwell/.config/NuGet/NuGet.Config"
+        "/Users/ambermcgregor/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
