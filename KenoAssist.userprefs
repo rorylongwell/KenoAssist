@@ -1,21 +1,52 @@
-﻿<Properties StartupConfiguration="{5949FE19-AEFA-431C-9B29-1525DEBF9DC9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Downloads/repos/KenoAssist.API/Keno.Consumer/ResponseModel.cs">
+﻿<Properties StartupConfiguration="{9B32D2F4-CB4F-44D0-8406-37C289FF64AC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Views/Login/Index.cshtml">
     <Files>
-      <File FileName="KenoAssist.Web/Controllers/HomeController.cs" Line="6" Column="1" NotebookId="1" />
-      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Business/IKenoService.cs" Line="8" Column="23" NotebookId="1" />
-      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Data/ClientCondition.cs" Line="4" Column="1" NotebookId="1" />
-      <File FileName="../../Downloads/repos/KenoAssist.API/KenoAssist.API/Controllers/ClientController.cs" Line="15" Column="16" NotebookId="1" />
-      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Business/Implementation/KenoService.cs" Line="10" Column="6" NotebookId="1" />
-      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Data.Repository/UnitOfWork.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Consumer/ResponseModel.cs" Line="1" Column="13" NotebookId="1" />
+      <File FileName="KenoAssist.Web/Controllers/LoginController.cs" Line="32" Column="17" />
+      <File FileName="KenoAssist.Web/Views/Login/Index.cshtml" Line="10" Column="5" />
+      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Business/IKenoService.cs" Line="11" Column="22" />
+      <File FileName="KenoAssist.Web/Controllers/StaffController.cs" Line="55" Column="6" />
+      <File FileName="KenoAssist.Web/Views/Staff/Clients.cshtml" Line="15" Column="8" />
+      <File FileName="KenoAssist.Web/Startup.cs" Line="41" Column="30" />
+      <File FileName="KenoAssist.Web/Controllers/ClientController.cs" Line="14" Column="36" />
+      <File FileName="KenoAssist.Web/Models/ClientModel.cs" Line="9" Column="67" />
+      <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Models/ClientViewModel.cs" Line="16" Column="52" />
+      <File FileName="KenoAssist.Web/Controllers/AccountController.cs" Line="26" Column="14" />
+      <File FileName="KenoAssist.Web/Controllers/FoodAndDrinkController.cs" Line="20" Column="1" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Index.cshtml" Line="2" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Client/Client.cshtml" Line="7" Column="1" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="3" Y="23" Width="1917" Height="1035">
-        <Files>
-          <File FileName="../../Downloads/repos/KenoAssist.API/Keno.Models/ClientViewModel.cs" Line="19" Column="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KenoAssist" expanded="True">
+            <Node name="Dlls" expanded="True">
+              <Node name="Keno.Business" expanded="True" />
+              <Node name="Keno.Consumer" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                  <Node name="SdkDependencies" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Keno.Models" expanded="True" />
+            </Node>
+            <Node name="KenoAssist.Web" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
+                <Node name="Client" expanded="True" />
+                <Node name="FoodAndDrink" expanded="True" />
+                <Node name="Login" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Staff" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -24,4 +55,5 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.KenoAssist.Web PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.KenoAssist.API PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

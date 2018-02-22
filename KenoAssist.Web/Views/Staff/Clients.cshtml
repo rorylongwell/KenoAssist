@@ -1,0 +1,17 @@
+﻿@model IList<ClientModel>
+
+<a href="@Url.Action("Index", "Account")">
+Account Button
+</a>
+
+
+<h2>Clients</h2>
+
+
+@foreach(var client in Model){
+<a href="@Url.Action("Client", "Client")">
+    <h3>@client.Forename @client.Surname</h3>
+    <br/>
+    <p>@client.Location</p>
+</a>
+}

@@ -1,0 +1,18 @@
+﻿@model UserLoginViewModel
+
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    <h2>Login</h2>
+
+    @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "" });
+    <br/>
+    @Html.TextBoxFor(m => m.Password, new { placeholder = "Password", @class = "" });
+    <br/>
+    <input type="submit" value="Login"/>
+}
+

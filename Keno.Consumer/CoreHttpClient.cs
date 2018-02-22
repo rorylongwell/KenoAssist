@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using System.Net.Http;
-using System.Net.Http.Formatting;
-using System.Net.Http.Headers;
+using Newtonsoft.Json;
+
 
 namespace Keno.Consumer
 {

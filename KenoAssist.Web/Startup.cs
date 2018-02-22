@@ -22,6 +22,8 @@ namespace KenoAssist.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,13 +38,15 @@ namespace KenoAssist.Web
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseSession();
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Login}/{action=Login}/{id?}");
+                    template: "{controller=Login}/{action=Index}/{id?}");
             });
         }
     }
