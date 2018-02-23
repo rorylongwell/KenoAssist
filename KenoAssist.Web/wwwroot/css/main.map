@@ -1,0 +1,24 @@
+{
+	"version": 3,
+	"file": "SCSS/main.css",
+	"sources": [
+		"SCSS/main.scss",
+		"SCSS/modules/_colours.scss",
+		"SCSS/partials/_reset.scss",
+		"SCSS/partials/_typography.scss",
+		"SCSS/partials/_buttons.scss",
+		"SCSS/partials/_grids.scss",
+		"SCSS/partials/_layout.scss"
+	],
+	"sourcesContent": [
+		"// Modules and Variables\n\n//@import \"partials/base\";\n\n// Modules\n\n@import \"modules/colours\";\n    \n\n// Partials\n\n@import \"partials/reset\";\n@import \"partials/typography\";\n@import \"partials/buttons\";\n@import \"partials/grids\";\n@import \"partials/layout\";\n\n",
+		"// Turquoise\n$Primary-colour: #009CA6;\n\n\n// Navy\n$Primary-complimentary: #1B365D;\n\n\n// Grey\n$Primary-text: #7C878E;\n\n\n// Green\n$Secondary-colour: #74AA50;\n\n\n// Purple\n$Secondary-highlight: #7474C1;",
+		"/* http://meyerweb.com/eric/tools/css/reset/ \n   v2.0 | 20110126\n   License: none (public domain)\n*/\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    font-size: 100%;\n    font: inherit;\n    vertical-align: baseline\n}\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n    display: block\n}\n\nbody {\n    line-height: 1\n}\n\nol, ul {\n    list-style: none\n}\n\nblockquote, q {\n    quotes: none\n}\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n    content: '';\n    content: none\n}\n\ntable {\n    border-collapse: collapse;\n    border-spacing: 0\n\n}\n",
+		"@import url(\"https://use.typekit.net/tzu6iyh.css\");\r\n\r\np, h2 {\r\n    font-family: \"Brandon Grotesque\", Helvetica, sans-serif;\r\n    color: $Primary-colour;\r\n}\r\n\r\nh1, h2, h3, h4, h5, h6, p {\r\n    color: $Primary-text;\r\n}",
+		"",
+		"",
+		""
+	],
+	"mappings": "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",
+	"names": []
+}
