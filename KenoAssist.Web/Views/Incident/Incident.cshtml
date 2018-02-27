@@ -1,0 +1,29 @@
+﻿@model IncidentReportModel
+
+<h2>Incident Report</h2>
+
+ <h3>@Model.Date</h3><h3>@Model.Time</h3>
+
+ <ul>
+@foreach(var staff in Model.StaffNames){
+    <li>
+    @staff
+    </li>
+}
+</ul>
+ <br/>
+    <h4>Area of Injury</h4>
+    <p>@Model.Injury</p>
+    <br/>
+
+    @foreach(var image in Model.PhotoUrl){
+    <img>
+    @staff
+    <img src="@Href("@image")"/>
+    <br/>
+}
+
+    <br/>
+    <h4>Incident Report</h4>
+    <p>@Model.Description</p>
+

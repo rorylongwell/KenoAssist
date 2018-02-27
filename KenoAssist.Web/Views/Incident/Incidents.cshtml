@@ -1,0 +1,13 @@
+﻿@model IList<IncidentModel>
+
+<h2>Incidents and Injuries</h2>
+
+
+@foreach(var incident in Model){
+<a href="@Url.Action("Incident", "Incident", new { incidentId = incident.Id })">
+    <h3>@incident.Date</h3><h3>@incident.Time</h3>
+    <br/>
+    <h4>Incident</h4>
+    <p>@incident.Description</p>
+</a>
+}

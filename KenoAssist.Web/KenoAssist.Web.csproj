@@ -20,10 +20,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Staff\" />
     <Folder Include="Views\Client\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Staff\" />
     <Folder Include="Views\FoodAndDrink\" />
+    <Folder Include="Views\Incident\" />
   </ItemGroup>
 </Project>
