@@ -1,10 +1,15 @@
 @import url("https://use.typekit.net/tzu6iyh.css");
 
+$Header-font:"Brandon Grotesque", Helvetica, sans-serif;
+$Paragraph-font:"Open Sans", Helvetica, sans-serif;
+
 p, h2 {
-    font-family: "Brandon Grotesque", Helvetica, sans-serif;
+    font-family: $Header-font;
     color: $Primary-colour;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p{
     color: $Primary-text;
 }
+
+

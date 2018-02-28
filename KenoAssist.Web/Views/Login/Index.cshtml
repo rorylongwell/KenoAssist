@@ -1,18 +1,21 @@
 ﻿@model UserLoginViewModel
 
-
+<div class="gradient">
 @{
     ViewData["Title"] = "Login";
 }
-
+ <img src="images/Keno_Icon_white_txt.svg"/>
+    
 @using (Html.BeginForm("Login", "Login", FormMethod.Post))
 {
-    <h2>Login</h2>
-
+    <label>Username</label>
+    <br/>
     @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "" });
+    <br/>
+    <label>Password</label>
     <br/>
     @Html.TextBoxFor(m => m.Password, new { placeholder = "Password", @class = "" });
     <br/>
     <input type="submit" value="Login"/>
 }
-
+<div>

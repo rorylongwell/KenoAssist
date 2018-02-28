@@ -1,0 +1,36 @@
+// Mixin
+
+$Spacing-10: 10px;
+$Spacing-15: 15px;
+$Spacing-20: 20px; 
+$Spacing-30: 30px;
+
+.gradient {
+    height: 100vh;
+    background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient( rgba(92,184,178,0.80), rgba(27,54,93,0.80) ),
+    /* bottom, image */
+    url(../images/background_medium.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+// Image Sizes
+
+.gradient > img {
+    width: 150px;
+    margin-bottom: 60px;
+
+}
+
+// Spacing
