@@ -1,0 +1,45 @@
+input[type=submit] {
+    width: 140px;
+    height: 40px;
+    border-radius: 0;
+    -webkit-appearance: none;
+    color: $Primary-complimentary$Primary-complimentary;
+    background-color: $Plain-colour;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    margin-top: $Spacing-30
+
+}
+
+input[type=text] {
+    background-color: $Plain-colour;
+    border: none;
+    opacity: 0.5;
+    width: 260px;
+    height: 40px;
+    margin-top: $Spacing-10;
+    padding-left: $Spacing-10;
+    margin-bottom: $Spacing-20;
+    font-family: $Paragraph-font;
+
+}
+
+input[type=text]:focus {
+    border: none;}
+
+    ::-moz-focus-inner {
+        border: 0
+    }
+
+
+    input[type=submit]:hover {
+        background-color: darken($Plain-colour, 10%)
+    }
+
+
+    label {
+        font-family: $Paragraph-font;
+        color: $Plain-colour;
+        margin-top: $Spacing-20
+    }
