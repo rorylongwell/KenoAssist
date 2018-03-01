@@ -1,8 +1,0 @@
-C:\Git\KenoAssist\Keno.Models\bin\Debug\netcoreapp2.0\Keno.Models.deps.json
-C:\Git\KenoAssist\Keno.Models\bin\Debug\netcoreapp2.0\Keno.Models.dll
-C:\Git\KenoAssist\Keno.Models\bin\Debug\netcoreapp2.0\Keno.Models.pdb
-C:\Git\KenoAssist\Keno.Models\obj\Debug\netcoreapp2.0\Keno.Models.csproj.CoreCompileInputs.cache
-C:\Git\KenoAssist\Keno.Models\obj\Debug\netcoreapp2.0\Keno.Models.AssemblyInfoInputs.cache
-C:\Git\KenoAssist\Keno.Models\obj\Debug\netcoreapp2.0\Keno.Models.AssemblyInfo.cs
-C:\Git\KenoAssist\Keno.Models\obj\Debug\netcoreapp2.0\Keno.Models.dll
-C:\Git\KenoAssist\Keno.Models\obj\Debug\netcoreapp2.0\Keno.Models.pdb
