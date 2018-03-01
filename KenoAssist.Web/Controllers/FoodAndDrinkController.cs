@@ -15,5 +15,20 @@ namespace KenoAssist.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult Food()
+        {
+            return View();
+        }
+
+        public IActionResult Drink()
+        {
+            return View();
+        }
+
+        public IActionResult Menu()
+        {
+            return View();
+        }
     }
 }

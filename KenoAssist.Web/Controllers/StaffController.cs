@@ -11,12 +11,6 @@ namespace KenoAssist.Web.Controllers
 {
     public class StaffController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         public IActionResult Clients()
         {
             var clients = new List<ClientModel>(){
