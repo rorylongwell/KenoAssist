@@ -17,9 +17,7 @@
     <br/>
 
     @foreach(var image in Model.PhotoUrl){
-    <img>
-    @staff
-    <img src="@Href("@image")"/>
+    <img src="@Url.Content(image)"/>
     <br/>
 }
 

@@ -63,14 +63,14 @@ namespace KenoAssist.Web.Controllers
                 IncidentId = 1,
                 Injury = "Bruised leg",
                 StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                PhotoUrl = new List<string>() { "~/image/louis1.jpg", "~/image/louis2.jpg", "~/image/louis3.jpg" },
+                PhotoUrl = new List<string>() { "~/images/louis1.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
                 Description = "This was an accident",
                 Date = DateTime.Now.ToString("d"),
                 Time = DateTime.Now.ToString("t")
                               
             };
 
-            return View();
+            return View(incidentReport);
         }
     }
 }
