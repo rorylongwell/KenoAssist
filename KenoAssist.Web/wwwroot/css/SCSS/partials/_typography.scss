@@ -12,4 +12,8 @@ h1, h2, h3, h4, h5, h6, p{
     color: $Primary-text;
 }
 
-
+h1, h2, h3, h4, h5, h6{
+    font-family:$Header-font;
+    font-size:22px;
+}
+h1{}

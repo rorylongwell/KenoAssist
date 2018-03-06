@@ -1,17 +1,22 @@
 ﻿@model IList<ClientModel>
 
-<a href="@Url.Action("Index", "Account")">
-Account Button
-</a>
+<div class="heading">
+    <h1>Clients</h1>
+<a href="@Url.Action("Index", "Account")"><img src="../images/account_imgs/account_img_nurse.png"
+></a>
+</div>
 
-
-<h2>Clients</h2>
-
-
+<div class="client-list">
 @foreach(var client in Model){
 <a href="@Url.Action("Client", "Client")">
-    <h3>@client.Forename @client.Surname</h3>
-    <br/>
+        
+           <img src="../images/account_imgs/male_1.png"/>
+
+        <div>
+    <p>@client.Forename @client.Surname</p>
+
     <p>@client.Location</p>
+            </div>
 </a>
 }
+</div>
