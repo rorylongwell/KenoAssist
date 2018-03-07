@@ -30,22 +30,100 @@ namespace Keno.Business.Implementation
             }
             return models;
         }
-                     
 
         public ClientViewModel GetClientById(long clientId)
         {
             throw new NotImplementedException();
         }
 
+
+        #region User
+
+
         public UserViewModel GetUserById(long userId)
         {
-            throw new NotImplementedException();
+            return MapDomainToViewModel(uow.UserRepository.GetByID(userId));
         }
 
         public UserViewModel GetUserByUsername(string username)
         {
             throw new NotImplementedException();
         }
+
+        public List<UserViewModel> GetUsersByUserTypeId(long userTypeId)
+        {
+            var items = uow.UserRepository.GetUsersByUserTypeId(userTypeId);
+            var models = new List<UserViewModel>();
+            foreach (var item in items)
+            {
+                models.Add(MapDomainToViewModel(item));
+            }
+            return models;
+        }
+
+        #endregion
+
+
+        #region IncidentReport
+
+        public Incident GetIncidentById(long incidentId)
+        {
+            return uow.IncidentRepository.GetByID(incidentId);
+        }
+
+        public List<UserViewModel> GetUsersByIncidentId(long incidentId)
+        {
+            var incidentUsers = uow.UserIncidentRepository.GetUserIncidentsByIncidentId(incidentId);
+
+            var results = new List<UserViewModel>();
+
+            foreach (var item in incidentUsers)
+            {
+                results.Add(GetUserById(item.UserId));
+            }
+
+            return results;
+        }
+
+        public IncidentPhoto GetIncidentPhotoById(long incidentPhotoId)
+        {
+            return uow.IncidentPhotoRepository.GetByID(incidentPhotoId);
+        }
+
+        public List<IncidentPhoto> GetIncidentPhotosByIncidentId(long incidentId)
+        {
+            var incidentUsers = uow.IncidentPhotoRepository.GetIncidentPhotosByIncidentId(incidentId);
+
+            var results = new List<IncidentPhoto>();
+
+            foreach (var item in incidentUsers)
+            {
+                results.Add(GetIncidentPhotoById(item.Id));
+            }
+
+            return results;
+        }
+
+        #endregion
+
+        #region Message
+
+        public List<Message> GetRecievedMessagesByUserId(long userId)
+        {
+            return uow.MessageRepository.GetRecievedMessagesByUserId(userId);
+        }
+
+        public List<Message> GetSentMessagesByUserId(long userId)
+        {
+            return uow.MessageRepository.GetSentMessagesByUserId(userId);
+        }
+
+        public Message SendMessage(Message message)
+        {
+            return uow.MessageRepository.Add(message);
+        }
+
+        #endregion
 
         #region Model Mapping
 
@@ -85,6 +163,54 @@ namespace Keno.Business.Implementation
                 DateModified = model.DateModified,
                 Location = model.Location,
                 Deleted = model.Deleted
+
+            };
+
+            return result;
+        }
+
+        public UserViewModel MapDomainToViewModel(User model)
+        {
+
+            UserViewModel result = null;
+
+            result = new UserViewModel()
+            {
+                Id = result.Id,
+                Forename = result.Forename,
+                Surname = result.Surname,
+                DateOfBirth = result.DateOfBirth,
+                DateCreated = result.DateCreated,
+                DateModified = result.DateModified,
+                Username = result.Username,
+                Password = result.Password,
+                PasswordSalt = result.PasswordSalt,
+                UserTypeId = result.UserTypeId,
+                Deleted = result.Deleted
+
+            };
+
+            return result;
+        }
+
+        public User MapViewToDomainModel(UserViewModel model)
+        {
+
+            User result = null;
+
+            result = new User()
+            {
+                Id = result.Id,
+                Forename = result.Forename,
+                Surname = result.Surname,
+                DateOfBirth = result.DateOfBirth,
+                DateCreated = result.DateCreated,
+                DateModified = result.DateModified,
+                Username = result.Username,
+                Password = result.Password,
+                PasswordSalt = result.PasswordSalt,
+                UserTypeId = result.UserTypeId,
+                Deleted = result.Deleted
 
             };
 
@@ -196,10 +322,6 @@ namespace Keno.Business.Implementation
             throw new NotImplementedException();
         }
 
-        public IncidentViewModel GetIncidentById(long incidentId)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<IncidentViewModel> GetAllIncidents()
         {

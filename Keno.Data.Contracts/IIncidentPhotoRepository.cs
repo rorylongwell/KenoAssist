@@ -6,5 +6,6 @@ namespace Keno.Data.Contracts
 {
     public interface IIncidentPhotoRepository : IRepository<IncidentPhoto>
     {
+        List<IncidentPhoto> GetIncidentPhotosByIncidentId(long incidentId);
     }
 }

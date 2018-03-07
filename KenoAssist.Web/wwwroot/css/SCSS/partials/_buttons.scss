@@ -29,17 +29,17 @@ input[type=text]:focus {
     border: none;}
 
     ::-moz-focus-inner {
-        border: 0
+        border: 0;
     }
 
 
     input[type=submit]:hover {
-        background-color: darken($Plain-colour, 10%)
+        background-color: darken($Plain-colour, 10%);
     }
 
 
     label {
         font-family: $Paragraph-font;
         color: $Plain-colour;
-        margin-top: $Spacing-20
+        margin-top: $Spacing-20;
     }

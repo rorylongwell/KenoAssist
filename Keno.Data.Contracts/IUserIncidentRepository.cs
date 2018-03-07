@@ -6,5 +6,6 @@ namespace Keno.Data.Contracts
 {
     public interface IUserIncidentRepository : IRepository<UserIncident>
     {
+        List<UserIncident> GetUserIncidentsByIncidentId(long incidentId);
     }
 }

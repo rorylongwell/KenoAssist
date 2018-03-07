@@ -31,6 +31,7 @@ namespace Keno.Data.Repository
             UserRepository = new UserRepository(this.context);
             UserIncidentRepository = new UserIncidentRepository(this.context);
             UserTypeRepository = new UserTypeRepository(this.context);
+            MessageRepository = new MessageRepository(this.context);
         }
 
         public IClientRepository ClientRepository { get; set; }
@@ -58,6 +59,8 @@ namespace Keno.Data.Repository
         public IUserIncidentRepository UserIncidentRepository { get; set; }
 
         public IUserTypeRepository UserTypeRepository { get; set; }
+
+        public IMessageRepository MessageRepository { get; set; }
 
         public int Commit()
         {

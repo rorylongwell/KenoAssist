@@ -6,5 +6,6 @@ namespace Keno.Data.Contracts
 {
     public interface IUserRepository : IRepository<User>
     {
+        List<User> GetUsersByUserTypeId(long userTypeId);
     }
 }
