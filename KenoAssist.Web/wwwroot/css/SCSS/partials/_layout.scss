@@ -5,6 +5,10 @@ $Spacing-15: 15px;
 $Spacing-20: 20px; 
 $Spacing-30: 30px;
 
+body{
+    background-color:$bg-colour;
+    }
+
 .gradient {
     height: 100vh;
     background:
@@ -34,3 +38,98 @@ $Spacing-30: 30px;
 }
 
 // Spacing
+
+
+//column
+
+.client-list > a {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    background-color: $Plain-colour;
+    text-decoration: none;
+    height: 130px;
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.client-list > a:first-child {
+    margin-top: 64px;
+
+}
+
+.client-list > a > div > p {
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.client-list > a > div > p:first-child {
+    padding-bottom: 10px
+
+}
+
+.client-list > a > div > p:last-child {
+    font-weight: 400
+
+}
+
+.client-list > a > div {
+    margin: 0 20px 0 0;
+
+}
+
+.client-list > a > img {
+    height: 90px;
+    margin: 0 20px 0 20px;
+
+}
+
+//header
+.heading {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: $Primary-colour;
+    height: 60px;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+}
+
+.heading > h1 {
+    height:60px;
+    color: $Plain-colour;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+     text-align: center;
+}
+
+
+.heading > a {
+    float: right;
+    display: flex;
+}
+
+.heading > a > img {
+    margin-top: -44px;
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+
+}
+
+.float-left {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.float-right {
+display: flex;
+  justify-content: flex-end;
+
+}
