@@ -30,12 +30,15 @@ namespace Keno.Business.Implementation
             }
             return models;
         }
-                     
 
         public ClientViewModel GetClientById(long clientId)
         {
             throw new NotImplementedException();
         }
+
+
+        #region User
+
 
         public UserViewModel GetUserById(long userId)
         {
@@ -46,6 +49,19 @@ namespace Keno.Business.Implementation
         {
             throw new NotImplementedException();
         }
+
+        public List<UserViewModel> GetUsersByUserTypeId(long userTypeId)
+        {
+            var items = uow.UserRepository.GetUsersByUserTypeId(userTypeId);
+            var models = new List<UserViewModel>();
+            foreach (var item in items)
+            {
+                models.Add(MapDomainToViewModel(item));
+            }
+            return models;
+        }
+
+        #endregion
 
 
         #region IncidentReport
@@ -86,6 +102,25 @@ namespace Keno.Business.Implementation
             }
 
             return results;
+        }
+
+        #endregion
+
+        #region Message
+
+        public List<Message> GetRecievedMessagesByUserId(long userId)
+        {
+            return uow.MessageRepository.GetRecievedMessagesByUserId(userId);
+        }
+
+        public List<Message> GetSentMessagesByUserId(long userId)
+        {
+            return uow.MessageRepository.GetSentMessagesByUserId(userId);
+        }
+
+        public Message SendMessage(Message message)
+        {
+            return uow.MessageRepository.Add(message);
         }
 
         #endregion

@@ -21,5 +21,6 @@ namespace Keno.Data.Contracts
         IUserRepository UserRepository { get; }
         IUserIncidentRepository UserIncidentRepository { get; }
         IUserTypeRepository UserTypeRepository { get; }
+        IMessageRepository MessageRepository { get; }
     }
 }

@@ -26,5 +26,6 @@
     <ProjectReference Include="..\Keno.Common\Keno.Common.csproj" />
     <ProjectReference Include="..\Keno.Consumer\Keno.Consumer.csproj" />
     <ProjectReference Include="..\Keno.Models\Keno.Models.csproj" />
+    <ProjectReference Include="..\KenoAssist.Web\KenoAssist.Web.csproj" />
   </ItemGroup>
 </Project>
