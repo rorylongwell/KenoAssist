@@ -8,5 +8,6 @@ namespace KenoAssist.Web.Models
         public string Surname { get; set; }
         public Nullable<System.DateTime> DateOfBirth { get; set; }
         public string Location { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

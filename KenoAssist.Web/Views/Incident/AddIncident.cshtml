@@ -1,5 +1,45 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model IncidentReportModel
+
+<h2>Add Incident</h2>
+
+@using (Html.BeginForm("AddIncident", "Incident", FormMethod.Post)){
+  <label>Date</label>
+    <br/>
+    @Html.TextBoxFor(m => m.Date, new { placeholder = "", @class = "" });
+
+      <label>Time</label>
+    <br/>
+    @Html.TextBoxFor(m => m.Date, new { placeholder = "", @class = "" });
+
+     <label>Staff Involved</label>
+    <br/>
+   
+ 
+
+  <table  id="container">
+     @Html.EditorFor(x => x.StaffNames)    
+    </table>   
+<button id="btnAddStaff">Add Staff</button>
+
+<script type="text/javascript">
+        
+            $(function () {
+        $("#btnAddStaff").click(function (e) {
+            var itemIndex = $("#container input.iHidden").length;
+            e.preventDefault();
+            var newItem = $("<tr><td>
+    <input type='text' id='itemIndex' name='StaffNames[" + itemIndex + "]'/></td>
+    <td></tr>");
+            $("#container").append(newItem);
+        });
+    });
+    
+</script>
+
+<!--<input type="submit" name="submitButton" value="AddStaff" />-->
+<input type="submit" name="submitButton" value="Next" />
 }
+
+
+
+

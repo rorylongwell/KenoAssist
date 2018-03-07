@@ -4,23 +4,23 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{F91EAD94-8071-4585-A48D-B6599CFF4A2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Consumer", "Keno.Consumer\Keno.Consumer.csproj", "{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Consumer", "Keno.Consumer\Keno.Consumer.csproj", "{041AB597-ECD2-4FFA-AF5E-8E4A62E446AA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenoAssist.Web", "KenoAssist.Web\KenoAssist.Web.csproj", "{9B32D2F4-CB4F-44D0-8406-37C289FF64AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenoAssist.Web", "KenoAssist.Web\KenoAssist.Web.csproj", "{9B32D2F4-CB4F-44D0-8406-37C289FF64AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KenoAssist.API", "KenoAssist.API\KenoAssist.API.csproj", "{BE469549-5D31-467E-B96B-7F5B33F27551}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KenoAssist.API", "KenoAssist.API\KenoAssist.API.csproj", "{BE469549-5D31-467E-B96B-7F5B33F27551}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Business", "Keno.Business\Keno.Business.csproj", "{38C744D1-76D7-4E5A-8A2A-E9558C50579F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Business", "Keno.Business\Keno.Business.csproj", "{38C744D1-76D7-4E5A-8A2A-E9558C50579F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Common", "Keno.Common\Keno.Common.csproj", "{8559BECA-935E-4DC6-B660-34BA98214D0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Common", "Keno.Common\Keno.Common.csproj", "{8559BECA-935E-4DC6-B660-34BA98214D0E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Data.Contracts", "Keno.Data.Contracts\Keno.Data.Contracts.csproj", "{47E50183-D8E8-4789-A1F6-1246B0DE1390}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data.Contracts", "Keno.Data.Contracts\Keno.Data.Contracts.csproj", "{47E50183-D8E8-4789-A1F6-1246B0DE1390}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Data.Repository", "Keno.Data.Repository\Keno.Data.Repository.csproj", "{5A40A493-F303-4663-8352-EE3004964911}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data.Repository", "Keno.Data.Repository\Keno.Data.Repository.csproj", "{5A40A493-F303-4663-8352-EE3004964911}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Data", "Keno.Data\Keno.Data.csproj", "{021A869B-B392-4795-8C4E-2C0392C44454}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Data", "Keno.Data\Keno.Data.csproj", "{021A869B-B392-4795-8C4E-2C0392C44454}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keno.Models", "Keno.Models\Keno.Models.csproj", "{F19B66F6-2577-40A6-9E26-2AC27175B139}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keno.Models", "Keno.Models\Keno.Models.csproj", "{F19B66F6-2577-40A6-9E26-2AC27175B139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

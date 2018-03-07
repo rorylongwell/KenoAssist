@@ -7,7 +7,7 @@ namespace Keno.Data.Contracts
 {
     public class FoodRepository : Repository<Food>,IFoodRepository
     {
-        public FoodRepository(KenoEntities context) : base(context)
+        public FoodRepository(KenoContext context) : base(context)
         {
             this.context = context;
 

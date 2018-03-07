@@ -15,3 +15,6 @@ C:/Git/KenoAssist/Keno.Common/bin/Debug/netcoreapp2.0/Microsoft.AspNetCore.Mvc.V
 /Users/rorylongwell/Projects/KenoAssist/Keno.Common/obj/Debug/netcoreapp2.0/Keno.Common.AssemblyInfo.cs
 /Users/rorylongwell/Projects/KenoAssist/Keno.Common/obj/Debug/netcoreapp2.0/Keno.Common.dll
 /Users/rorylongwell/Projects/KenoAssist/Keno.Common/obj/Debug/netcoreapp2.0/Keno.Common.pdb
+/Users/rorylongwell/Projects/KenoAssist/Keno.Common/bin/Debug/netcoreapp2.0/Keno.Common.deps.json
+/Users/rorylongwell/Projects/KenoAssist/Keno.Common/bin/Debug/netcoreapp2.0/Keno.Common.dll
+/Users/rorylongwell/Projects/KenoAssist/Keno.Common/bin/Debug/netcoreapp2.0/Keno.Common.pdb

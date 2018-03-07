@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Keno.Data
 {
-    public class KenoEntities : DbContext
+    public class KenoContext : DbContext
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<ClientCondition> ClientConditions { get; set; }
@@ -20,5 +20,10 @@ namespace Keno.Data
         public DbSet<User> Users { get; set; }
         public DbSet<UserIncident> UserIncidents { get; set; }
         public DbSet<UserType> UserType { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Filename=keno.db");
+        }
     }
 }

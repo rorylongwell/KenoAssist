@@ -11,8 +11,8 @@ namespace Keno.Data.Repository
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         public DbSet<TEntity> dbSet { get; set; }
-        public KenoEntities context;
-        public Repository(KenoEntities context)
+        public KenoContext context;
+        public Repository(KenoContext context)
         {
             this.context = context;
             dbSet = context.Set<TEntity>();

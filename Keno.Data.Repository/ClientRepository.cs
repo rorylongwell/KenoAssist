@@ -5,7 +5,7 @@ namespace Keno.Data.Repository
 {
     public class ClientRepository : Repository<Client>, IClientRepository
     {
-        public ClientRepository(KenoEntities context) : base(context)
+        public ClientRepository(KenoContext context) : base(context)
         {
             this.context = context;
 

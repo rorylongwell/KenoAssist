@@ -10,8 +10,7 @@ namespace KenoAssist.Web.Models
         public List<string> StaffNames { get; set; } 
         public List<string> PhotoUrl { get; set; } 
         public string Description { get; set; }
-        public string Date { get; set; }
-        public string Time { get; set; }
-    
+        public DateTime Date { get; set; }
+        public DateTime Time { get; set; }
     }
 }

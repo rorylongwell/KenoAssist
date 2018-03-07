@@ -7,7 +7,7 @@ namespace Keno.Data.Contracts
 {
     public class ClientConditionRepository : Repository<ClientCondition>, IClientConditionRepository
     {
-        public ClientConditionRepository(KenoEntities context) : base(context)
+        public ClientConditionRepository(KenoContext context) : base(context)
         {
             this.context = context;
 

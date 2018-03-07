@@ -7,11 +7,11 @@ namespace Keno.Data.Repository
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        KenoEntities context;
+        KenoContext context;
 
-        public UnitOfWork(KenoEntities kenoContext)
+        public UnitOfWork(KenoContext kenoContext)
         {
-            this.context = new KenoEntities();
+            this.context = new KenoContext();
             context = kenoContext;
             InitializeRepositories();
         }

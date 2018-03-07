@@ -7,7 +7,7 @@ namespace Keno.Data.Contracts
 {
     public class UserIncidentRepository : Repository<UserIncident>, IUserIncidentRepository
     {
-        public UserIncidentRepository(KenoEntities context) : base(context)
+        public UserIncidentRepository(KenoContext context) : base(context)
         {
             this.context = context;
 

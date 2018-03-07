@@ -9,7 +9,7 @@ namespace Keno.Business.Implementation
     public class KenoService : IKenoService
     {
         IUnitOfWork uow;
-        public KenoService(KenoEntities context)
+        public KenoService(KenoContext context)
         {
             uow = new UnitOfWork(context);
 
@@ -17,7 +17,7 @@ namespace Keno.Business.Implementation
 
         public KenoService()
         {
-            uow = new UnitOfWork(new KenoEntities());
+            uow = new UnitOfWork(new KenoContext());
         }
 
         public List<ClientViewModel> GetAllClients()
@@ -56,14 +56,14 @@ namespace Keno.Business.Implementation
 
             result = new ClientViewModel()
             {
-                Id = result.Id,
-                Forename = result.Forename,
-                Surname = result.Surname,
-                DateOfBirth = result.DateOfBirth,
-                DateCreated = result.DateCreated,
-                DateModified = result.DateModified,
-                Location = result.Location,
-                Deleted = result.Deleted
+                Id = model.Id,
+                Forename = model.Forename,
+                Surname = model.Surname,
+                DateOfBirth = model.DateOfBirth,
+                DateCreated = model.DateCreated,
+                DateModified = model.DateModified,
+                Location = model.Location,
+                Deleted = model.Deleted
 
             };
 
@@ -77,14 +77,14 @@ namespace Keno.Business.Implementation
 
             result = new Client()
             {
-                Id = result.Id,
-                Forename = result.Forename,
-                Surname = result.Surname,
-                DateOfBirth = result.DateOfBirth,
-                DateCreated = result.DateCreated,
-                DateModified = result.DateModified,
-                Location = result.Location,
-                Deleted = result.Deleted
+                Id = model.Id,
+                Forename = model.Forename,
+                Surname = model.Surname,
+                DateOfBirth = model.DateOfBirth,
+                DateCreated = model.DateCreated,
+                DateModified = model.DateModified,
+                Location = model.Location,
+                Deleted = model.Deleted
 
             };
 

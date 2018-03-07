@@ -2,7 +2,7 @@
 
 <h2>Incident Report</h2>
 
- <h3>@Model.Date</h3><h3>@Model.Time</h3>
+ <h3>@Model.Date.ToString("d")</h3><h3>@Model.Date.ToString("t")</h3>
 
  <ul>
 @foreach(var staff in Model.StaffNames){

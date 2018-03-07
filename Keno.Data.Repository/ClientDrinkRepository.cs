@@ -7,7 +7,7 @@ namespace Keno.Data.Contracts
 {
     public class ClientDrinkRepository : Repository<ClientDrink>, IClientDrinkRepository
     {
-        public ClientDrinkRepository(KenoEntities context) : base(context)
+        public ClientDrinkRepository(KenoContext context) : base(context)
         {
             this.context = context;
 

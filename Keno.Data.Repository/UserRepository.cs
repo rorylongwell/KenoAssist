@@ -7,7 +7,7 @@ namespace Keno.Data.Contracts
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        public UserRepository(KenoEntities context) : base(context)
+        public UserRepository(KenoContext context) : base(context)
         {
             this.context = context;
 

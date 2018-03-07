@@ -20,26 +20,21 @@ namespace KenoAssist.Web.Controllers
                 {
                     Id = 1,
                     Description = "John fell",
-                    Date = DateTime.Now.ToString("d"),
-                    Time = DateTime.Now.ToString("t")
-
+                    Date = DateTime.Now
                 },
 
                 new IncidentModel()
                 {
                     Id = 2,
                     Description = "John cut himself",
-                    Date = DateTime.Now.ToString("d"),
-                    Time = DateTime.Now.ToString("t")
-
+                    Date = DateTime.Now
                 },
 
                 new IncidentModel()
                 {
                     Id = 3,
                     Description = "John wasn't feeling well",
-                    Date = DateTime.Now.ToString("d"),
-                    Time = DateTime.Now.ToString("t")
+                    Date = DateTime.Now
 
                 },
 
@@ -65,12 +60,37 @@ namespace KenoAssist.Web.Controllers
                 StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
                 PhotoUrl = new List<string>() { "~/images/louis1.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
                 Description = "This was an accident",
-                Date = DateTime.Now.ToString("d"),
-                Time = DateTime.Now.ToString("t")
-                              
+                Date = DateTime.Now,                  
             };
 
             return View(incidentReport);
+        }
+
+        public IActionResult AddIncident()
+        {
+            IncidentReportModel incidentReport = new IncidentReportModel()
+            {
+                IncidentId = 0,
+                StaffNames = new List<string>()
+            };
+            return View(incidentReport);
+        }
+
+        [HttpPost]
+        public IActionResult AddIncident(IncidentReportModel incidentReport,string submitButton)
+        {
+            switch (submitButton)
+            {
+                case "AddStaff":
+                    
+                    return View(incidentReport);
+                case "Next":
+                    
+                    return View();
+                default:
+           
+                    return View();
+            }
         }
     }
 }
