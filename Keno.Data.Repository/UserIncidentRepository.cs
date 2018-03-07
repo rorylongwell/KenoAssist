@@ -1,6 +1,7 @@
 ﻿using Keno.Data.Repository;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Keno.Data.Contracts
@@ -11,6 +12,11 @@ namespace Keno.Data.Contracts
         {
             this.context = context;
 
+        }
+
+        public List<UserIncident> GetUserIncidentsByIncidentId(long incidentId)
+        {
+            return context.UserIncidents.Where(i => i.IncidentId == incidentId).ToList();
         }
     }
 }

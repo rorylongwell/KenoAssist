@@ -39,13 +39,56 @@ namespace Keno.Business.Implementation
 
         public UserViewModel GetUserById(long userId)
         {
-            throw new NotImplementedException();
+            return MapDomainToViewModel(uow.UserRepository.GetByID(userId));
         }
 
         public UserViewModel GetUserByUsername(string username)
         {
             throw new NotImplementedException();
         }
+
+
+        #region IncidentReport
+
+        public Incident GetIncidentById(long incidentId)
+        {
+            return uow.IncidentRepository.GetByID(incidentId);
+        }
+
+        public List<UserViewModel> GetUsersByIncidentId(long incidentId)
+        {
+            var incidentUsers = uow.UserIncidentRepository.GetUserIncidentsByIncidentId(incidentId);
+
+            var results = new List<UserViewModel>();
+
+            foreach (var item in incidentUsers)
+            {
+                results.Add(GetUserById(item.UserId));
+            }
+
+            return results;
+        }
+
+        public IncidentPhoto GetIncidentPhotoById(long incidentPhotoId)
+        {
+            return uow.IncidentPhotoRepository.GetByID(incidentPhotoId);
+        }
+
+        public List<IncidentPhoto> GetIncidentPhotosByIncidentId(long incidentId)
+        {
+            var incidentUsers = uow.IncidentPhotoRepository.GetIncidentPhotosByIncidentId(incidentId);
+
+            var results = new List<IncidentPhoto>();
+
+            foreach (var item in incidentUsers)
+            {
+                results.Add(GetIncidentPhotoById(item.Id));
+            }
+
+            return results;
+        }
+
+        #endregion
 
         #region Model Mapping
 
@@ -84,6 +127,54 @@ namespace Keno.Business.Implementation
                 DateCreated = result.DateCreated,
                 DateModified = result.DateModified,
                 Location = result.Location,
+                Deleted = result.Deleted
+
+            };
+
+            return result;
+        }
+
+        public UserViewModel MapDomainToViewModel(User model)
+        {
+
+            UserViewModel result = null;
+
+            result = new UserViewModel()
+            {
+                Id = result.Id,
+                Forename = result.Forename,
+                Surname = result.Surname,
+                DateOfBirth = result.DateOfBirth,
+                DateCreated = result.DateCreated,
+                DateModified = result.DateModified,
+                Username = result.Username,
+                Password = result.Password,
+                PasswordSalt = result.PasswordSalt,
+                UserTypeId = result.UserTypeId,
+                Deleted = result.Deleted
+
+            };
+
+            return result;
+        }
+
+        public User MapViewToDomainModel(UserViewModel model)
+        {
+
+            User result = null;
+
+            result = new User()
+            {
+                Id = result.Id,
+                Forename = result.Forename,
+                Surname = result.Surname,
+                DateOfBirth = result.DateOfBirth,
+                DateCreated = result.DateCreated,
+                DateModified = result.DateModified,
+                Username = result.Username,
+                Password = result.Password,
+                PasswordSalt = result.PasswordSalt,
+                UserTypeId = result.UserTypeId,
                 Deleted = result.Deleted
 
             };
@@ -196,10 +287,6 @@ namespace Keno.Business.Implementation
             throw new NotImplementedException();
         }
 
-        public IncidentViewModel GetIncidentById(long incidentId)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<IncidentViewModel> GetAllIncidents()
         {

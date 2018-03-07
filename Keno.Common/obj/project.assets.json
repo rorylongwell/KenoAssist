@@ -4843,28 +4843,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/ambermcgregor/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\devstudent1\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/Users/ambermcgregor/Git/KenoAssist/Keno.Common/Keno.Common.csproj",
+      "projectUniqueName": "C:\\Git\\KenoAssist\\Keno.Common\\Keno.Common.csproj",
       "projectName": "Keno.Common",
-      "projectPath": "/Users/ambermcgregor/Git/KenoAssist/Keno.Common/Keno.Common.csproj",
-      "packagesPath": "/Users/ambermcgregor/.nuget/packages/",
-      "outputPath": "/Users/ambermcgregor/Git/KenoAssist/Keno.Common/obj",
+      "projectPath": "C:\\Git\\KenoAssist\\Keno.Common\\Keno.Common.csproj",
+      "packagesPath": "C:\\Users\\devstudent1\\.nuget\\packages\\",
+      "outputPath": "C:\\Git\\KenoAssist\\Keno.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/ambermcgregor/.config/NuGet/NuGet.Config"
+        "C:\\Users\\devstudent1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4881,23 +4886,23 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
+          "Microsoft.AspNet.WebApi.Core": {
             "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
+            "version": "[5.2.4, )"
           },
           "Microsoft.AspNetCore.Mvc.Core": {
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
+          },
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           },
           "System.Web.Http.Common": {
             "target": "Package",
-            "version": "4.0.20126.16343"
-          },
-          "Microsoft.AspNet.WebApi.Core": {
-            "target": "Package",
-            "version": "5.2.4"
+            "version": "[4.0.20126.16343, )"
           }
         },
         "imports": [

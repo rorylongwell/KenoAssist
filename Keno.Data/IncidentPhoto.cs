@@ -8,6 +8,7 @@ namespace Keno.Data
     {
         public long Id  {get;set;}
         public long IncidentId { get; set; }
+        public string Url { get; set; }
 
         public virtual Incident Incident { get; set; }
 
