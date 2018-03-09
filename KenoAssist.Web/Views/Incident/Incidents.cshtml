@@ -1,13 +1,34 @@
-﻿@model IList<IncidentModel>
+﻿<div class="page">
 
-<h2>Incidents and Injuries</h2>
+            @model IList<IncidentModel>
+    <div class="heading">
 
+<h1>Incidents and Injuries</h1>
 
+            <div class="margin-top-4 default-menu">
 @foreach(var incident in Model){
 <a href="@Url.Action("Incident", "Incident", new { incidentId = incident.Id })">
-    <h3>@incident.Date</h3><h3>@incident.Time</h3>
-    <br/>
-    <h4>Incident</h4>
+
+                <div class="details-left">
+                    
+<p class="title margin-top-0">Date</p>
+         
+                     
+    <p>@incident.Date</p>
+                    
+                    </div>
+
+                <div class="details-right">
+
+                    
+    <p class="title margin-top-0">Time</p>
+            
+                <p>@incident.Time</p>
+                </div>
+                
+    <p class="title">Incident</p>
     <p>@incident.Description</p>
 </a>
 }
+                </div>
+            </div>

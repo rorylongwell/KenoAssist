@@ -88,7 +88,12 @@ body {
   margin-bottom: 60px;
 }
 
-/* line 45, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 42, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.content-margin {
+  margin-top: 64px;
+}
+
+/* line 49, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .client-list > a {
   margin-left: 4px;
   margin-right: 4px;
@@ -102,39 +107,34 @@ body {
   align-items: center;
 }
 
-/* line 58, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
-.client-list > a:first-child {
-  margin-top: 64px;
-}
-
-/* line 63, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 62, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .client-list > a > div > p {
   font-size: 16px;
   font-weight: bold;
 }
 
-/* line 69, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 68, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .client-list > a > div > p:first-child {
   padding-bottom: 10px;
 }
 
-/* line 74, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 73, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .client-list > a > div > p:last-child {
   font-weight: 400;
 }
 
-/* line 79, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 78, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .client-list > a > div {
   margin: 0 20px 0 0;
 }
 
-/* line 84, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 83, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .client-list > a > img {
   height: 90px;
   margin: 0 20px 0 20px;
 }
 
-/* line 91, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 90, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .heading {
   width: 100%;
   position: fixed;
@@ -143,7 +143,7 @@ body {
   height: 60px;
 }
 
-/* line 102, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 98, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .heading > h1 {
   height: 60px;
   color: #ffffff;
@@ -153,13 +153,13 @@ body {
   text-align: center;
 }
 
-/* line 112, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 108, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .heading > a {
   float: right;
   display: flex;
 }
 
-/* line 117, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 113, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .heading > a > img {
   margin-top: -44px;
   width: 26px;
@@ -167,33 +167,359 @@ body {
   margin-right: 20px;
 }
 
-/* line 125, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 121, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .float-left {
   display: flex;
   justify-content: flex-start;
 }
 
-/* line 131, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 127, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .float-right {
-  display: flex;
-  justify-content: flex-end;
+  flex: 0 1 auto;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
 }
 
-/* line 6, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
-p, h2 {
-  font-family: "Brandon Grotesque", Helvetica, sans-serif;
+/* line 134, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.details-left {
+  flex: 0 1 auto;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  left: 8px;
+}
+
+/* line 144, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.details-right {
+  flex: 0 1 auto;
+  width: 50%;
+  margin-left: auto;
+  right: 0;
+  text-align: right;
+  margin-right: 8px;
+}
+
+/* line 155, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.page {
+  height: calc(100vh - 90px);
+  flex-wrap: nowrap;
+}
+
+/* line 160, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.menu_options {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+/* line 173, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.keno_client {
+  height: 44%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
+}
+
+/* line 184, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.keno_client > h2 {
+  display: block;
+  color: #586066;
+  font-weight: 700;
+}
+
+/* line 190, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.keno_client > img {
+  height: 140px;
+}
+
+/* line 194, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.menu_options > a {
+  height: 33.3%;
+  width: calc(33.3% - 6px);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* line 201, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.menu_options > a:hover,
+.client-list > a:hover,
+.food_menu > a:hover,
+.default-menu > a:hover {
+  background-color: #fafafa;
+}
+
+/* line 213, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.food_menu {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 221, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.food_menu > a {
+  height: 50%;
+  width: calc(50% - 6px);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* line 228, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.section_page {
+  height: 100vh;
+}
+
+/* line 234, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.default-menu {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 4px;
+  display: flex;
+  justify-content: flex-start;
+  /* adjustment */
+  position: relative;
+}
+
+/* line 245, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.default-menu > a {
+  height: 200px;
+  width: calc(100% - 16px);
+  margin-bottom: 4px;
+  background-color: #ffffff;
+  text-decoration: none;
+  padding: 10px 0 10px 8px;
+}
+
+/* line 254, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.default-menu > a > p,
+.default-menu > a > p,
+.details-left,
+.details-right,
+.title {
+  margin-bottom: 4px;
+}
+
+/* line 262, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.title {
+  margin: 24px 0 8px 0;
+}
+
+/* line 265, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.margin-top-4 {
+  margin-top: 4px;
+}
+
+/* line 270, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.margin-bottom-4 {
+  margin-bottom: 4px;
+}
+
+/* line 275, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.margin-left-4 {
+  margin-left: 4px;
+}
+
+/* line 280, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.margin-right-4 {
+  margin-right: 4px;
+}
+
+/* line 285, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.margin-top-12 {
+  margin-top: 12px;
+}
+
+/* line 289, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.margin-top-0 {
+  margin-top: 0;
+}
+
+/* line 293, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.fifty_width {
+  width: 49%;
+}
+
+/* line 297, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.containter_fullpage {
+  margin: 0 4px 0 4px;
+}
+
+/* line 303, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.injury_img {
+  width: calc(33.3% - 2.6px);
+  margin: 8px 0 16px 0;
+}
+
+/* line 310, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.background_container {
+  margin-top: 60px;
+  padding: 4px;
+  height: calc(100vh - 68px);
+  background: #ffffff;
+}
+
+/* line 323, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 327, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.row > .column {
+  padding: 0 4px 0 0;
+}
+
+/* line 331, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 337, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.column {
+  float: left;
+  width: 33.3%;
+}
+
+/* The Modal (background) */
+/* line 343, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content */
+/* line 357, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+}
+
+/* The Close Button */
+/* line 365, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.6s eas;
+}
+
+/* line 375, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.close:hover,
+.close:focus {
+  color: #009CA6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.6s eas;
+}
+
+/* line 383, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.mySlides {
+  display: none;
+}
+
+/* line 387, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+/* line 392, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 55%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+/* line 410, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/* line 416, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.prev:hover,
+.next:hover {
   color: #009CA6;
 }
 
-/* line 11, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
-h1, h2, h3, h4, h5, h6, p {
+/* line 8, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+p, li {
+  font-size: 16px;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+/* line 13, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+li {
+  line-height: 24px;
+}
+
+/* line 17, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+h1, h2, h3, h4, h5, h6, p, li {
   color: #7C878E;
 }
 
-/* line 15, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 21, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Brandon Grotesque", Helvetica, sans-serif;
   font-size: 22px;
+}
+
+/* line 28, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+h2 {
+  font-size: 20px;
+}
+
+/* line 34, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+.menu_options > a,
+.food_menu > a {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  color: #586066;
+}
+
+/* line 45, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+.title {
+  font-size: 12px;
 }
 
 /* line 1, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */

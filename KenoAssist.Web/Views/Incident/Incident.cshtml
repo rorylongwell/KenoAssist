@@ -1,9 +1,32 @@
-﻿@model IncidentReportModel
+﻿<div class="page">
+    <div class="heading">
 
-<h2>Incident Report</h2>
+@model IncidentReportModel
 
- <h3>@Model.Date</h3><h3>@Model.Time</h3>
+<h1>Incident Report</h1>
+</div>
 
+    <div class="content-margin background_container">
+
+                        <div class="details-left">
+                    
+<p class="title margin-top-12">Date</p>
+         
+ <p>@Model.Date</p>
+            </div>
+
+
+                        <div class="details-right">
+
+                    
+    <p class="title margin-top-12">Time</p>
+            <p>@Model.Time</p>
+
+        </div>
+
+        <div class="containter_fullpage">
+
+        <p class="title">Staff Involved</p>
  <ul>
 @foreach(var staff in Model.StaffNames){
     <li>
@@ -11,17 +34,85 @@
     </li>
 }
 </ul>
- <br/>
-    <h4>Area of Injury</h4>
+     <p class="title">Area of Injury</p>
     <p>@Model.Injury</p>
-    <br/>
 
-    @foreach(var image in Model.PhotoUrl){
-    <img src="@Url.Content(image)"/>
-    <br/>
+    <p class="title">Evidence</p>
+
+            <div class="row">
+                @foreach(var image in Model.PhotoUrl){
+  <div class="column">
+    <img src="@Url.Content(image)" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>}
+                </div>
+
+
+<!-- put here -->
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+                     @foreach(var image in Model.PhotoUrl){
+    <div class="mySlides">
+                        
+
+      <img src="@Url.Content(image)" style="width:100%">
+    </div> }
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+</div>
+                    
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
 }
 
-    <br/>
-    <h4>Incident Report</h4>
-    <p>@Model.Description</p>
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+            
+        
+   <!-- @foreach(var image in Model.PhotoUrl){
+    <img class="injury_img" src="@Url.Content(image)"/>
+}-->
+
+    <p class="title margin-top-12">Incident Report</p>
+    <p>@Model.Description</p>
+    </div>
+        </div>
+    </div>
