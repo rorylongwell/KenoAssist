@@ -19,15 +19,16 @@ namespace Keno.Data
         public DbSet<IncidentPhoto> IncidentPhotos { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserIncident> UserIncidents { get; set; }
+<<<<<<< HEAD
         public DbSet<UserType> UserType { get; set; }
-        public DbSet<Message> Messages { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Filename=keno.db");
         }
-
-  
-
+=======
+        public DbSet<UserType> UserTypes { get; set; }
+        public DbSet<Message> Messages { get; set; }
+>>>>>>> 20182f60325cd124a2a5119fee3f7fc1c68e9ce8
     }
 }

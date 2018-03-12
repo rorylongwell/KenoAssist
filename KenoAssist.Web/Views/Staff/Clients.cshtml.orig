@@ -9,12 +9,18 @@
 <div class="client-list">
 @foreach(var client in Model){
 <a href="@Url.Action("Client", "Client")">
+<<<<<<< HEAD
+    <img src="@Url.Content(client.ImageUrl)" style="max-height:450px; max-width:450px; overflow: hidden"/>
+    <h3>@client.Forename @client.Surname</h3>
+    <br/>
+=======
         
            <img src="../images/account_imgs/male_1.png"/>
 
         <div>
     <p>@client.Forename @client.Surname</p>
 
+>>>>>>> 20182f60325cd124a2a5119fee3f7fc1c68e9ce8
     <p>@client.Location</p>
             </div>
 </a>

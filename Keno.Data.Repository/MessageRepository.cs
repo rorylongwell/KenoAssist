@@ -8,7 +8,7 @@ namespace Keno.Data.Repository
 {
     public class MessageRepository : Repository<Message>, IMessageRepository
     {
-        public MessageRepository(KenoEntities context) : base(context)
+        public MessageRepository(KenoContext context) : base(context)
         {
             this.context = context;
 

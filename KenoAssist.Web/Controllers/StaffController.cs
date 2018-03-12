@@ -19,28 +19,28 @@ namespace KenoAssist.Web.Controllers
                     Forename = "John",
                     Surname = "Ellison",
                     Location = "Room 41",
-                    ImageUrl = "~/images/louis1.jpg"
+                    ImageUrl = "../images/account_imgs/male_1.png"
                 },
                 new ClientModel(){
                     Id = 2,
                     Forename = "Bert",
                     Surname = "Macklin",
                     Location = "Room 38",
-                    ImageUrl = "~/images/louis2.jpg"
+                    ImageUrl = "../images/account_imgs/male_1.png"
                 },
                 new ClientModel(){
                     Id = 3,
                     Forename = "Kip",
                     Surname = "Hackman",
                     Location = "Room 34",
-                    ImageUrl = "~/images/louis3.jpg"
+                    ImageUrl = "../images/account_imgs/male_1.png"
                 },
                 new ClientModel(){
                     Id = 4,
                     Forename = "Andrew",
                     Surname = "Dwyer",
                     Location = "Room 43",
-                    ImageUrl = "~/images/louis1.jpg"
+                    ImageUrl = "../images/account_imgs/male_1.png"
                 }
             };
 
