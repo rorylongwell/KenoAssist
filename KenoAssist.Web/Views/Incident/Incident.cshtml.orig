@@ -3,7 +3,11 @@
 
         <div class="vertical_align">
 
+<<<<<<< HEAD
+ <h3>@Model.Date.ToString("d")</h3><h3>@Model.Date.ToString("t")</h3>
+=======
         <p class="return">&#10094 back</p>
+>>>>>>> master
 
             </div>
 

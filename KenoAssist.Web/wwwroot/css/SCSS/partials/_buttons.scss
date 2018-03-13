@@ -43,3 +43,16 @@ input[type=text]:focus {
         color: $Plain-colour;
         margin-top: $Spacing-20;
     }
+
+.button-bottom {
+    bottom: 0;
+    background-color: $Primary-colour;
+    border: none;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    color: $Plain-colour;
+    font-family: $Header-font;
+    font-size:14px;
+    box-sizing:none;
+}

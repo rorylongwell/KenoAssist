@@ -8,6 +8,11 @@
             <div class="margin-top-4 default-menu">
 @foreach(var incident in Model){
 <a href="@Url.Action("Incident", "Incident", new { incidentId = incident.Id })">
+<<<<<<< HEAD
+    <h3>@incident.Date.ToString("d")</h3><h3>@incident.Date.ToString("t")</h3>
+    <br/>
+    <h4>Incident</h4>
+=======
 
                 <div class="details-left">
                     
@@ -27,13 +32,22 @@
                 </div>
                 
     <p class="margin-top-14 title">Incident</p>
+>>>>>>> master
     <p>@incident.Description</p>
 </a>
 }
 
+<<<<<<< HEAD
+<br/>
+
+<a href="@Url.Action("AddIncident", "Incident")">
+Add New Incident
+</a>
+=======
                 </div>
 
               <button class="button-bottom">Add Report</button>
             </div>
 
    
+>>>>>>> master
