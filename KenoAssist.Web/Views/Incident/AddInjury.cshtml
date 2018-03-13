@@ -1,5 +1,19 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿
+@model IncidentReportModel
+
+<h2>Add Incident</h2>
+
+@using (Html.BeginForm("AddInjury", "Incident", FormMethod.Post)){
+
+ @Html.HiddenFor(m => m.IncidentId)
+ @Html.HiddenFor(m => m.StaffNames)
+ @Html.HiddenFor(m => m.Date)
+ @Html.HiddenFor(m => m.Time)
+
+
+<label>Injury</label>
+  @Html.TextBoxFor(m => m.Injury, new { placeholder = "", @class = "" });
+
+  <label>Injury Area</label>
+  @Html.TextBoxFor(m => m.InjuryArea, new { placeholder = "", @class = "" });
 }

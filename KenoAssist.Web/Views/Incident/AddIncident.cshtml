@@ -16,27 +16,16 @@
    
  
 
-  <table  id="container">
-     @Html.EditorFor(x => x.StaffNames)    
-    </table>   
-<button id="btnAddStaff">Add Staff</button>
+    for (int i = 0; i < Model.StaffNames.Count; i++)
+    {
+<!--        @Html.Hidden("StaffNames.Index", i)
+        @Html.TextBoxFor(m => Model.StaffNames[i])-->
+        @Html.DropDownListFor(m => m.StaffNames, (IEnumerable<SelectListItem>)ViewBag.StaffList, new { id = "ddlStaff", @class = "form-control" })
+        <br/>
+    }
 
-<script type="text/javascript">
-        
-            $(function () {
-        $("#btnAddStaff").click(function (e) {
-            var itemIndex = $("#container").length;
-            e.preventDefault();
-            var newItem = $("<tr><td>
-    <input type='text' id='itemIndex' name='StaffNames[" + itemIndex + "]'/></td>
-    <td></tr>");
-            $("#container").append(newItem);
-        });
-    });
-    
-</script>
 
-<!--<input type="submit" name="submitButton" value="AddStaff" />-->
+<input type="submit" name="submitButton" value="Add Staff" />
 <input type="submit" name="submitButton" value="Next" />
 }
 
