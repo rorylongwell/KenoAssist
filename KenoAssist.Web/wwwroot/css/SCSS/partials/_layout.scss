@@ -96,12 +96,16 @@ body{
 }
 
 .heading > h1 {
-    height:60px;
+    height: 60px;
     color: $Plain-colour;
     justify-content: center;
     display: flex;
-    flex-direction: column;
-     text-align: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.minus-margin-60 {
+    margin-top: -60px;
 }
 
 
@@ -118,9 +122,30 @@ body{
 
 }
 
+.return {
+    display: flex;
+    vertical-align: center;
+    color: white;
+    margin-left: 6px;
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+     //flex-direction: row;
+}
+
+.vertical_align {
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 20%;
+    margin-left: 6px;
+}
+
 .float-left {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start
 
 }
 
@@ -282,8 +307,16 @@ body{
 
 }
 
+.margin-top-8 {
+    margin-top: 8px;
+}
+
 .margin-top-12 {
     margin-top: 12px
+}
+
+.margin-top-14 {
+    margin-top: 14px;
 }
 
 .margin-top-0{
@@ -319,11 +352,6 @@ body{
 
 //image viewer
 
-
-* {
-    box-sizing: border-box
-}
-
 .row > .column {
      padding: 0 4px 0 0;
 }
@@ -336,7 +364,7 @@ body{
 
 .column {
     float: left;
-    width: 33.3%;
+    width: calc(33.3% - 4px);
 }
 
 /* The Modal (background) */
