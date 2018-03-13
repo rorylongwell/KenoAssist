@@ -141,6 +141,7 @@ namespace Keno.Business.Implementation
                 DateCreated = model.DateCreated,
                 DateModified = model.DateModified,
                 Location = model.Location,
+                PhotoUrl = model.PhotoUrl,
                 Deleted = model.Deleted
 
             };
@@ -162,6 +163,7 @@ namespace Keno.Business.Implementation
                 DateCreated = model.DateCreated,
                 DateModified = model.DateModified,
                 Location = model.Location,
+                PhotoUrl = model.PhotoUrl,
                 Deleted = model.Deleted
 
             };

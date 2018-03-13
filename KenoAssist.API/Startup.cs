@@ -26,7 +26,7 @@ namespace KenoAssist.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddEntityFrameworkSqlite().AddDbContext<KenoContext>();
+            //services.AddEntityFrameworkSqlite().AddDbContext<KenoContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +42,7 @@ namespace KenoAssist.API
             using (var db = new KenoContext())
             {
                 db.Database.EnsureCreated();
-                db.Database.Migrate();
+                //db.Database.Migrate();
             }
         }
     }

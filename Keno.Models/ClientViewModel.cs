@@ -13,6 +13,7 @@ namespace Keno.Data
         public Nullable<System.DateTime> DateCreated { get; set; }
         public Nullable<System.DateTime> DateModified { get; set; }
         public string Location { get; set; }
+        public string PhotoUrl { get; set; }
         public Nullable<bool> Deleted { get; set; }
     }
 }

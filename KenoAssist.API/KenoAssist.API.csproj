@@ -10,13 +10,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,5 +30,8 @@
     <ProjectReference Include="..\Keno.Models\Keno.Models.csproj" />
     <ProjectReference Include="..\Keno.Data\Keno.Data.csproj" />
     <ProjectReference Include="..\KenoAssist.Web\KenoAssist.Web.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="keno.db" />
   </ItemGroup>
 </Project>
