@@ -25,6 +25,7 @@
     <Folder Include="Views\Staff\" />
     <Folder Include="Views\FoodAndDrink\" />
     <Folder Include="Views\Incident\" />
+    <Folder Include="wwwroot\images\incident_images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\SCSS\partials\_base.sass" />

@@ -1,22 +1,18 @@
 ﻿<Properties StartupConfiguration="{9B32D2F4-CB4F-44D0-8406-37C289FF64AC}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Views/Incident/AddIncident.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Views/Incident/IncidentReport.cshtml">
     <Files>
-      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml.orig" Line="7" Column="31" />
-      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml" Line="6" Column="38" />
       <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml" Line="42" Column="84" />
-      <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml.orig" Line="43" Column="49" />
       <File FileName="KenoAssist.Web/Views/Client/Client.cshtml" Line="31" Column="85" />
       <File FileName="KenoAssist.Web/Views/Staff/Clients.cshtml" Line="12" Column="1" />
-      <File FileName="KenoAssist.Web/Controllers/IncidentController.cs" Line="99" Column="1" />
-      <File FileName="KenoAssist.Web/Views/Incident/AddIncident.cshtml" Line="12" Column="3" />
-      <File FileName="KenoAssist.Web/Views/Incident/AddInjury.cshtml" Line="8" Column="35" />
+      <File FileName="KenoAssist.Web/Controllers/IncidentController.cs" Line="124" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Incident/AddInjury.cshtml" Line="24" Column="21" />
+      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml" Line="52" Column="10" />
+      <File FileName="KenoAssist.Web/Views/Incident/IncidentReport.cshtml" Line="5" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/Controllers/IncidentController.cs" relfile="KenoAssist.Web/Controllers/IncidentController.cs" line="99" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.KenoAssist.Web PreferredExecutionTarget="MonoDevelop.Default" />
