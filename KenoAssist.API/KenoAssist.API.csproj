@@ -33,5 +33,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="keno.db" />
+    <None Remove="keno.db" />
   </ItemGroup>
 </Project>

@@ -1,3 +1,55 @@
-﻿
+﻿@model FoodIntakeModel
+
 <h2>Food Intake</h2>
 
+<a href="@Url.Action("AddIncident", "Incident")">&lt;</a><h3>Today</h3><a href="@Url.Action("AddIncident", "Incident")">&gt;</a>
+
+<h4>Breakfast</h4>
+
+@if(Model.Breakfast.Count > 0){
+foreach(var food in Model.Breakfast){
+     <p>@food.Name</p>
+}
+}
+else{
+<p>No Data</p>
+}
+
+<h4>Lunch</h4>
+
+@if(Model.Lunch.Count > 0){
+foreach(var food in Model.Lunch){
+    <p>@food.Name</p>
+}
+}
+else{
+<p>No Data</p>
+}
+
+
+<h4>Dinner</h4>
+
+@if(Model.Dinner.Count > 0){
+foreach(var food in Model.Dinner){
+    <p>@food.Name</p>
+}
+}
+else{
+<p>No Data</p>
+}
+
+
+<h4>Snacks</h4>
+
+@if(Model.Snacks.Count > 0){
+foreach(var food in Model.Snacks){
+    <p>@food.Name</p>
+}
+}
+else{
+<p>No Data</p>
+}
+
+
+
+ <a class="button-bottom"href="@Url.Action("AddFood", "FoodAndDrink")">Add Food</a>

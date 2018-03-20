@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
 namespace Keno.Data
@@ -24,7 +25,11 @@ namespace Keno.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Filename=keno.db");
+            var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = "/Users/rorylongwell/Projects/KenoAssist/Keno.Data/keno.db" };
+            var connectionString = connectionStringBuilder.ToString();
+            var connection = new SqliteConnection(connectionString);
+
+            optionsBuilder.UseSqlite(connection);
         }
 
   

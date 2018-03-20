@@ -41,4 +41,7 @@
     <Content Remove="wwwroot\css\SCSS\partials\_reset.scss" />
     <Content Remove="wwwroot\css\SCSS\partials\_typography.scss" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Keno.Models\Keno.Models.csproj" />
+  </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Keno.Data
+namespace Keno.Models
 {
     public class UserViewModel
     {

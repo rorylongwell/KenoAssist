@@ -1,3 +1,22 @@
-﻿
+﻿@model DrinkIntakeModel
+
 <h1>Beverage Intake</h1>
 
+<a href="@Url.Action("AddIncident", "Incident")">&lt;</a><h3>Today</h3><a href="@Url.Action("AddIncident", "Incident")">&gt;</a>
+
+<h4>Total</h4>
+<p>@Model.TotalVolume ml</p>
+
+<h4>Drinks Today</h4>
+
+@if(Model.Drinks.Count > 0){
+foreach(var drink in Model.Drinks){
+     <p>@drink.Name</p>
+     <p>@drink.Volume ml</p>
+}
+}
+else{
+<p>No Data</p>
+}
+
+ <a class="button-bottom"href="@Url.Action("AddIncident", "Incident")">Add Beverage</a>

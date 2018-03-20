@@ -7,7 +7,7 @@ namespace Keno.Data.Repository
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        KenoContext context;
+        private readonly KenoContext context;
 
         public UnitOfWork(KenoContext kenoContext)
         {

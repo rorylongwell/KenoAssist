@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Keno.Data
+namespace Keno.Models
 {
     public class ClientIncidentViewModel
     {
