@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using KenoAssist.Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Keno.Common;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,7 +12,6 @@ namespace KenoAssist.Web.Controllers
 {
     public class FoodAndDrinkController : Controller
     {
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
@@ -19,14 +19,14 @@ namespace KenoAssist.Web.Controllers
 
         public IActionResult Food()
         {
-            var food = new List<Keno.Models.FoodViewModel>() 
+            var food = new List<FoodModel>()
             {
-                new Keno.Models.FoodViewModel(){Id = 1, Name = "Toast and Jam"},
-                new Keno.Models.FoodViewModel(){Id = 2, Name = "An Orange"},
-                new Keno.Models.FoodViewModel(){Id = 3, Name = "Chicken Sandwich"},
-                new Keno.Models.FoodViewModel(){Id = 4, Name = "Strawberry Yogurt"},
-                new Keno.Models.FoodViewModel(){Id = 5, Name = "Battered Fish and Chips"},
-                new Keno.Models.FoodViewModel(){Id = 6, Name = "Cake and Custard"},
+                new FoodModel(){Id = 1, Name = "Toast and Jam", FoodTypeId = (long)Constants.EFoodType.Breakfast},
+                new FoodModel(){Id = 2, Name = "An Orange", FoodTypeId = (long)Constants.EFoodType.Snack},
+                new FoodModel(){Id = 3, Name = "Chicken Sandwich", FoodTypeId = (long)Constants.EFoodType.Lunch},
+                new FoodModel(){Id = 4, Name = "Strawberry Yogurt" , FoodTypeId = (long)Constants.EFoodType.Snack},
+                new FoodModel(){Id = 5, Name = "Battered Fish and Chips", FoodTypeId = (long)Constants.EFoodType.Dinner},
+                new FoodModel(){Id = 6, Name = "Cake and Custard", FoodTypeId = (long)Constants.EFoodType.Dinner},
             };
 
 
@@ -35,22 +35,22 @@ namespace KenoAssist.Web.Controllers
             {
                 ClientId =1 ,
                 Date = DateTime.Now,
-                Breakfast = new List<Keno.Models.FoodViewModel>()
+                Breakfast = new List<FoodModel>()
                 {
-                    new Keno.Models.FoodViewModel(){Id = 1, Name = "Toast and Jam"},
-                    new Keno.Models.FoodViewModel(){Id = 2, Name = "An Orange"}
+                    new FoodModel(){Id = 1, Name = "Toast and Jam"},
+                    new FoodModel(){Id = 2, Name = "An Orange"}
                 },
-                Lunch = new List<Keno.Models.FoodViewModel>()
+                Lunch = new List<FoodModel>()
                 {
-                    new Keno.Models.FoodViewModel(){Id = 3, Name = "Chicken Sandwich"},
-                    new Keno.Models.FoodViewModel(){Id = 4, Name = "Strawberry Yogurt"}
+                    new FoodModel(){Id = 3, Name = "Chicken Sandwich"},
+                    new FoodModel(){Id = 4, Name = "Strawberry Yogurt"}
                 },
-                Dinner = new List<Keno.Models.FoodViewModel>()
+                Dinner = new List<FoodModel>()
                 {
-                    new Keno.Models.FoodViewModel(){Id = 5, Name = "Battered Fish and Chips"},
-                    new Keno.Models.FoodViewModel(){Id = 6, Name = "Cake and Custard"}
+                    new FoodModel(){Id = 5, Name = "Battered Fish and Chips"},
+                    new FoodModel(){Id = 6, Name = "Cake and Custard"}
                 },
-                Snacks = new List<Keno.Models.FoodViewModel>()
+                Snacks = new List<FoodModel>()
                 {
                 }
 
@@ -79,15 +79,122 @@ namespace KenoAssist.Web.Controllers
             return View(drinkIntake);
         }
 
-        public IActionResult AddFood()
+        public IActionResult AddFoodMenu()
         {
             return View();
         }
 
-
-        public IActionResult Menu()
+        public IActionResult Menu(int addDays = 0)
         {
-            return View();
+
+            DateTime day = DateTime.Now.AddDays(addDays); 
+
+
+            IEnumerable<FoodIntakeModel> menu = new List<FoodIntakeModel>()
+            {
+
+                new FoodIntakeModel()
+                {
+                    ClientId = 1,
+                    Date = DateTime.Now,
+                    Breakfast = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 1, Name = "Toast and Jam"},
+                        new FoodModel(){Id = 2, Name = "An Orange"}
+                    },
+                    Lunch = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 3, Name = "Chicken Sandwich"},
+                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt"}
+                    },
+                    Dinner = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 5, Name = "Battered Fish and Chips"},
+                        new FoodModel(){Id = 6, Name = "Cake and Custard"}
+                    }
+                },
+                new FoodIntakeModel()
+                {
+                    ClientId = 1,
+                    Date = DateTime.Now.AddDays(1),
+                    Breakfast = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 1, Name = "Toast and Jam"},
+                        new FoodModel(){Id = 2, Name = "An Orange"}
+                    },
+                    Lunch = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 3, Name = "Chicken Sandwich"},
+                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt"}
+                    },
+                    Dinner = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 5, Name = "Battered Fish and Chips"},
+                        new FoodModel(){Id = 6, Name = "Cake and Custard"}
+                    }
+                },
+
+                new FoodIntakeModel()
+                {
+                    ClientId = 1,
+                    Date = DateTime.Now.AddDays(2),
+                    Breakfast = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 1, Name = "Toast and Jam"},
+                        new FoodModel(){Id = 2, Name = "An Orange"}
+                    },
+                    Lunch = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 3, Name = "Chicken Sandwich"},
+                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt"}
+                    },
+                    Dinner = new List<FoodModel>()
+                    {
+                        new FoodModel(){Id = 5, Name = "Battered Fish and Chips"},
+                        new FoodModel(){Id = 6, Name = "Cake and Custard"}
+                    }
+                }
+               
+            };
+
+            var currentMenu = menu.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
+
+            if(currentMenu == null)
+            {
+                currentMenu = new FoodIntakeModel();
+            }
+
+
+            bool IsSubmitted = currentMenu.Date.Date < DateTime.Now.Date.AddDays(2); 
+
+
+            ViewBag.IsSubmitted = IsSubmitted;
+            ViewBag.DayCount = addDays;
+            ViewBag.CurrentDay = GetDayName(day);
+
+            return View(currentMenu);
         }
+
+        public string GetDayName(DateTime date)
+        {
+            string result = string.Empty;
+
+            //if(date.DayOfWeek ==){
+
+            //}
+
+            if(date.Date == DateTime.Today){
+                return "Today";
+            }
+            if(date.Date == DateTime.Today.AddDays(1)){
+                return "Tomorrow";
+            }
+
+            result = date.ToString("d");
+
+            return result;
+
+        }
+
     }
 }

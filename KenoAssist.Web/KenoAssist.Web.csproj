@@ -43,5 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Keno.Models\Keno.Models.csproj" />
+    <ProjectReference Include="..\Keno.Common\Keno.Common.csproj" />
   </ItemGroup>
 </Project>

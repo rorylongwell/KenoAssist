@@ -8,9 +8,9 @@ namespace KenoAssist.Web.Models
     {
         public long ClientId { get; set; }
         public DateTime Date {get; set;}
-        public List<FoodViewModel> Breakfast{get; set;}
-        public List<FoodViewModel> Lunch { get; set; }
-        public List<FoodViewModel> Dinner { get; set; }
-        public List<FoodViewModel> Snacks { get; set; }
+        public List<FoodModel> Breakfast{get; set;}
+        public List<FoodModel> Lunch { get; set; }
+        public List<FoodModel> Dinner { get; set; }
+        public List<FoodModel> Snacks { get; set; }
     }
 }
