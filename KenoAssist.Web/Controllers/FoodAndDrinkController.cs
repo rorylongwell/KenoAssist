@@ -179,10 +179,6 @@ namespace KenoAssist.Web.Controllers
         {
             string result = string.Empty;
 
-            //if(date.DayOfWeek ==){
-
-            //}
-
             if(date.Date == DateTime.Today){
                 return "Today";
             }

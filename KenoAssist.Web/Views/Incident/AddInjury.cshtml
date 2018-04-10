@@ -3,7 +3,13 @@
 
 <div class="page">
     <div class="heading">
-<h1>Add Incident</h1>
+      <div class="vertical_align">
+
+        <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
+
+            </div>
+        
+<h1 class="minus-margin-60">Add Incident</h1>
 </div>
 
      <div class="content-margin-40">
@@ -23,10 +29,12 @@
 }
 
 <label>Injury</label>
-  @Html.TextBoxFor(m => m.Injury, new { placeholder = "Bruise", @class = "" });
+  @Html.ValidationMessageFor(model => model.Injury)    
+  @Html.TextBoxFor(m => m.Injury, new { placeholder = "", @class = "" });
 
   <label>Area Injured</label>
-  @Html.TextBoxFor(m => m.InjuryArea, new { placeholder = "Left Leg", @class = "" });
+  @Html.ValidationMessageFor(model => model.InjuryArea) 
+  @Html.TextBoxFor(m => m.InjuryArea, new { placeholder = "", @class = "" });
 
   <label>Photo Evidence</label>
 
@@ -46,17 +54,33 @@
 </g></svg>            <span>Select Photo&hellip;</span>
                 </div>
         </label>
-        
+
+         
    if(Model.PhotoUrl != null){
   foreach(var image in Model.PhotoUrl){
   <div class="column">
     <img src="@Url.Content(image)" style="width:100%"  class="hover-shadow cursor">
   </div>
+}       
 }
-}
-
- <input type="submit" name="submitButton" value="Upload" class="fullwidth-ghost-btn" />
+        
+ <input id="imageUpload" type="submit" name="submitButton" value="Upload" class="fullwidth-ghost-btn" disabled="disabled" />
 
 
 <input type="submit" name="submitButton" value="Next" class="button-bottom" />
 }        </div>
+
+    <script>
+        var input = document.querySelector('#imageUpload');
+
+        input.disabled = true;
+
+        document.getElementById('file-1').addEventListener('change', function () {
+        if (this.value.length > 0) {
+            input.disabled = false;
+        } else {
+            input.disabled = true;
+        }
+        });
+
+        </script>
