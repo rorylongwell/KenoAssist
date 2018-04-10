@@ -8,14 +8,14 @@
     
 @using (Html.BeginForm("Login", "Login", FormMethod.Post))
 {
-    <label>Username</label>
+    <label class="login-page">Username</label>
     <br/>
-    @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "" });
+    @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "login-field" });
     <br/>
-    <label>Password</label>
+    <label class="login-page">Password</label>
     <br/>
-    @Html.TextBoxFor(m => m.Password, new { placeholder = "Password", @class = "" });
+    @Html.TextBoxFor(m => m.Password, new { placeholder = "Password", @class = "login-field" });
     <br/>
-    <input type="submit" value="Login"/>
+    <input type="submit" value="Login" class="login"/>
 }
 <div>

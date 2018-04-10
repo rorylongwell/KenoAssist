@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F2F2F2;}
+	.st1{clip-path:url(#SVGID_2_);enable-background:new    ;}
+	.st2{clip-path:url(#SVGID_4_);}
+	.st3{clip-path:url(#SVGID_6_);fill:none;stroke:#BFBEBE;stroke-miterlimit:10;}
+	.st4{fill:#939595;}
+	.st5{clip-path:url(#SVGID_8_);fill:#1A365D;}
+	.st6{clip-path:url(#SVGID_10_);fill:#009CA5;}
+	.st7{clip-path:url(#SVGID_12_);fill:#2B5898;}
+	.st8{clip-path:url(#SVGID_14_);fill:#0D1622;}
+	.st9{clip-path:url(#SVGID_16_);fill:#59C7DC;}
+	.st10{clip-path:url(#SVGID_18_);fill:#00545A;}
+	.st11{clip-path:url(#SVGID_20_);fill:#73AA4E;}
+	.st12{clip-path:url(#SVGID_22_);fill:#9CC480;}
+	.st13{clip-path:url(#SVGID_24_);fill:#507636;}
+	.st14{clip-path:url(#SVGID_26_);fill:#7574B6;}
+	.st15{clip-path:url(#SVGID_28_);fill:#A7A6CF;}
+	.st16{clip-path:url(#SVGID_30_);fill:#4C4C92;}
+	.st17{clip-path:url(#SVGID_32_);fill:#808182;}
+	.st18{clip-path:url(#SVGID_34_);fill:#A5ADB1;}
+	.st19{clip-path:url(#SVGID_36_);fill:#586066;}
+	.st20{fill:none;stroke:#009CA5;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st21{fill:none;stroke:#009CA5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st22{fill:none;stroke:#009CA5;stroke-width:2;stroke-miterlimit:10;}
+	.st23{fill:none;stroke:#009CA5;stroke-width:2.0357;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st24{fill:none;stroke:#009CA5;stroke-width:2.3034;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st25{fill:none;stroke:#009CA5;stroke-width:2.0061;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st26{fill:none;stroke:#009CA5;stroke-width:1.8656;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st27{fill:none;stroke:#009CA5;stroke-width:1.7589;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<path class="st20" d="M32.6,31l0-17.5c0-0.8-0.7-1.5-1.5-1.5H8.1c-0.8,0-1.5,0.7-1.5,1.5v27.4V44c0,1.1,0.9,2,2,2h23"/>
+	<line class="st20" x1="32.6" y1="41" x2="32.6" y2="35.8"/>
+	<rect x="10.6" y="8" class="st21" width="18" height="4"/>
+	<g>
+		<path class="st21" d="M29.6,8h-20c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h20c1.1,0,2,0.9,2,2v2C31.6,7.1,30.7,8,29.6,8z"/>
+		<line class="st21" x1="11.6" y1="2" x2="11.6" y2="7"/>
+		<line class="st21" x1="19.6" y1="2" x2="19.6" y2="7"/>
+		<line class="st21" x1="15.6" y1="2" x2="15.6" y2="7"/>
+		<line class="st21" x1="23.6" y1="2" x2="23.6" y2="7"/>
+		<line class="st21" x1="27.6" y1="2" x2="27.6" y2="7"/>
+	</g>
+	<polyline class="st20" points="32.6,40 6.6,40 6.6,18 32.6,18 	"/>
+	<g>
+		<path class="st22" d="M29.6,43.4L29.6,43.4c0-1.3,1.1-2.5,2.5-2.5h7c1.4,0,2.5,1.1,2.5,2.5v-0.1c0,1.4-1.1,2.5-2.5,2.5h-7
+			C30.7,46,29.6,44.8,29.6,43.4z"/>
+		<line class="st22" x1="35.6" y1="41" x2="35.6" y2="46"/>
+	</g>
+	<g>
+		<path class="st22" d="M32,31.5L32,31.5c0.9-0.9,2.5-0.9,3.5,0l5.1,5.1c1,1,1,2.6,0,3.6l0,0c-1,1-2.6,1-3.6,0L32,35
+			C31,34.1,31,32.5,32,31.5z"/>
+		<line class="st22" x1="38.1" y1="33.9" x2="34.5" y2="37.5"/>
+	</g>
+	<polygon class="st21" points="26.6,27 21.6,27 21.6,22 17.6,22 17.6,27 12.6,27 12.6,31 17.6,31 17.6,36 21.6,36 21.6,31 26.6,31 	
+		"/>
+</g>
+</svg>

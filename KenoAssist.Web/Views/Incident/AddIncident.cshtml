@@ -1,18 +1,22 @@
-﻿@model IncidentReportModel
+﻿    @model IncidentReportModel
 
-<h2>Add Incident</h2>
+<div class="page">
+    <div class="heading">
+<h1>Add Incident</h1>
+</div>
 
+     <div class="content-margin-40">
 @using (Html.BeginForm("AddIncident", "Incident", FormMethod.Post)){
   <label>Date</label>
-    <br/>
+
     @Html.TextBoxFor(m => m.Date, new { placeholder = "", @class = "" });
 
       <label>Time</label>
-    <br/>
+
     @Html.TextBoxFor(m => m.Date, new { placeholder = "", @class = "" });
 
      <label>Staff Involved</label>
-    <br/>
+
    
  
 
@@ -25,10 +29,14 @@
     }
 
 
-<input type="submit" name="submitButton" value="Add Staff" />
-<input type="submit" name="submitButton" value="Next" />
+<input type="submit" name="submitButton" value="Add Staff" class="fullwidth-ghost-btn margin-top-20" />
+
+
+
+        
+<input type="submit" name="submitButton" value="Next" class="button-bottom" />
 }
 
 
-
-
+</div>
+    </div>

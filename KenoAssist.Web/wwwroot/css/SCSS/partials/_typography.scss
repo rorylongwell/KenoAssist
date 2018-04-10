@@ -5,22 +5,25 @@ $Paragraph-font:"Open Sans", Helvetica, sans-serif;
 
 
 
-p, li{
+p, li, label{
     font-size:16px;
     font-family: $Paragraph-font;
 }
+
 
 li{
     line-height:24px;
 }
 
-h1, h2, h3, h4, h5, h6, p, li{
+h1, h2, h3, h4, h5, h6, p, li, label, placeholder,
+input[type='text'], .form-control {
     color: $Primary-text;
+    font-family: $Paragraph-font;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family:$Header-font;
-    font-size:22px;
+    font-size:22px;    
 }
 h1{}
 
@@ -32,16 +35,26 @@ h2 {
 
 //menu
 .menu_options > a,
+.menu_options > a > div > p,
 .food_menu > a {
     font-family: $Paragraph-font;
     text-decoration: none;
-    font-size: 14px;
-    color: darken($Primary-text, 15%)
+    font-size: 12px;
+    color: darken($Primary-text, 15%)
 }
 
+//placeholder text
+.opacity-text {
+    color: $Opacity-text;
+}
 
 //classes
 
 .title{
     font-size: 12px;
 }
+.explaining-form-field{
+    font-size:12px;
+    margin: 10px 0 4px 0;
+} 
+

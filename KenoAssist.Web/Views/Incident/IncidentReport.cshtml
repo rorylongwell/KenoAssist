@@ -1,7 +1,12 @@
 ﻿@model IncidentReportModel
 
-<h2>Add Incident</h2>
+<div class="page">
+    <div class="heading">
+<h1>Add Incident</h1>
+</div>
 
+
+     <div class="content-margin-40">
 @using (Html.BeginForm("IncidentReport", "Incident", FormMethod.Post)){
 
  @Html.HiddenFor(m => m.IncidentId)
@@ -17,7 +22,13 @@ for(int i = 0; i < Model.PhotoUrl.Count; i++)
 }
 
   <label>Incident Report</label>
-  @Html.TextBoxFor(m => m.Description, new { placeholder = "", @class = "" });
 
-  <input type="submit" name="submitButton" value="Next" />
+   <p class="explaining-form-field">Please enter as much detail as possible regarding how the incident happened.</p>
+
+  @Html.TextAreaFor(m => m.Description, new { placeholder = "", @class = "incident-report" });
+
+  <input type="submit" name="submitButton" value="Next"  class="button-bottom"/>
 }
+
+    </div>
+    </div>

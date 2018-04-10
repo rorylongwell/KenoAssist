@@ -5,6 +5,21 @@ $Spacing-15: 15px;
 $Spacing-20: 20px; 
 $Spacing-30: 30px;
 
+// border radius
+$border-radius: 4px;
+
+//vertical align
+.vertical-align {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    display:flex;
+}
+
+.vertical-align > div {
+    vertical-align: middle;
+}
+
 body{
     background-color:$bg-colour;
     }
@@ -34,14 +49,29 @@ body{
 .gradient > img {
     width: 150px;
     margin-bottom: 60px;
+  
+}
 
+.small-icon{
+    width:24px;
 }
 
 // Spacing
 
 .content-margin {
-    margin-top: 64px;
+    width: calc(100% - 8px);
+    margin: 0 auto;
+    margin-top: 68px;
+    display: block
 
+}
+
+.content-margin-40{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 98px;
+    display: block;
+    overflow:hidden;
 }
 
 //column
@@ -49,14 +79,16 @@ body{
 .client-list > a {
     margin-left: 4px;
     margin-right: 4px;
-    margin-top: 4px;
+    margin-top: 8px;
     background-color: $Plain-colour;
+    box-shadow: $btn-shadow;
     text-decoration: none;
     height: 130px;
     display: block;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border-radius: $border-radius;
 }
 
 .client-list > a > div > p {
@@ -96,6 +128,7 @@ body{
 }
 
 .heading > h1 {
+    font-size:16px;
     height: 60px;
     color: $Plain-colour;
     justify-content: center;
@@ -109,7 +142,7 @@ body{
 }
 
 
-.heading > a {
+.heading > a >img {
     float: right;
     display: flex;
 }
@@ -162,6 +195,7 @@ body{
     height: 100px;
     position: absolute;
     left: 8px;
+    display:inline-block;
 
 }
 
@@ -169,17 +203,18 @@ body{
 .details-right {
     flex: 0 1 auto;
     width: 50%;
-     margin-left: auto;
-     right:0;
-     text-align:right;
-     margin-right:8px;
+    margin-left: auto;
+    right: 0;
+    text-align: right;
+    margin-right: 8px;
+
 }
 
 //keno Homepage
 
 .page {
-    height: calc(100vh - 90px);
-     flex-wrap: nowrap;
+    height: calc(100vh - 100px);
+    overflow:initial;
 }
 
 .menu_options {
@@ -191,7 +226,14 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     flex-flow: row wrap;
+}
 
+//menu icons
+.menu-icons {
+    width: 26%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px
 
 }
 
@@ -221,6 +263,14 @@ body{
     width: calc(33.3% - 6px);
     background-color: $Plain-colour;
     text-align: center;
+    vertical-align: middle;
+    display:table;
+}
+
+.menu_options > a > div{
+    vertical-align:middle;
+    display:table-cell;
+   
 }
 
 .menu_options > a:hover,
@@ -228,7 +278,6 @@ body{
 .food_menu > a:hover,
 .default-menu > a:hover {
     background-color: darken($Plain-colour, 2%)
-
 }
 
 
@@ -269,11 +318,13 @@ body{
 
 .default-menu > a {
     height: 200px;
-    width:calc(100% - 16px);
-    margin-bottom: 4px;
+    width: calc(100% - 16px);
+    margin-bottom: 8px;
     background-color: $Plain-colour;
     text-decoration: none;
     padding: 10px 0 10px 8px;
+    box-shadow: $btn-shadow;
+    border-radius: 4px;
 }
 
 .default-menu > a > p,
@@ -311,12 +362,22 @@ body{
     margin-top: 8px;
 }
 
+.margin-top-10 {
+    margin-top: 10px
+}
+
+
 .margin-top-12 {
     margin-top: 12px
 }
 
 .margin-top-14 {
     margin-top: 14px;
+}
+
+.margin-top-20 {
+    margin-top: 20px
+
 }
 
 .margin-top-0{
@@ -446,3 +507,5 @@ body{
     color: $Primary-colour;
 
 }
+
+//back

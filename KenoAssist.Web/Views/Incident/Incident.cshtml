@@ -25,8 +25,8 @@
                         <div class="details-right">
 
                     
-    <p class="title margin-top-12">Time</p>
-            <p>@Model.Date.ToString("t")</p>
+    <img class="small-icon title margin-top-12" src="../images/app_icons/time.svg">    
+            <span>@Model.Date.ToString("t")</span>
 
         </div>
 
@@ -46,10 +46,15 @@
     <p class="title">Evidence</p>
 
             <div class="row">
-                @foreach(var image in Model.PhotoUrl){
+                @{
+                int i = 1;
+                foreach(var image in Model.PhotoUrl){
   <div class="column">
-    <img src="@Url.Content(image)" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-  </div>}
+    <img src="@Url.Content(image)" style="width:100%" onclick="openModal();currentSlide(@i)" class="hover-shadow cursor">
+  </div>
+                 i++;
+                }
+               }
                 </div>
 
 
@@ -58,6 +63,7 @@
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
+                    
                      @foreach(var image in Model.PhotoUrl){
     <div class="mySlides">
                         
