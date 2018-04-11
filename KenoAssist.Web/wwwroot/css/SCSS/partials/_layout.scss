@@ -59,7 +59,7 @@ body{
 // Spacing
 
 .content-margin {
-    width: calc(100% - 8px);
+    width: calc(100% - 16px);
     margin: 0 auto;
     margin-top: 68px;
     display: block
@@ -125,6 +125,7 @@ body{
     top: 0px;
     background-color: $Primary-colour;
     height: 60px;
+     z-index: 100;
 }
 
 .heading > h1 {
@@ -169,7 +170,6 @@ body{
 .vertical_align {
     display: flex;
     align-items: center;
-    //justify-content: center;
     vertical-align: middle;
     height: 100%;
     width: 20%;
@@ -192,10 +192,18 @@ body{
 .details-left {
     flex: 0 1 auto;
     width: 150px;
-    height: 100px;
     position: absolute;
     left: 8px;
-    display:inline-block;
+    vertical-align: middle;
+}
+
+.details-right > img,
+.details-right > svg,
+.details-right > span,
+.details-left > img,
+.details-left > svg,
+.details-left > span {
+    vertical-align: middle
 
 }
 
@@ -207,6 +215,7 @@ body{
     right: 0;
     text-align: right;
     margin-right: 8px;
+    vertical-align: middle;
 
 }
 
@@ -401,11 +410,12 @@ body{
 
 // incident report
 
-.background_container{
-    margin-top:60px;
-    padding: 4px;
-    height:calc(100vh - 68px);
+.background_container {
+    margin-top: 60px;
+    padding: 4px 8px 4px 8px;
+    height: calc(100vh - 68px);
     background: $Plain-colour;
+
 }
 
 
@@ -432,7 +442,7 @@ body{
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 101;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -508,4 +518,22 @@ body{
 
 }
 
-//back
+//image cropping
+.thumbnail {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden
+}
+
+.thumbnail img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
+
+}

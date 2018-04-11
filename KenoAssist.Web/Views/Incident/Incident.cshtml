@@ -14,23 +14,26 @@
 
     <div class="content-margin background_container">
 
-                        <div class="details-left">
+                        <div class="details-left margin-top-12">
                     
-<p class="title margin-top-12">Date</p>
+    <img class="small-icon" src="../images/app_icons/calendar.svg"> 
          
- <p>@Model.Date.ToString("d")</p>
+ <span class="title">@Model.Date.ToString("d")</span>
             </div>
 
 
-                        <div class="details-right">
+                        <div class="details-right margin-top-12">
 
                     
-    <img class="small-icon title margin-top-12" src="../images/app_icons/time.svg">    
-            <span>@Model.Date.ToString("t")</span>
+    <img class="small-icon" src="../images/app_icons/time.svg">    
+            <span class="title">@Model.Date.ToString("t")</span>
 
         </div>
 
         <div class="containter_fullpage">
+
+                 <p class="title">Injury</p>
+    <p class="highlight-text">@Model.Injury</p>
 
         <p class="title">Staff Involved</p>
  <ul>
@@ -40,8 +43,6 @@
     </li>
 }
 </ul>
-     <p class="title">Area of Injury</p>
-    <p>@Model.Injury</p>
 
     <p class="title">Evidence</p>
 
@@ -124,7 +125,7 @@ function showSlides(n) {
 }-->
 
     <p class="title margin-top-12">Incident Report</p>
-    <p>@Model.Description</p>
+    <p class="added-lineheight">@Model.Description</p>
     </div>
         
         </div>

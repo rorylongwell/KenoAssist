@@ -32,6 +32,14 @@ h2 {
     font-size:20px;
 }
 
+span.title {
+    color: $Primary-text;
+    font-family: $Paragraph-font;
+    font-size: 12px;
+    margin-left:4px;
+    
+}
+
 
 //menu
 .menu_options > a,
@@ -45,16 +53,25 @@ h2 {
 
 //placeholder text
 .opacity-text {
-    color: $Opacity-text;
+     color: lighten($Primary-text,15%);
 }
 
 //classes
 
-.title{
+.title {
     font-size: 12px;
+    color: lighten($Primary-text,20%);
 }
 .explaining-form-field{
     font-size:12px;
     margin: 10px 0 4px 0;
 } 
 
+.highlight-text{
+    color: $Primary-colour;
+    font-weight:700;
+
+}
+
+.added-lineheight{
+    line-height:24px;}
