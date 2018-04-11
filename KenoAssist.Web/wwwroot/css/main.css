@@ -528,7 +528,7 @@ body {
   right: 25px;
   font-size: 35px;
   font-weight: bold;
-  transition: 0.6s eas;
+  transition: 0.6s ease;
 }
 
 /* line 474, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
@@ -537,7 +537,7 @@ body {
   color: #009CA6;
   text-decoration: none;
   cursor: pointer;
-  transition: 0.6s eas;
+  transition: 0.6s ease;
 }
 
 /* line 482, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
@@ -658,7 +658,7 @@ span.title {
 /* line 61, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .title {
   font-size: 12px;
-  color: #b3b9bd;
+  color: #a5adb1;
 }
 
 /* line 65, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
@@ -818,30 +818,30 @@ a.button-bottom {
   border-radius: 0;
 }
 
-/* line 130, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 131, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .heading > div > a,
 .button-bottom {
   text-decoration: none;
 }
 
-/* line 138, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 139, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 form > label,
 form > inpit {
   display: block;
 }
 
-/* line 143, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 144, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 form > label {
   font-weight: 700;
   font-size: 12px;
 }
 
-/* line 149, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 150, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .margin-top-40 {
   margin-top: 40px;
 }
 
-/* line 153, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 154, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 input,
 .form-control {
   background-color: #ffffff;
@@ -856,19 +856,31 @@ input,
   box-shadow: inset 0 2px 3px #EAEAEA;
 }
 
-/* line 168, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 169, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .form-control {
   width: calc(100% - 2px);
   height: 46px;
   margin-bottom: 2px;
 }
 
-/* line 174, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 177, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+input.upload-btn {
+  background: url("../../images/app_icons/upload_tur.svg") no-repeat 24px center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* line 185, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+.html5-element {
+  width: calc(100% - 18px);
+}
+
+/* line 189, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 option {
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-/* line 180, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 195, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -878,35 +890,35 @@ option {
   z-index: -1;
 }
 
-/* line 189, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 204, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .inputfile + label {
   display: inline-block;
 }
 
-/* line 193, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 208, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .inputfile:focus + label {
   background-color: #009CA6;
 }
 
-/* line 197, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 212, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 input[type='file'] {
   visibility: hidden;
   display: none;
 }
 
-/* line 202, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 217, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .inputfile + label,
 .button-bottom,
 .fullwidth-ghost-btn {
   cursor: pointer;
 }
 
-/* line 208, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 223, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .inputfile + label * {
   pointer-events: none;
 }
 
-/* line 213, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 228, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .file-uploader {
   width: 100%;
   background: #009CA6;
@@ -918,19 +930,19 @@ input[type='file'] {
   margin: 10px 0 10px 0;
 }
 
-/* line 224, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 239, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .file-uploader:hover {
   background: #006c73;
 }
 
-/* line 228, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 243, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .file-uploader > div {
   text-align: center;
   vertical-align: middle;
   line-height: 40px;
 }
 
-/* line 235, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 250, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .file-uploader > div > svg {
   fill: #ffffff;
   vertical-align: middle;
@@ -939,12 +951,12 @@ input[type='file'] {
   height: 18px;
 }
 
-/* line 243, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 258, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .file-uploader > div > span {
   vertical-align: middle;
 }
 
-/* line 247, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 262, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 textarea.incident-report {
   height: 400px;
   width: calc(100% - 18px);

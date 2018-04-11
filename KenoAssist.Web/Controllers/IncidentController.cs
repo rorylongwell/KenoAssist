@@ -68,7 +68,8 @@ namespace KenoAssist.Web.Controllers
             IncidentReportModel incidentReport = new IncidentReportModel()
             {
                 IncidentId = 1,
-                Injury = "Bruised leg",
+                Injury = "Bruised",
+                InjuryArea = "Leg",
                 StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
                 PhotoUrl = new List<string>() { "~/images/louis1.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
                 Description = "This was an accident",

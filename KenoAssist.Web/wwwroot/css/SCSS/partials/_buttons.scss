@@ -126,6 +126,7 @@ a.button-bottom {
     line-height: 50px;
     border-radius: 0;
 }
+
 //back and button bottom
 .heading > div > a,
 .button-bottom {
@@ -169,6 +170,20 @@ input,
     width: calc(100% - 2px);
     height: 46px;
      margin-bottom: 2px;
+}
+
+//button with images
+
+input.upload-btn {
+    background: url("../../images/app_icons/upload_tur.svg") no-repeat 24px center;
+    margin: 0 auto;
+    cursor: pointer
+
+}
+
+
+.html5-element {
+    width:calc(100% - 18px)
 }
 
 option {
