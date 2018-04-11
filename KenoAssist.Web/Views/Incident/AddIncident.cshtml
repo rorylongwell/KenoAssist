@@ -2,28 +2,29 @@
 
 <div class="page">
     <div class="heading">
-<h1>Add Incident</h1>
+        <div class="vertical_align">
+            <a href="@Url.Action("Incidents", "Incident")"><p class="return">&#10094 back</p></a>
+        </div>
+<h1 class="minus-margin-60">Add Incident</h1>
 </div>
 
      <div class="content-margin-40">
 @using (Html.BeginForm("AddIncident", "Incident", FormMethod.Post)){
   <label>Date</label>
-
-    @Html.TextBoxFor(m => m.Date, new { placeholder = "", @class = "" });
+    @Html.ValidationMessageFor(model => model.Date )   
+    @Html.TextBoxFor(m => m.Date, new { @class = "form-control", type = "date" });
 
       <label>Time</label>
-
-    @Html.TextBoxFor(m => m.Date, new { placeholder = "", @class = "" });
+      @Html.ValidationMessageFor(model => model.Time)   
+    @Html.TextBoxFor(m => m.Time, new { @class = "form-control", type = "time" });
 
      <label>Staff Involved</label>
-
+     @Html.ValidationMessageFor(model => model.StaffNames)  
    
  
 
     for (int i = 0; i < Model.StaffNames.Count; i++)
     {
-<!--        @Html.Hidden("StaffNames.Index", i)
-        @Html.TextBoxFor(m => Model.StaffNames[i])-->
         @Html.DropDownListFor(m => m.StaffNames, (IEnumerable<SelectListItem>)ViewBag.StaffList, new { id = "ddlStaff", @class = "form-control" })
         <br/>
     }

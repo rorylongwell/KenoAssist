@@ -81,8 +81,11 @@ namespace KenoAssist.Web.Controllers
         public IActionResult AddIncident()
         {
             ViewBag.StaffList = staff;
+
             IncidentReportModel incidentReport = new IncidentReportModel()
             {
+                Date = DateTime.Now.Date,
+                Time = DateTime.Now.TimeOfDay,
                 StaffNames = new List<string>() { "" }
             };
             return View(incidentReport);
@@ -92,20 +95,54 @@ namespace KenoAssist.Web.Controllers
         public IActionResult AddIncident(IncidentReportModel incidentReport,string submitButton)
         {
             ViewBag.StaffList = staff;
+
+            if(incidentReport.StaffNames.Count < 1){
+                ModelState.AddModelError("StaffNames","Select staff member");
+            }
+            else if(incidentReport.StaffNames.Contains("0")){
+                ModelState.AddModelError("StaffNames", "Select staff member");
+            }
+
+            if (incidentReport.Date == new DateTime())
+            {
+                ModelState.AddModelError("DateOfIncident", "Select date");
+            }
+
+            if (incidentReport.Time == new TimeSpan())
+            {
+                ModelState.AddModelError("TimeOfIncident", "Select time");
+            }
+
             switch (submitButton)
             {
                 case "Add Staff":                    
                     incidentReport.StaffNames.Add("");
                     return View(incidentReport);
                 case "Next":
+                    if (!ModelState.IsValid)
+                        return View(incidentReport);
+
+                    ViewBag.UploadEnabled = false;
                     return View("AddInjury",incidentReport);
                 default:
                     return View();
             }
         }
+
         [HttpPost]
         public IActionResult AddInjury(IncidentReportModel incidentReport, string submitButton)
         {
+            if (string.IsNullOrEmpty(incidentReport.Injury))
+            {
+                ModelState.AddModelError("Date", "Enter injury");
+            }
+
+            if (string.IsNullOrEmpty(incidentReport.InjuryArea))
+            {
+                ModelState.AddModelError("Time", "Enter injury areas");
+            }
+
+
             switch (submitButton)
             {
                 case "Upload":
@@ -133,7 +170,11 @@ namespace KenoAssist.Web.Controllers
 
                     return View(incidentReport);
                 case "Next":
+                    if (!ModelState.IsValid)
+                        return View(incidentReport);
+
                     ViewBag.Images = incidentReport.PhotoUrl.Count;
+                    ViewBag.UploadEnabled = incidentReport.PhotoUrl.Count > 0;
                     return View("IncidentReport", incidentReport);
                 default:
                     return View();
@@ -143,6 +184,7 @@ namespace KenoAssist.Web.Controllers
         [HttpPost]
         public IActionResult IncidentReport(IncidentReportModel incidentReport)
         {
+            incidentReport.Date = incidentReport.Date + incidentReport.Time;
             return View("Incident", incidentReport);
         }
 

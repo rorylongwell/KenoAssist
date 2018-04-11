@@ -1,29 +1,33 @@
 ﻿<Properties StartupConfiguration="{9B32D2F4-CB4F-44D0-8406-37C289FF64AC}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Views/FoodAndDrink/Menu.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Models/IncidentReportModel.cs">
     <Files>
-      <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml" Line="4" Column="1" />
       <File FileName="KenoAssist.Web/Views/Staff/Clients.cshtml" Line="23" Column="7" />
-      <File FileName="KenoAssist.Web/Views/Incident/AddInjury.cshtml" Line="3" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Incident/AddInjury.cshtml" Line="36" Column="55" />
       <File FileName="Keno.Models/ClientFoodViewModel.cs" Line="5" Column="22" />
       <File FileName="KenoAssist.Web/Models/DrinkModel.cs" Line="6" Column="8" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Drink.cshtml" Line="14" Column="10" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Drink.cshtml" Line="1" Column="1" />
       <File FileName="KenoAssist.Web/Models/DrinkIntakeModel.cs" Line="11" Column="35" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Index.cshtml" Line="28" Column="1" />
-      <File FileName="Keno.Common/Constants.cs" Line="7" Column="11" />
-      <File FileName="KenoAssist.Web/Controllers/FoodAndDrinkController.cs" Line="186" Column="1" />
-      <File FileName="KenoAssist.Web/Models/AddFoodModel.cs" Line="10" Column="30" />
-      <File FileName="KenoAssist.Web/Models/FoodCheckBoxModel.cs" Line="10" Column="1" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Food.cshtml" Line="17" Column="10" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFoodMenu.cshtml" Line="2" Column="1" />
-      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml" Line="12" Column="28" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFood.cshtml" Line="4" Column="1" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Menu.cshtml" Line="17" Column="25" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Keno.Common/Constants.cs" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Controllers/FoodAndDrinkController.cs" Line="182" Column="6" />
+      <File FileName="KenoAssist.Web/Models/AddFoodModel.cs" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Models/FoodCheckBoxModel.cs" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Food.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFoodMenu.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFood.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Menu.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Controllers/IncidentController.cs" Line="113" Column="65" />
+      <File FileName="KenoAssist.Web/Models/IncidentReportModel.cs" Line="16" Column="39" />
+      <File FileName="KenoAssist.Web/Models/IncidentModel.cs" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml" Line="37" Column="5" />
+      <File FileName="KenoAssist.Web/Views/Incident/AddIncident.cshtml" Line="19" Column="33" />
+      <File FileName="KenoAssist.Web/Views/Incident/IncidentReport.cshtml" Line="14" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/Controllers/IncidentController.cs" relfile="KenoAssist.Web/Controllers/IncidentController.cs" line="136" column="1" />
       <Breakpoint file="/Users/rorylongwell/Projects/KenoAssist/KenoAssist.API/Controllers/ClientController.cs" relfile="KenoAssist.API/Controllers/ClientController.cs" line="22" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

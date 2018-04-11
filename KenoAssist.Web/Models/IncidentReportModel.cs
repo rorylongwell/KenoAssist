@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace KenoAssist.Web.Models
 {
@@ -12,6 +13,6 @@ namespace KenoAssist.Web.Models
         public List<string> PhotoUrl { get; set; } 
         public string Description { get; set; }
         public DateTime Date { get; set; }
-        public DateTime Time { get; set; }
+        public TimeSpan Time { get; set; }
     }
 }
