@@ -1,0 +1,539 @@
+// Mixin
+$Spacing-4: 4px;
+$Spacing-10: 10px;
+$Spacing-15: 15px;
+$Spacing-20: 20px; 
+$Spacing-30: 30px;
+
+// border radius
+$border-radius: 4px;
+
+//vertical align
+.vertical-align {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    display:flex;
+}
+
+.vertical-align > div {
+    vertical-align: middle;
+}
+
+body{
+    background-color:$bg-colour;
+    }
+
+.gradient {
+    height: 100vh;
+    background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient( rgba(92,184,178,0.80), rgba(27,54,93,0.80) ),
+    /* bottom, image */
+    url(../images/background_medium.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+// Image Sizes
+
+.gradient > img {
+    width: 150px;
+    margin-bottom: 60px;
+  
+}
+
+.small-icon{
+    width:24px;
+}
+
+// Spacing
+
+.content-margin {
+    width: calc(100% - 16px);
+    margin: 0 auto;
+    margin-top: 68px;
+    display: block
+
+}
+
+.content-margin-40{
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    margin-top: 98px;
+    display: block;
+    overflow:hidden;
+}
+
+//column
+
+.client-list > a {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 8px;
+    background-color: $Plain-colour;
+    box-shadow: $btn-shadow;
+    text-decoration: none;
+    height: 130px;
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: $border-radius;
+}
+
+.client-list > a > div > p {
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.client-list > a > div > p:first-child {
+    padding-bottom: 10px;
+
+}
+
+.client-list > a > div > p:last-child {
+    font-weight: 400;
+
+}
+
+.client-list > a > div {
+    margin: 0 20px 0 0;
+
+}
+
+.client-list > a > img {
+    height: 90px;
+    margin: 0 20px 0 20px;
+
+}
+
+//header
+.heading {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: $Primary-colour;
+    height: 60px;
+     z-index: 100;
+}
+
+.heading > h1 {
+    font-size:16px;
+    height: 60px;
+    color: $Plain-colour;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.minus-margin-60 {
+    margin-top: -60px;
+}
+
+
+.heading > a >img {
+    float: right;
+    display: flex;
+}
+
+.heading > a > img {
+    margin-top: -44px;
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+
+}
+
+.return {
+    display: flex;
+    vertical-align: center;
+    color: white;
+    margin-left: 6px;
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+     //flex-direction: row;
+}
+
+.vertical_align {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 20%;
+    margin-left: 6px;
+}
+
+.float-left {
+    display: flex;
+    justify-content: flex-start
+
+}
+
+.float-right {
+     flex: 0 1 auto;
+      width: 100px;
+      height: 100px;
+      margin-left: auto;  
+}
+
+.details-left {
+    flex: 0 1 auto;
+    width: 150px;
+    position: absolute;
+    left: 8px;
+    vertical-align: middle;
+}
+
+.details-right > img,
+.details-right > svg,
+.details-right > span,
+.details-left > img,
+.details-left > svg,
+.details-left > span {
+    vertical-align: middle
+
+}
+
+
+.details-right {
+    flex: 0 1 auto;
+    width: 50%;
+    margin-left: auto;
+    right: 0;
+    text-align: right;
+    margin-right: 8px;
+    vertical-align: middle;
+
+}
+
+//keno Homepage
+
+.page {
+    height: calc(100vh - 100px);
+    overflow:initial;
+}
+
+.menu_options {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+//menu icons
+.menu-icons {
+    width: 26%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px
+
+}
+
+.keno_client {
+    height: 44%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+}
+
+.keno_client > h2 {
+    display: block;
+    color: darken($Primary-text, 15%);
+    font-weight:700;
+}
+
+.keno_client > img {
+    height: 140px;
+}
+
+.menu_options > a {
+    height: 33.3%;
+    width: calc(33.3% - 6px);
+    background-color: $Plain-colour;
+    text-align: center;
+    vertical-align: middle;
+    display:table;
+}
+
+.menu_options > a > div{
+    vertical-align:middle;
+    display:table-cell;
+   
+}
+
+.menu_options > a:hover,
+.client-list > a:hover,
+.food_menu > a:hover,
+.default-menu > a:hover {
+    background-color: darken($Plain-colour, 2%)
+}
+
+
+
+// food and drink
+
+.food_menu {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.food_menu > a {
+    height: 50%;
+    width: calc(50% - 6px);
+    background-color: $Plain-colour;
+    text-align: center;
+}
+
+.section_page {
+    height: 100vh;
+}
+
+//incidents and injuries
+
+.default-menu {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4px;
+    display: flex;
+    justify-content: flex-start; /* adjustment */
+    position: relative;
+}
+
+.default-menu > a {
+    height: 200px;
+    width: calc(100% - 16px);
+    margin-bottom: 8px;
+    background-color: $Plain-colour;
+    text-decoration: none;
+    padding: 10px 0 10px 8px;
+    box-shadow: $btn-shadow;
+    border-radius: 4px;
+}
+
+.default-menu > a > p,
+.default-menu > a > p,
+.details-left,
+.details-right,
+.title {
+    margin-bottom: 4px
+}
+
+.title{
+    margin:24px 0 8px 0;
+}
+.margin-top-4 {
+    margin-top: 4px
+
+}
+
+.margin-bottom-4 {
+    margin-bottom: 4px;
+
+}
+
+.margin-left-4 {
+    margin-left: 4px;
+
+}
+
+.margin-right-4 {
+    margin-right: 4px;
+
+}
+
+.margin-top-8 {
+    margin-top: 8px;
+}
+
+.margin-top-10 {
+    margin-top: 10px
+}
+
+
+.margin-top-12 {
+    margin-top: 12px
+}
+
+.margin-top-14 {
+    margin-top: 14px;
+}
+
+.margin-top-20 {
+    margin-top: 20px
+
+}
+
+.margin-top-0{
+    margin-top: 0;
+}
+
+.fifty_width{
+    width:49%;
+}
+
+.containter_fullpage{
+    margin: 0 4px 0 4px;
+}
+
+//imgs
+
+.injury_img{
+    width: calc(33.3% - 2.6px);
+    margin: 8px 0 16px 0;
+}
+
+// incident report
+
+.background_container {
+    margin-top: 60px;
+    padding: 4px 8px 4px 8px;
+    height: calc(100vh - 68px);
+    background: $Plain-colour;
+
+}
+
+
+
+
+//image viewer
+
+.row > .column {
+     padding: 0 4px 0 0;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.column {
+    float: left;
+    width: calc(33.3% - 4px);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+     background-color: rgba(0,0,0,0.8);
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+     transition: 0.6s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: $Primary-colour;
+    text-decoration: none;
+    cursor: pointer;
+     transition: 0.6s ease;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    color: $Primary-colour;
+
+}
+
+//image cropping
+.thumbnail {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden
+}
+
+.thumbnail img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
+
+}
