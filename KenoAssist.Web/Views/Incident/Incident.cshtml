@@ -18,7 +18,7 @@
                     
     <img class="small-icon" src="../images/app_icons/calendar.svg"> 
          
- <span class="title">@Model.Date.ToString("d")</span>
+ <span class="title">@Common.GetDayName((DateTime)Model.Date)</span>
             </div>
 
 
@@ -26,7 +26,7 @@
 
                     
     <img class="small-icon" src="../images/app_icons/time.svg">    
-            <span class="title">@Model.Date.ToString("t")</span>
+            <span class="title">@Common.GetTimeString((DateTime)Model.Date)</span>
 
         </div>
 
@@ -44,6 +44,8 @@
 }
 </ul>
 
+ @if(Model.PhotoUrl != null){
+if(Model.PhotoUrl.Count > 0){                
     <p class="title">Evidence</p>
 
             <div class="row">
@@ -60,7 +62,8 @@
 
 
 <!-- put here -->
-
+      
+            
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
@@ -77,6 +80,8 @@
 
   </div>
 </div>
+            }
+}
                     
 <script>
 function openModal() {
@@ -117,16 +122,14 @@ function showSlides(n) {
 }
 </script>
 
-
-            
-        
-   <!-- @foreach(var image in Model.PhotoUrl){
-    <img class="injury_img" src="@Url.Content(image)"/>
-}-->
-
     <p class="title margin-top-12">Incident Report</p>
     <p class="added-lineheight">@Model.Description</p>
     </div>
         
         </div>
+
+        @if(ViewBag.IsForm){
+        <a href="@Url.Action("Incidents", "Incident")" class="button-bottom">Done</a>  
+    }
+    
     </div>

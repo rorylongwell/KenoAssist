@@ -36,9 +36,13 @@
   @Html.ValidationMessageFor(model => model.InjuryArea) 
   @Html.TextBoxFor(m => m.InjuryArea, new { placeholder = "", @class = "" });
 
+
+  <label>Include Photos</label>
+  <input type="checkbox" onclick="toggleImages()"/>
+        
+        
+  <div id="imageDiv" style="display:none">      
   <label>Photo Evidence</label>
-
-
 
     <input type="file" name="file-1[] files" id="file-1" class="inputfile inputfile-1"data-multiple-caption="{count} files selected" multiple />
                     <label for="file-1" class="file-uploader">
@@ -56,7 +60,7 @@
         </label>
 
          
-   if(Model.PhotoUrl != null){
+   @if(Model.PhotoUrl != null){
   foreach(var image in Model.PhotoUrl){
   <div class="column">
     <img src="@Url.Content(image)" style="width:100%"  class="hover-shadow cursor">
@@ -80,6 +84,8 @@
                 </label>
         </button>
 
+     </div>
+
 
 <input type="submit" name="submitButton" value="Next" class="button-bottom" />
 }        </div>
@@ -98,3 +104,16 @@
         });
 
         </script>
+
+    <script>
+
+    function toggleImages() {
+    var x = document.getElementById("imageDiv");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}    
+        
+    </script>

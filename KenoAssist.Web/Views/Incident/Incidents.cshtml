@@ -1,6 +1,6 @@
 ﻿<div class="page">
 
-            @model IList<IncidentModel>
+            @model IList<IncidentReportModel>
     <div class="heading">
 
           <div class="vertical_align">
@@ -10,26 +10,39 @@
             </div>
 
 <h1 class="minus-margin-60">Incidents and Injuries</h1>
+</div>
 
-            <div class="margin-top-4 default-menu">
+
+     <br/>
+    <br/>
+     <br/>
+     <br/>
+       <div class="margin-top-4 default-menu">
+
+        @{
+                string profileUrl = ViewBag.ProfileImage;
+                <img src="@Url.Content(profileUrl)" style="width:50px">
+                }
+<p>@ViewBag.Name</p>
+            
+ 
 @foreach(var incident in Model){
-<a href="@Url.Action("Incident", "Incident", new { incidentId = incident.Id })">
-
+<a href="@Url.Action("Incident", "Incident", new { incidentId = incident.IncidentId })">
+@{
+                string url = incident.PhotoUrl.FirstOrDefault();
+                <img src="@Url.Content(url)" style="width:50px">
+                }
                 <div class="details-left">
                     
-<p class="title margin-top-0 margin-bottom-4">Date</p>
+ <p class="highlight-text">@incident.Injury, @incident.InjuryArea</p>
          
                      
-    <p>@incident.Date.ToString("d")</p>
-                    
-                    </div>
+                       </div>
 
-                <div class="details-right">
-
+                <div class="details-right">  
+                     <p>@Common.GetDayName((DateTime)incident.Date)</p>
+             
                     
-    <p class="title margin-top-0 margin-bottom-4">Time</p>
-            
-                <p>@incident.Date.ToString("t")</p>
                 </div>
                 
     <p class="margin-top-14 title">Incident</p>
