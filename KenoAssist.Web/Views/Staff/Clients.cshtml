@@ -9,9 +9,9 @@
 
 <div class="client-list content-margin">
 @foreach(var client in Model){
-<a href="@Url.Action("Client", "Client")">
+<a href="@Url.Action("Client", "Client", new {id= client.Id})">
         
-           <img src="../images/account_imgs/male_1.png"/>
+           <img src="@Url.Content(client.ImageUrl)"/>
 
         <div>
     <p>@client.Forename @client.Surname</p>
