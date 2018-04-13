@@ -7,24 +7,30 @@
 
 
      <div class="content-margin-40">
-@using (Html.BeginForm("IncidentReport", "Incident", FormMethod.Post)){
+@using (Html.BeginForm("IncidentReport", "Incident", new { isForm = true}, FormMethod.Post)){
 
  @Html.HiddenFor(m => m.IncidentId)
- @Html.HiddenFor(m => m.StaffNames)
  @Html.HiddenFor(m => m.Date)
  @Html.HiddenFor(m => m.Time)
  @Html.HiddenFor(m => m.Injury)
  @Html.HiddenFor(m => m.InjuryArea)
 
-for(int i = 0; i < Model.PhotoUrl.Count; i++)
+        if(Model.PhotoUrl != null){
+            for(int i = 0; i < Model.PhotoUrl.Count; i++)
+            {
+                @Html.HiddenFor(model => Model.PhotoUrl[i])
+            }
+        }
+
+for(int i = 0; i < Model.StaffNames.Count; i++)
 {
-    @Html.HiddenFor(model => Model.PhotoUrl[i])
+    @Html.HiddenFor(model => Model.StaffNames[i])
 }
 
   <label>Incident Report</label>
 
    <p class="explaining-form-field">Please enter as much detail as possible regarding how the incident happened.</p>
-
+   @Html.ValidationMessageFor(model => model.Description)
   @Html.TextAreaFor(m => m.Description, new { placeholder = "", @class = "incident-report" });
 
   <input type="submit" name="submitButton" value="Next"  class="button-bottom"/>

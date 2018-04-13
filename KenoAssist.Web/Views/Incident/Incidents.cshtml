@@ -40,10 +40,8 @@
                        </div>
 
                 <div class="details-right">  
-                @{
-                string date = KenoAssist.Web.Helper.Common.GetDayName(incident.Date);
-                     <p>@date</p>
-                 }
+                     <p>@Common.GetDayName((DateTime)incident.Date)</p>
+             
                     
                 </div>
                 

@@ -91,9 +91,9 @@ namespace KenoAssist.Web.Controllers
 
         public IEnumerable<SelectListItem> staff = new List<SelectListItem>()
         {
-            new SelectListItem { Text = "Select Staff", Value = "0" },
-            new SelectListItem { Text = "Joe Bloggs", Value = "1" },
-            new SelectListItem { Text = "Jane Doe", Value = "2" },
+            new SelectListItem { Text = "Select Staff", Value = "Select Staff" },
+            new SelectListItem { Text = "Joe Bloggs", Value = "Joe Bloggs" },
+            new SelectListItem { Text = "Jane Doe", Value = "Jane Doe" },
         };
 
         // GET: /<controller>/
@@ -110,6 +110,7 @@ namespace KenoAssist.Web.Controllers
 
         public IActionResult Incident(long incidentId)
         {
+            ViewBag.IsForm = false;
             IncidentReportModel incidentReport = incidentReports.Where(i => i.IncidentId == incidentId).FirstOrDefault();
             return View(incidentReport);
         }
@@ -139,12 +140,12 @@ namespace KenoAssist.Web.Controllers
                 ModelState.AddModelError("StaffNames", "Select staff member");
             }
 
-            if (incidentReport.Date == new DateTime())
+            if (incidentReport.Date == null)
             {
                 ModelState.AddModelError("Date", "Select date");
             }
 
-            if (incidentReport.Time == new TimeSpan())
+            if (incidentReport.Time == null)
             {
                 ModelState.AddModelError("Time", "Select time");
             }
@@ -209,8 +210,16 @@ namespace KenoAssist.Web.Controllers
                     if (!ModelState.IsValid)
                         return View(incidentReport);
 
-                    ViewBag.Images = incidentReport.PhotoUrl.Count;
-                    ViewBag.UploadEnabled = incidentReport.PhotoUrl.Count > 0;
+                    if(incidentReport.PhotoUrl != null){
+                        ViewBag.Images = incidentReport.PhotoUrl.Count;
+                        ViewBag.UploadEnabled = incidentReport.PhotoUrl.Count > 0;
+                    }
+                    else
+                    {
+                        ViewBag.Images = 0;
+                        ViewBag.UploadEnabled = false;
+                    }
+
                     return View("IncidentReport", incidentReport);
                 default:
                     return View();
@@ -218,8 +227,17 @@ namespace KenoAssist.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult IncidentReport(IncidentReportModel incidentReport)
+        public IActionResult IncidentReport(IncidentReportModel incidentReport, bool isForm = false)
         {
+            if (string.IsNullOrEmpty(incidentReport.Description))
+            {
+                ModelState.AddModelError("Description", "Enter a report");
+            }
+
+            if (!ModelState.IsValid)
+                return View(incidentReport);
+
+            ViewBag.IsForm = isForm;
             incidentReport.Date = incidentReport.Date + incidentReport.Time;
             return View("Incident", incidentReport);
         }

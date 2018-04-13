@@ -25,5 +25,15 @@ namespace KenoAssist.Web.Helper
             return result;
 
         }
+
+        public static string GetTimeString(DateTime date)
+        {
+            string result = string.Empty;
+
+            result = date.ToString("t");
+
+            return result;
+
+        }
     }
 }
