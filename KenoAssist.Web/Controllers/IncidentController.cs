@@ -16,11 +16,76 @@ namespace KenoAssist.Web.Controllers
     public class IncidentController : Controller
     {
         private readonly IHostingEnvironment _environment;
+        private List<IncidentReportModel> incidentReports; 
 
         // Constructor
         public IncidentController(IHostingEnvironment IHostingEnvironment)
         {
             _environment = IHostingEnvironment;
+
+            incidentReports = new List<IncidentReportModel>()
+            {
+                new IncidentReportModel()
+                {
+                IncidentId = 1,
+                Injury = "Bruising",
+                InjuryArea = "top of right foot",
+                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                Description = "This was an accident",
+                Date = DateTime.Now,
+                },
+                new IncidentReportModel()
+                {
+                IncidentId = 2,
+                Injury = "Bruising",
+                InjuryArea = "top of right arm",
+                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                Description = "This was an accident",
+                    Date = DateTime.Now.AddDays(-1),
+                },
+                new IncidentReportModel()
+                {
+                IncidentId = 3,
+                Injury = "Bruising",
+                InjuryArea = "bottom left leg",
+                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                Description = "This was an accident",
+                    Date = DateTime.Now.AddDays(-3),
+                },
+                new IncidentReportModel()
+                {
+                IncidentId = 4,
+                Injury = "Cut",
+                InjuryArea = "right side of chest",
+                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                Description = "This was an accident",
+                    Date = DateTime.Now.AddDays(-4),
+                },
+                new IncidentReportModel()
+                {
+                IncidentId = 5,
+                Injury = "Swelling",
+                InjuryArea = "right ear",
+                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                Description = "This was an accident",
+                    Date = DateTime.Now.AddDays(-4),
+                },
+                new IncidentReportModel()
+                {
+                IncidentId = 6,
+                Injury = "Bruising",
+                InjuryArea = "top right of foot",
+                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                Description = "This was an accident",
+                    Date = DateTime.Now.AddDays(-6),
+                },
+            };
         }
 
 
@@ -34,48 +99,18 @@ namespace KenoAssist.Web.Controllers
         // GET: /<controller>/
         public IActionResult Incidents()
         {
-            List<IncidentModel> incidents = new List<IncidentModel>() 
-            { 
-                new IncidentModel()
-                {
-                    Id = 1,
-                    Description = "John fell",
-                    Date = DateTime.Now
-                },
+            
 
-                new IncidentModel()
-                {
-                    Id = 2,
-                    Description = "John cut himself",
-                    Date = DateTime.Now
-                },
+            ViewBag.ProfileImage = "~/images/account_imgs/male_1.png";
+            ViewBag.Name = "John Ellison, Room 12";
 
-                new IncidentModel()
-                {
-                    Id = 3,
-                    Description = "John wasn't feeling well",
-                    Date = DateTime.Now
 
-                },
-
-            };
-
-            return View(incidents);
+            return View(incidentReports);
         }
 
         public IActionResult Incident(long incidentId)
         {
-            IncidentReportModel incidentReport = new IncidentReportModel()
-            {
-                IncidentId = 1,
-                Injury = "Bruised",
-                InjuryArea = "Leg",
-                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                PhotoUrl = new List<string>() { "~/images/louis1.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
-                Description = "This was an accident",
-                Date = DateTime.Now,                  
-            };
-
+            IncidentReportModel incidentReport = incidentReports.Where(i => i.IncidentId == incidentId).FirstOrDefault();
             return View(incidentReport);
         }
 
@@ -85,8 +120,8 @@ namespace KenoAssist.Web.Controllers
 
             IncidentReportModel incidentReport = new IncidentReportModel()
             {
-                Date = DateTime.Now.Date,
-                Time = DateTime.Now.TimeOfDay,
+                //Date = DateTime.Now.Date,
+                //Time = DateTime.Now.TimeOfDay,
                 StaffNames = new List<string>() { "" }
             };
             return View(incidentReport);
@@ -106,12 +141,12 @@ namespace KenoAssist.Web.Controllers
 
             if (incidentReport.Date == new DateTime())
             {
-                ModelState.AddModelError("DateOfIncident", "Select date");
+                ModelState.AddModelError("Date", "Select date");
             }
 
             if (incidentReport.Time == new TimeSpan())
             {
-                ModelState.AddModelError("TimeOfIncident", "Select time");
+                ModelState.AddModelError("Time", "Select time");
             }
 
             switch (submitButton)
@@ -135,12 +170,12 @@ namespace KenoAssist.Web.Controllers
         {
             if (string.IsNullOrEmpty(incidentReport.Injury))
             {
-                ModelState.AddModelError("Date", "Enter injury");
+                ModelState.AddModelError("Injury", "Enter injury");
             }
 
             if (string.IsNullOrEmpty(incidentReport.InjuryArea))
             {
-                ModelState.AddModelError("Time", "Enter injury areas");
+                ModelState.AddModelError("InjuryArea", "Enter injury areas");
             }
 
 
@@ -188,6 +223,5 @@ namespace KenoAssist.Web.Controllers
             incidentReport.Date = incidentReport.Date + incidentReport.Time;
             return View("Incident", incidentReport);
         }
-
     }
 }

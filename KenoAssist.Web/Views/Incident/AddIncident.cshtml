@@ -11,12 +11,12 @@
      <div class="content-margin-40">
 @using (Html.BeginForm("AddIncident", "Incident", FormMethod.Post)){
   <label>Date</label>
-    @Html.ValidationMessageFor(model => model.Date )   
-    @Html.TextBoxFor(m => m.Date, new { @class = "form-control html5-element", type = "date" });
+    @Html.ValidationMessageFor(model => model.Date)   
+    @Html.TextBoxFor(m => m.Date, new { @class = "form-control html5-element", type = "date" })
 
       <label>Time</label>
       @Html.ValidationMessageFor(model => model.Time)   
-    @Html.TextBoxFor(m => m.Time, new { @class = "form-control html5-element", type = "time" });
+    @Html.TextBoxFor(m => m.Time, new { @class = "form-control html5-element", type = "time"})
 
      <label>Staff Involved</label>
      @Html.ValidationMessageFor(model => model.StaffNames)  
