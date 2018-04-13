@@ -5,7 +5,21 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
+                <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="https://use.typekit.net/tzu6iyh.css">
+
+        <script>
+  (function(d) {
+    var config = {
+      kitId: 'tzu6iyh',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+        
+        <meta name="referrer" content="no-referrer"/> 
 
     <script type="text/javascript">
         (function(document,navigator,standalone) {
@@ -38,16 +52,9 @@
     <title>@ViewData["Title"] - KenoAssist.Web</title>
 
     <environment include="Development">
-        <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />-->
-       <!-- <link rel="stylesheet" href="~/css/site.css" />-->
              <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
     </environment>
     <environment exclude="Development">
-<!--        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />-->
-        <!--<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />-->
-
         <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
     </environment>
     <link rel="stylesheet" href="https://use.typekit.net/tzu6iyh.css">

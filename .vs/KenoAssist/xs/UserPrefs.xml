@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{9B32D2F4-CB4F-44D0-8406-37C289FF64AC}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Views/Incident/IncidentReport.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Views/Shared/_Layout.cshtml">
     <Files>
       <File FileName="KenoAssist.Web/Views/Staff/Clients.cshtml" Line="23" Column="7" />
-      <File FileName="KenoAssist.Web/Views/Incident/AddInjury.cshtml" Line="8" Column="64" />
-      <File FileName="KenoAssist.Web/Controllers/IncidentController.cs" Line="223" Column="37" />
+      <File FileName="KenoAssist.Web/Views/Incident/AddInjury.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Controllers/IncidentController.cs" Line="1" Column="1" />
       <File FileName="KenoAssist.Web/Models/IncidentModel.cs" Line="1" Column="1" />
-      <File FileName="KenoAssist.Web/Views/Incident/AddIncident.cshtml" Line="12" Column="69" />
-      <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml" Line="54" Column="100" />
-      <File FileName="KenoAssist.Web/Views/Account/StaffAccount.cshtml" Line="13" Column="2" />
-      <File FileName="KenoAssist.Web/Models/IncidentReportModel.cs" Line="16" Column="25" />
-      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml" Line="136" Column="5" />
-      <File FileName="KenoAssist.Web/Helper/Common.cs" Line="33" Column="38" />
-      <File FileName="KenoAssist.Web/Views/Incident/IncidentReport.cshtml" Line="34" Column="3" />
+      <File FileName="KenoAssist.Web/Views/Incident/AddIncident.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Account/StaffAccount.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Models/IncidentReportModel.cs" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Helper/Common.cs" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Incident/IncidentReport.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Views/Shared/_Layout.cshtml" Line="54" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
