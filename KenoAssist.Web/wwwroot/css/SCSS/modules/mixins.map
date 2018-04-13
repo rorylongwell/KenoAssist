@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../SCSS/modules/mixins.css",
+	"sources": [
+		"../SCSS/modules/mixins.scss"
+	],
+	"sourcesContent": [
+		"﻿@mixin crossBrowser($property, $css) {\n    -webkit-#{$property}: $css;\n    -moz-#{$property}: $css;\n    -o-#{$property}: $css;\n    #{$property}: $css\n}\n"
+	],
+	"mappings": "",
+	"names": []
+}

@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://use.typekit.net/tzu6iyh.css");
 /* line 6, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -603,36 +602,36 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* line 8, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 6, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 p, li, label {
   font-size: 16px;
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-/* line 14, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 12, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 li {
   line-height: 24px;
 }
 
-/* line 18, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 16, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6, p, li, label, placeholder,
 input[type='text'], .form-control {
   color: #7C878E;
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-/* line 24, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 22, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Brandon Grotesque", Helvetica, sans-serif;
   font-size: 22px;
 }
 
-/* line 31, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 29, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 h2 {
   font-size: 20px;
 }
 
-/* line 35, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 33, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 span.title {
   color: #7C878E;
   font-family: "Open Sans", Helvetica, sans-serif;
@@ -640,7 +639,7 @@ span.title {
   margin-left: 4px;
 }
 
-/* line 45, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 43, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .menu_options > a,
 .menu_options > a > div > p,
 .food_menu > a {
@@ -650,30 +649,30 @@ span.title {
   color: #586066;
 }
 
-/* line 55, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 53, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .opacity-text {
   color: #a5adb1;
 }
 
-/* line 61, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 59, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .title {
   font-size: 12px;
   color: #a5adb1;
 }
 
-/* line 65, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 63, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .explaining-form-field {
   font-size: 12px;
   margin: 10px 0 4px 0;
 }
 
-/* line 70, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 68, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .highlight-text {
   color: #009CA6;
   font-weight: 700;
 }
 
-/* line 76, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
+/* line 74, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .added-lineheight {
   line-height: 24px;
 }
