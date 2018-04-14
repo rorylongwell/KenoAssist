@@ -19,5 +19,10 @@ namespace Keno.Common
             Dinner = 3,
             Snack = 4
         }
+        public enum ENotificationType
+        {
+            Incident = 1,
+            Message = 2
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿<div class="page">
+﻿@model IList<NotificationModel>
+
+<div class="page">
  <div class="heading">
 
           <div class="vertical_align">
@@ -9,6 +11,45 @@
 
 <h1 class="minus-margin-60">Staff Account</h1>
 </div>
+
+    <img src="~/images/account_imgs/account_img_nurse.png">
+    <br/>
+    <h2>Emma Willis</h2>
+    <br/>
+    <p>Nurse</p>
+
+
+       <div class="margin-top-4 default-menu">
+    @foreach(var notification in Model)
+    {
+        <!-- Incident notification-->
+        if(notification.NotificationTypeId == 1)
+        {
+            <a href="@Url.Action("RedirectToIncident", "Account")">
+        
+                <p class="highlight-text">Incidents & Injuries</p> 
+                <p>@Common.GetTimeString(notification.Date)</p>
+
+                <p>@notification.Description</p>
+                
+            </a>
+        }
+
+       <!-- Message notification-->
+        if(notification.NotificationTypeId == 2)
+        {
+            <a >
+    
+                <p class="highlight-text">Message from Sophie Louise</p> 
+                <p>@Common.GetTimeString(notification.Date)</p>
+
+                <p>@notification.Description</p>
+            </a>
+        }
+    }
+        </div>
+        
+    
 
  <a href="@Url.Action("Index", "Login")" class="button-bottom">Sign Out</a>   
  </div>
