@@ -1,27 +1,36 @@
 ﻿<div class="page">
     <div class="heading">
 
+    @if(ViewBag.IsStaff)
+        {
+         <div class="vertical_align">
+            <a href="@Url.Action("Clients", "Staff")"><p class="return">&#10094 back</p></a>
+        </div>
+<h1 class="minus-margin-60">KenoAssist</h1>
+        }
+        else
+        {
+        <h1>KenoAssist</h1>
+        }
 
-<h1>KenoAssist</h1>
 
-        <a href="@Url.Action("Index", "Account")"><img src="../images/account_imgs/account_img_nurse.png"
->
+        <a href="@Url.Action("Index", "Account")"><img src="~/images/account_imgs/account_img_nurse.png">
 </a>
     
 </div>
 
 <div class="content-margin keno_client">
 
-     <img src="../images/account_imgs/male_1.png"/>
+     <img src="@Url.Content(ViewBag.Photo)"/>
         <br/>
-     <h2>John Ellison</h2>
+     <h2>@ViewBag.Name</h2>
     </div>
 
     <div class="menu_options">
 <a class="margin-bottom-4 margin-right-4" href="@Url.Action("Index", "FoodAndDrink")">
 
              <div>
-            <img class="menu-icons" src="../images/app_icons/food_water.svg">
+            <img class="menu-icons" src="~/images/app_icons/food_water.svg">
 <p>Food & Beverages</p>
                 </div>
 </a>
@@ -30,7 +39,7 @@
 <a class="margin-bottom-4" href="@Url.Action("Client", "Client")">
 
              <div>
-            <img class="menu-icons" src="../images/app_icons/medication.svg">
+            <img class="menu-icons" src="~/images/app_icons/medication.svg">
 <p>Medication</p>
                 </div>
 </a>
@@ -39,7 +48,7 @@
 <a class="margin-bottom-4 margin-left-4" href="@Url.Action("Incidents", "Incident")">
 
                          <div>
-            <img class="menu-icons" src="../images/app_icons/incidents.svg">
+            <img class="menu-icons" src="~/images/app_icons/incidents.svg">
 <p>Incidents & Injuries</p>
                 </div> 
 </a>
@@ -48,7 +57,7 @@
 <a class="margin-right-4" href="@Url.Action("Client", "Client")">
 
            <div>
-            <img class="menu-icons" src="../images/app_icons/hygiene.svg">
+            <img class="menu-icons" src="~/images/app_icons/hygiene.svg">
 <p>Personal Hygiene</p>
     </div>
 </a>
@@ -56,7 +65,7 @@
 <br/>
 <a href="@Url.Action("Client", "Client")">
            <div>
-            <img class="menu-icons" src="../images/app_icons/messages.svg">
+            <img class="menu-icons" src="~/images/app_icons/messages.svg">
 <p>Messages</p>
     </div>
 </a>
@@ -65,7 +74,7 @@
 
 <a class="margin-left-4" href="@Url.Action("Client", "Client")">
            <div>
-            <img class="menu-icons" src="../images/app_icons/contacts.svg">
+            <img class="menu-icons" src="~/images/app_icons/contacts.svg">
 <p>Contacts</p>
     </div>
 </a>
@@ -74,7 +83,7 @@
 
 <a class="margin-top-4 margin-right-4" href="@Url.Action("Client", "Client")">
            <div>
-            <img class="menu-icons" src="../images/app_icons/sleep.svg">
+            <img class="menu-icons" src="~/images/app_icons/sleep.svg">
 <p>Sleep</p>
     </div>
 </a>
@@ -83,7 +92,7 @@
 
 <a class="margin-top-4" href="@Url.Action("Client", "Client")">
            <div>
-            <img class="menu-icons" src="../images/app_icons/client_record.svg">
+            <img class="menu-icons" src="~/images/app_icons/client_record.svg">
 <p>Client Record</p>
     </div>
 </a>
@@ -92,7 +101,7 @@
 
 <a class="margin-top-4 margin-left-4" href="@Url.Action("Client", "Client")">
            <div>
-            <img class="menu-icons" src="../images/app_icons/camera.svg">
+            <img class="menu-icons" src="~/images/app_icons/camera.svg">
 <p>Camera</p>
     </div>
 </a>

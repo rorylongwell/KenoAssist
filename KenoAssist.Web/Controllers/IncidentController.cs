@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using KenoAssist.Web.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -27,22 +28,22 @@ namespace KenoAssist.Web.Controllers
             {
                 new IncidentReportModel()
                 {
-                IncidentId = 1,
-                Injury = "Bruising",
-                InjuryArea = "top of right foot",
-                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
-                Description = "This was an accident",
-                Date = DateTime.Now,
+                    IncidentId = 1,
+                    Injury = "Bruising",
+                    InjuryArea = "top of right foot",
+                    StaffNames = new List<string>() { "Emma Willis", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/injury_imgs/injury_6/injury6_photo1.jpg"},
+                    Description = "This was an accident",
+                    Date = DateTime.Now,
                 },
                 new IncidentReportModel()
                 {
-                IncidentId = 2,
-                Injury = "Bruising",
-                InjuryArea = "top of right arm",
-                StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
-                Description = "This was an accident",
+                    IncidentId = 2,
+                    Injury = "Bruising",
+                    InjuryArea = "top of right arm",
+                    StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
+                    PhotoUrl = new List<string>() { "~/images/injury_imgs/injury_2/injury2_photo1.jpg" },
+                    Description = "This was an accident",
                     Date = DateTime.Now.AddDays(-1),
                 },
                 new IncidentReportModel()
@@ -51,7 +52,7 @@ namespace KenoAssist.Web.Controllers
                 Injury = "Bruising",
                 InjuryArea = "bottom left leg",
                 StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                    PhotoUrl = new List<string>() { "~/images/injury_imgs/injury_3/injury3_photo1.jpg" },
                 Description = "This was an accident",
                     Date = DateTime.Now.AddDays(-3),
                 },
@@ -61,7 +62,7 @@ namespace KenoAssist.Web.Controllers
                 Injury = "Cut",
                 InjuryArea = "right side of chest",
                 StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                    PhotoUrl = new List<string>() { "~/images/injury_imgs/injury_4/injury4_photo1.jpg" },
                 Description = "This was an accident",
                     Date = DateTime.Now.AddDays(-4),
                 },
@@ -71,7 +72,7 @@ namespace KenoAssist.Web.Controllers
                 Injury = "Swelling",
                 InjuryArea = "right ear",
                 StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                    PhotoUrl = new List<string>() { "~/images/injury_imgs/injury_5/injury5_photo1.jpg"},
                 Description = "This was an accident",
                     Date = DateTime.Now.AddDays(-4),
                 },
@@ -81,7 +82,7 @@ namespace KenoAssist.Web.Controllers
                 Injury = "Bruising",
                 InjuryArea = "top right of foot",
                 StaffNames = new List<string>() { "Joe Bloggs", "Jane Doe" },
-                    PhotoUrl = new List<string>() { "~/images/incident_images/leg_bruise_3.jpg", "~/images/louis2.jpg", "~/images/louis3.jpg" },
+                    PhotoUrl = new List<string>() { "~/images/injury_imgs/injury_1/injury1_photo1.jpg", "~/images/injury_imgs/injury_1/injury1_photo2.jpg" },
                 Description = "This was an accident",
                     Date = DateTime.Now.AddDays(-6),
                 },
@@ -92,17 +93,30 @@ namespace KenoAssist.Web.Controllers
         public IEnumerable<SelectListItem> staff = new List<SelectListItem>()
         {
             new SelectListItem { Text = "Select Staff", Value = "Select Staff" },
-            new SelectListItem { Text = "Joe Bloggs", Value = "Joe Bloggs" },
-            new SelectListItem { Text = "Jane Doe", Value = "Jane Doe" },
+            new SelectListItem { Text = "You- Emma Willis", Value = "Emma Willis" },
+            new SelectListItem { Text = "Cara White", Value = "Cara White" },
+            new SelectListItem { Text = "Carissa Ferguson", Value = "Carissa Ferguson" },
+            new SelectListItem { Text = "David Wright", Value = "David Wright" },
+            new SelectListItem { Text = "Gemma Stewart", Value = "Gemma Stewart" },
+            new SelectListItem { Text = "Hannah Lynn", Value = "Hannah Lynn" },
+            new SelectListItem { Text = "John Brown", Value = "John Brown" },
+            new SelectListItem { Text = "Kimberly Stephens", Value = "Kimberly Stephens" },
+            new SelectListItem { Text = "Laura Brown", Value = "Laura Brown" },
+            new SelectListItem { Text = "Matthew Richards", Value = "Matthew Richards" },
+            new SelectListItem { Text = "Nathan Boyd", Value = "Nathan Boyd" },
+            new SelectListItem { Text = "Paige Allen", Value = "Paige Allen" },
+            new SelectListItem { Text = "Rachael Large", Value = "Rachael Large" },
+            new SelectListItem { Text = "Samantha Blair", Value = "Samantha Blair" },
+            new SelectListItem { Text = "Sammy Ferguson", Value = "Sammy Ferguson" },
+            new SelectListItem { Text = "Tammy McKenna", Value = "Tammy McKenna" },
+            new SelectListItem { Text = "Victoria Ward", Value = "Victoria Ward" },
         };
 
         // GET: /<controller>/
         public IActionResult Incidents()
         {
-            
-
-            ViewBag.ProfileImage = "~/images/account_imgs/male_1.png";
-            ViewBag.Name = "John Ellison, Room 12";
+            ViewBag.ProfileImage = HttpContext.Session.GetString("Photo");
+            ViewBag.Name = string.Format("{0}, {1}",HttpContext.Session.GetString("Name"), HttpContext.Session.GetString("Room"));
 
 
             return View(incidentReports);

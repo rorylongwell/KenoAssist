@@ -1,4 +1,6 @@
 ﻿using System;
+using KenoAssist.Web.Models;
+
 namespace KenoAssist.Web.Helper
 {
     public static class Common
@@ -31,6 +33,20 @@ namespace KenoAssist.Web.Helper
             string result = string.Empty;
 
             result = date.ToString("t");
+
+            return result;
+
+        }
+
+        public static FoodModel MapCheckBoxToFood(FoodCheckBoxModel model){
+
+            var result = new FoodModel()
+            {
+                Id = model.Id,
+                Name = model.Name,
+                FoodTypeId = model.FoodTypeId,
+                PercentageAmount = model.PercentageAmount
+            };
 
             return result;
 

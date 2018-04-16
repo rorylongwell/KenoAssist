@@ -5,17 +5,25 @@
     ViewData["Title"] = "Login";
 }
  <img src="images/Keno_Icon_white_txt.svg"/>
+
+
     
 @using (Html.BeginForm("Login", "Login", FormMethod.Post))
 {
+    if(ViewBag.InvalidLogin)
+    {
+        <p style="color:red">Username or password is incorrect</p>
+    }
+
     <label class="login-page">Username</label>
     <br/>
     @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "login-field" });
     <br/>
     <label class="login-page">Password</label>
     <br/>
-    @Html.TextBoxFor(m => m.Password, new { placeholder = "Password", @class = "login-field" });
+    @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "login-field"  });
     <br/>
     <input type="submit" value="Login" class="login"/>
 }
+    
 <div>

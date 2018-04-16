@@ -1,0 +1,46 @@
+﻿@model IList<FoodCheckBoxModel>
+
+<div class="page">
+
+        <div class="heading">
+        <div class="vertical_align">
+        <a href="@Url.Action("Menu", "FoodAndDrink")"><p class="return">&#10094 back</p></a>
+      </div>
+<h1 class="minus-margin-60">Meal Selection</h1>
+
+</div>
+
+    <br/>
+     <br/>
+     <br/>
+    <br/>
+    
+    @using (Html.BeginForm("MealSelection", "FoodAndDrink", new {Date = ViewBag.Date ,  PageNo = (ViewBag.PageNo + 1)}, FormMethod.Post)){
+    <p>@ViewBag.Date</p>
+    <h2>@ViewBag.PageTitle</h2>
+    <h3>Mains</h3>
+    for (int idx = 0; idx < Model.Count; idx++) {
+        @Html.HiddenFor(t=> Model[idx].Id)
+        @Html.HiddenFor(t=> Model[idx].Name)
+        @Html.HiddenFor(t=> Model[idx].FoodTypeId)
+    
+        if(Model[idx].FoodTypeId == 1){
+        <p>@Model[idx].Name</p>
+        @Html.CheckBoxFor(x=>Model[idx].IsChecked)
+        }
+    }
+    <h3>Sides</h3>
+     for (int idx = 0; idx < Model.Count; idx++) {
+        @Html.HiddenFor(t=> Model[idx].Id)
+        @Html.HiddenFor(t=> Model[idx].Name)
+        @Html.HiddenFor(t=> Model[idx].FoodTypeId)  
+    
+        if(Model[idx].FoodTypeId == 2){
+        <p>@Model[idx].Name</p> 
+        @Html.CheckBoxFor(x=>Model[idx].IsChecked)
+        }
+    }
+
+    <input type="submit" name="submitButton" value="Next" class="button-bottom" />
+    }
+</div>
