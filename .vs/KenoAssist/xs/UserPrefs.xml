@@ -1,19 +1,23 @@
 ﻿<Properties StartupConfiguration="{9B32D2F4-CB4F-44D0-8406-37C289FF64AC}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Views/Account/StaffAccount.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KenoAssist.Web/Helper/Common.cs">
     <Files>
-      <File FileName="KenoAssist.Web/Views/Account/StaffAccount.cshtml" Line="8" Column="66" />
-      <File FileName="KenoAssist.Web/Controllers/AccountController.cs" Line="70" Column="15" />
-      <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml" Line="17" Column="3" />
-      <File FileName="KenoAssist.Web/Helper/Common.cs" Line="29" Column="43" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/Menu.cshtml" Line="12" Column="10" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/MealSelection.cshtml" Line="34" Column="9" />
+      <File FileName="KenoAssist.Web/Controllers/FoodAndDrinkController.cs" Line="301" Column="1" />
       <File FileName="KenoAssist.Web/Controllers/IncidentController.cs" Line="125" Column="54" />
-      <File FileName="KenoAssist.Web/Models/NotificationModel.cs" Line="13" Column="1" />
-      <File FileName="KenoAssist.Web/Controllers/ClientController.cs" Line="25" Column="18" />
-      <File FileName="KenoAssist.Web/Views/Incident/Incident.cshtml" Line="29" Column="76" />
+      <File FileName="KenoAssist.Web/Views/Incident/AddIncident.cshtml" Line="12" Column="1" />
+      <File FileName="KenoAssist.Web/Models/MealSelectionModel.cs" Line="6" Column="9" />
+      <File FileName="KenoAssist.Web/Models/FoodCheckBoxModel.cs" Line="4" Column="18" />
+      <File FileName="KenoAssist.Web/Controllers/LoginController.cs" Line="40" Column="20" />
+      <File FileName="KenoAssist.Web/Helper/SessionExtensions.cs" Line="19" Column="1" />
+      <File FileName="KenoAssist.Web/Helper/Common.cs" Line="43" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/rorylongwell/Projects/KenoAssist/KenoAssist.Web/Controllers/FoodAndDrinkController.cs" relfile="KenoAssist.Web/Controllers/FoodAndDrinkController.cs" line="296" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.KenoAssist.Web PreferredExecutionTarget="MonoDevelop.Default" />

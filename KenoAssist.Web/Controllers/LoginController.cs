@@ -10,9 +10,12 @@ namespace KenoAssist.Web.Controllers
 {
     public class LoginController : Controller
     {
+        private const string PASSWORD = "KenoCares";
+
         [ActionName("Index")]
-        public IActionResult Index()
+        public IActionResult Index(bool invalidLogin = false)
         {
+            ViewBag.InvalidLogin = invalidLogin;
             return View();
         }
 
@@ -20,19 +23,26 @@ namespace KenoAssist.Web.Controllers
         [ActionName("Login")]
         public IActionResult Login(UserLoginViewModel model)
         {
-
-            if(model.Username.ToLower().Equals("staff")){
-                HttpContext.Session.SetString("UserType", "staff");
-                return RedirectToAction("Clients","Staff");
+            if(model.Password != PASSWORD){
+                return RedirectToAction("Index", "Login", new { invalidLogin = true });
             }
 
-            if (model.Username.ToLower().Equals("family"))
+            if (model.Username != null)
             {
-                HttpContext.Session.SetString("UserType", "family");
-                return RedirectToAction("Client", "Client");
+                if (model.Username.ToLower().Equals("staff"))
+                {
+                    HttpContext.Session.SetString("UserType", "staff");
+                    return RedirectToAction("Clients", "Staff");
+                }
+
+                if (model.Username.ToLower().Equals("family"))
+                {
+                    HttpContext.Session.SetString("UserType", "family");
+                    return RedirectToAction("Client", "Client");
+                }
             }
 
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("Index", "Login", new { invalidLogin = true });
         }
     }
 }

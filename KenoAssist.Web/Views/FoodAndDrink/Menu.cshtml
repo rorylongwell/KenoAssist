@@ -57,6 +57,12 @@ foreach(var food in Model.Dinner){
 else{
 <p>No meal selected</p>
 }
-
-     <a class="button-bottom"href="@Url.Action("AddFood", "FoodAndDrink")">Menu Selection</a>
+    @if(ViewBag.IsSubmitted)
+    {
+        <button class="button-bottom"disabled="disabled" >Meal Selection</button>
+    }
+    else
+    {
+        <button class="button-bottom"onclick="location.href='@Url.Action("MealSelection", "FoodAndDrink", new {Date = @ViewBag.CurrentDay, PageNo = 1 })';return false;">Meal Selection</button>
+    }
 <div>
