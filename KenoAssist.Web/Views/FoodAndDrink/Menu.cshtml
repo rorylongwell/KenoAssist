@@ -1,68 +1,71 @@
 ﻿@model FoodIntakeModel
 <div class="page">
-
-        <div class="heading">
+    <div class="heading">
         <div class="vertical_align">
-        <a href="@Url.Action("Index", "FoodAndDrink")"><p class="return">&#10094 back</p></a>
-      </div>
-<h1 class="minus-margin-60">Food Menu</h1>
+            <a href="@Url.Action("Index", "FoodAndDrink")"><p class="return">&#10094 back</p></a>
+        </div>
+        <h1 class="minus-margin-60">Food Menu</h1>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
 
-</div>
-
-    <br/>
-     <br/>
-     <br/>
-    <br/>
-    
-@if(ViewBag.IsSubmitted){
-<p>Menu choices have been submitted to the kitchen, no changes can be made.</p>
-}    
-    
-@if(ViewBag.DayCount > 0){
- <a href="@Url.Action("Menu", "FoodAndDrink", new {addDays=(ViewBag.DayCount - 1)})">&lt;</a> 
-}
-<h2>@ViewBag.CurrentDay</h2>
-<a href="@Url.Action("Menu", "FoodAndDrink", new {addDays=ViewBag.DayCount + 1})">&gt;</a>
-    
-<h3>Breakfast</h3>
-
-@if(Model.Breakfast != null){
-foreach(var food in Model.Breakfast){
-     <p>@food.Name</p>
-}
-}
-else{
-<p>No meal selected</p>
-}
-
-<h3>Lunch</h3>
-
-@if(Model.Lunch != null){
-foreach(var food in Model.Lunch){
-    <p>@food.Name</p>
-}
-}
-else{
-<p>No meal selected</p>
-}
-
-
-<h3>Dinner</h3>
-
-@if(Model.Dinner != null){
-foreach(var food in Model.Dinner){
-    <p>@food.Name</p>
-}
-}
-else{
-<p>No meal selected</p>
-}
-    @if(ViewBag.IsSubmitted)
+    @if (ViewBag.IsSubmitted)
     {
-        <button class="button-bottom"disabled="disabled" >Meal Selection</button>
+        <p>Menu choices have been submitted to the kitchen, no changes can be made.</p>
+    }
+
+    @if (ViewBag.DayCount > 0)
+    {
+        <a href="@Url.Action("Menu", "FoodAndDrink", new {addDays=(ViewBag.DayCount - 1)})">&lt;</a>
+    }
+    <h2>@ViewBag.CurrentDay</h2>
+    <a href="@Url.Action("Menu", "FoodAndDrink", new {addDays=ViewBag.DayCount + 1})">&gt;</a>
+
+    <h3>Breakfast</h3>
+    @if (Model.Breakfast != null)
+    {
+        foreach (var food in Model.Breakfast)
+        {
+            <p>@food.Name</p>
+        }
     }
     else
     {
-        <button class="button-bottom"onclick="location.href='@Url.Action("MealSelection", "FoodAndDrink", new {Date = @ViewBag.CurrentDay, PageNo = 1 })';return false;">Meal Selection</button>
+        <p>No meal selected</p>
     }
-<div>
+    <h3>Lunch</h3>
+    @if (Model.Lunch != null)
+    {
+        foreach (var food in Model.Lunch)
+        {
+            <p>@food.Name</p>
+        }
+    }
+    else
+    {
+        <p>No meal selected</p>
+    }
+
+    <h3>Dinner</h3>
+    @if (Model.Dinner != null)
+    {
+        foreach (var food in Model.Dinner)
+        {
+            <p>@food.Name</p>
+        }
+    }
+    else
+    {
+        <p>No meal selected</p>
+    }
+    @if (ViewBag.IsSubmitted)
+    {
+        <button class="button-bottom" disabled="disabled">Meal Selection</button>
+    }
+    else
+    {
+        <button class="button-bottom" onclick="location.href='@Url.Action("MealSelection", "FoodAndDrink", new {Date = ViewBag.CurrentDay, PageNo = 1 })';return false;">Meal Selection</button>
+    }
+</div>
