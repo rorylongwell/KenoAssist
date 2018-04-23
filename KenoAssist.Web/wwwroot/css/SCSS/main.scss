@@ -1,16 +1,17 @@
 // Modules and Variables
 
 //@import "partials/base";
+@import url("https://use.typekit.net/tzu6iyh.css");
 
 // Modules
 
 @import "modules/colours";
-@import "modules/mixins";
+@import "modules/mixins"; 
 
 
 // Partials
 
-@import "partials/reset";
+@import "partials/reset"; 
 @import "partials/layout";
 @import "partials/typography";
 @import "partials/buttons";

@@ -1,6 +1,0 @@
-﻿@mixin crossBrowser($property, $css) {
-    -webkit-#{$property}: $css;
-    -moz-#{$property}: $css;
-    -o-#{$property}: $css;
-    #{$property}: $css
-}

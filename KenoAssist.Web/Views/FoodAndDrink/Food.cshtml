@@ -1,21 +1,17 @@
-﻿@model FoodIntakeModel
+﻿<div class="page">
 
-<div class="page">
+@model FoodIntakeModel
+
     <div class="heading">    
 
      <div class="vertical_align">
         <a href="@Url.Action("Index", "FoodAndDrink")"><p class="return">&#10094 back</p></a>
       </div>
 
-        
 <h1 class="minus-margin-60">Food Intake</h1>
 </div>
 
-    <br/>
-     <br/>
-     <br/>
-    <br/>  
-    
+            <div class="content-margin">
 <a href="@Url.Action("AddIncident", "Incident")">&lt;</a><h3>Today</h3><a href="@Url.Action("AddIncident", "Incident")">&gt;</a>
     
 <h4>Breakfast</h4>
@@ -64,7 +60,7 @@ else{
 <p>No Data</p>
 }
 
-
+</div>
 
  <a class="button-bottom"href="@Url.Action("AddFood", "FoodAndDrink")">Add Food</a>
 

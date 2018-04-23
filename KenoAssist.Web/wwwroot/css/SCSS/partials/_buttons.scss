@@ -60,6 +60,26 @@ textarea.incident-report:focus {
 
 }
 
+.gradient > input[type=text],
+.gradient > form > [type='text'],
+.login-field {
+    border: none;
+    outline:none;
+}
+
+.gradient > input[type="submit"]:focus{
+    outline:none;
+
+}
+
+.warning-message{
+    color:$Plain-colour;
+}
+
+.warning-message > svg{
+    height:24px;
+}
+
 ::-moz-focus-inner {
     border: 0
 }
@@ -86,6 +106,12 @@ textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none
+}
+
+
+.gradient > input[type=text] {
+    border: none;
+
 }
 
 

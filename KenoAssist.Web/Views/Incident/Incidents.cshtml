@@ -13,24 +13,20 @@
 </div>
 
 
-     <br/>
-    <br/>
-     <br/>
-     <br/>
-       <div class="margin-top-4 default-menu">
+       <div class="content-margin default-menu">
 
+        <div class="content-margin">
         @{
                 string profileUrl = ViewBag.ProfileImage;
                 <img src="@Url.Content(profileUrl)" style="width:50px">
                 }
 <p>@ViewBag.Name</p>
-            
- 
+</div>
 @foreach(var incident in Model){
 <a href="@Url.Action("Incident", "Incident", new { incidentId = incident.IncidentId })">
 @{
                 string url = incident.PhotoUrl.FirstOrDefault();
-                <img src="@Url.Content(url)" style="width:50px">
+                <img src="@Url.Content(url)" class="injury_img_clip">
                 }
                 <div class="details-left">
                     
@@ -50,6 +46,7 @@
 </a>
 }
                 </div>
+        </div>
 
               <a href="@Url.Action("AddIncident", "Incident")" class="button-bottom">Add Report</a>
             </div>
