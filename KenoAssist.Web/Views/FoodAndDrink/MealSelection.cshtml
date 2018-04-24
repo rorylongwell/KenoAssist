@@ -6,30 +6,29 @@
         </div>
         <h1 class="minus-margin-60">Meal Selection</h1>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
+
 
     @using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
     {
-        <p>@ViewBag.Date</p>
-        <h2>@ViewBag.PageTitle</h2>
-        <h3>Mains</h3>
+        <div class="content-margin" style="margin-bottom: 64px;">
+            <p>@ViewBag.Date</p>
+            <h2>@ViewBag.PageTitle</h2>
+            <h3>Mains</h3>
 
-        @foreach (var main in Model.Mains)
-        {
-            <p>@main.Name</p>
-            @Html.RadioButtonFor(x => x.SelectedMain, main.Id)
-        }
+            @foreach (var main in Model.Mains)
+            {
+                <p>@main.Name</p>
+                @Html.RadioButtonFor(x => x.SelectedMain, main.Id)
+            }
 
-        <h3>Sides</h3>
-        @foreach (var side in Model.Sides)
-        {
-            <p>@side.Name</p>
-            @Html.RadioButtonFor(x => x.SelectedSide, side.Id)
-        }
-
+            <h3>Sides</h3>
+            @foreach (var side in Model.Sides)
+            {
+                <p>@side.Name</p>
+                @Html.RadioButtonFor(x => x.SelectedSide, side.Id)
+            }
+        </div>
         <input type="submit" name="submitButton" value="Next" class="button-bottom" />
     }
+
 </div>

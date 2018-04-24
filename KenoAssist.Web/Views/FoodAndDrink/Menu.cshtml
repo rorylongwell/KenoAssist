@@ -6,11 +6,8 @@
         </div>
         <h1 class="minus-margin-60">Food Menu</h1>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-
+ 
+    <div class="content-margin">
     @if (ViewBag.IsSubmitted)
     {
         <p>Menu choices have been submitted to the kitchen, no changes can be made.</p>
@@ -68,4 +65,5 @@
     {
         <button class="button-bottom" onclick="location.href='@Url.Action("MealSelection", "FoodAndDrink", new {Date = ViewBag.CurrentDay, PageNo = 1 })';return false;">Meal Selection</button>
     }
+        </div>
 </div>

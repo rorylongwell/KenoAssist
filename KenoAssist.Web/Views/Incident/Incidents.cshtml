@@ -18,7 +18,7 @@
         <div class="content-margin">
         @{
                 string profileUrl = ViewBag.ProfileImage;
-                <img src="@Url.Content(profileUrl)" style="width:50px">
+                <img src="@Url.Content(profileUrl)" style="width: 50px ">
                 }
 <p>@ViewBag.Name</p>
 </div>
@@ -46,7 +46,6 @@
 </a>
 }
                 </div>
-        </div>
 
               <a href="@Url.Action("AddIncident", "Incident")" class="button-bottom">Add Report</a>
             </div>
