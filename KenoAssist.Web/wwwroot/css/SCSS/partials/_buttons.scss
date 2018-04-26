@@ -60,11 +60,13 @@ textarea.incident-report:focus {
 
 }
 
+
 .gradient > input[type=text],
 .gradient > form > [type='text'],
 .login-field {
     border: none;
-    outline:none;
+    outline: none
+
 }
 
 .gradient > input[type="submit"]:focus{
@@ -301,3 +303,8 @@ textarea.incident-report {
 
 }
 
+
+.button-bottom:disabled {
+    background-color: #D6D6D6;
+    color: $Primary-text;
+}

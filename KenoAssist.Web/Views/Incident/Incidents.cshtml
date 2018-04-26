@@ -12,37 +12,48 @@
 <h1 class="minus-margin-60">Incidents and Injuries</h1>
 </div>
 
-
-       <div class="content-margin default-menu">
-
-        <div class="content-margin">
+            <div class="client_info_bar">
         @{
+
                 string profileUrl = ViewBag.ProfileImage;
-                <img src="@Url.Content(profileUrl)" style="width: 50px ">
-                }
+
+                <img src="@Url.Content(profileUrl)">
+
+      
+                }     
+
 <p>@ViewBag.Name</p>
-</div>
+            </div>
+       <div class="margin-top-4 default-menu">
+
+ 
 @foreach(var incident in Model){
 <a href="@Url.Action("Incident", "Incident", new { incidentId = incident.IncidentId })">
+
+            
 @{
                 string url = incident.PhotoUrl.FirstOrDefault();
-                <img src="@Url.Content(url)" class="injury_img_clip">
+            <div id="imageContainer">
+                <img src="@Url.Content(url)">
+                </div>
                 }
-                <div class="details-left">
+
+
+                <div class="details-left margin-top-12">
                     
  <p class="highlight-text">@incident.Injury, @incident.InjuryArea</p>
          
                      
                        </div>
 
-                <div class="details-right">  
-                     <p>@Common.GetDayName((DateTime)incident.Date)</p>
+                <div class="details-right incident_report_menu margin-top-12">  
+                     <p class="title">@Common.GetDayName((DateTime)incident.Date)</p>
              
                     
                 </div>
                 
-    <p class="margin-top-14 title">Incident</p>
-    <p>@incident.Description</p>
+    <p class="margin-top-8 title incident_report_menu">Incident</p>
+    <p class="details-left  margin-top-4">@incident.Description</p>
 </a>
 }
                 </div>

@@ -14,7 +14,12 @@
 
     <div class="content-margin background_container">
 
-                        <div class="details-left margin-top-12">
+
+        <div class="containter_fullpage">
+
+            <div class="padding-top-12">
+
+                        <div class="details-left">
                     
     <img class="small-icon" src="../images/app_icons/calendar.svg"> 
          
@@ -22,15 +27,14 @@
             </div>
 
 
-                        <div class="details-right margin-top-12">
+                        <div class="details-right">
 
                     
     <img class="small-icon" src="../images/app_icons/time.svg">    
             <span class="title">@Common.GetTimeString((DateTime)Model.Date)</span>
 
         </div>
-
-        <div class="containter_fullpage">
+                </div>
 
                  <p class="title">Injury</p>
     <p class="highlight-text">@Model.Injury, @Model.InjuryArea</p>
@@ -53,7 +57,7 @@ if(Model.PhotoUrl.Count > 0){
                 int i = 1;
                 foreach(var image in Model.PhotoUrl){
   <div class="column">
-    <img src="@Url.Content(image)" style="width:100%" onclick="openModal();currentSlide(@i)" class="hover-shadow cursor">
+    <img src="@Url.Content(image)" onclick="openModal();currentSlide(@i)" class="hover-shadow cursor injury_report_img">
   </div>
                  i++;
                 }

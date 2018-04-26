@@ -5,8 +5,8 @@ $Paragraph-font:"Open Sans", Helvetica, sans-serif;
 
 
 
-p, li, label{
-    font-size:16px;
+p, li, label, span{
+    font-size:14px;
     font-family: $Paragraph-font;
 }
 
@@ -23,9 +23,11 @@ input[type='text'], .form-control {
 
 h1, h2, h3, h4, h5, h6{
     font-family:$Header-font;
-    font-size:22px;    
+    
 }
-h1{}
+h1 {
+    font-size: 22px;
+}
 
 
 h2 {
@@ -65,12 +67,12 @@ span.title {
 .explaining-form-field{
     font-size:12px;
     margin: 10px 0 4px 0;
-} 
+}
 
-.highlight-text{
+.highlight-text {
     color: $Primary-colour;
-    font-weight:700;
-
+    font-weight: 700;
+    font-size: 12px;
 }
 
 .added-lineheight{
