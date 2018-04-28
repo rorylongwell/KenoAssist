@@ -1,32 +1,67 @@
 ﻿@model DrinkIntakeModel
-
 <div class="page">
-    <div class="heading">   
+    <div class="heading">
         <div class="vertical_align">
-        <a href="@Url.Action("Index", "FoodAndDrink")"><p class="return">&#10094 back</p></a>
-      </div>
-<h1 class="minus-margin-60">Beverage Intake</h1>
-</div>
-
-<div class="content-margin">
-    
-<a href="@Url.Action("AddIncident", "Incident")">&lt;</a><h3>Today</h3><a href="@Url.Action("AddIncident", "Incident")">&gt;</a>
-
-<h4>Total</h4>
-<p>@Model.TotalVolume ml</p>
-
-<h4>Drinks Today</h4>
-
-@if(Model.Drinks.Count > 0){
-foreach(var drink in Model.Drinks){
-     <p>@drink.Name</p>
-     <p>@drink.Volume ml</p>
-}
-}
-else{
-<p>No Data</p>
-}
-
- <a class="button-bottom"href="@Url.Action("AddDrink", "FoodAndDrink")">Add Beverage</a>
+            <a href="@Url.Action("Index", "FoodAndDrink")"><p class="return">&#10094 back</p></a>
+        </div>
+        <h1 class="minus-margin-60">Beverage Intake</h1>
     </div>
- </div>
+
+    <div class="date_header vertical-align">
+
+        <a class="left_arrow" href="@Url.Action("Drink", "FoodAndDrink", new { addDays = (ViewBag.DayCount - 1)})">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g>
+                    <path class="st21" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6" />
+
+                </g>
+            </svg>
+        </a>
+        <p>@ViewBag.CurrentDay</p>
+        @if (ViewBag.DayCount < 0)
+        {
+            <a class="right_arrow" href="@Url.Action("Drink", "FoodAndDrink", new { addDays = (ViewBag.DayCount + 1) })">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g>
+                        <path class="st21" d="M8.4,6l6.9,5.5c0.3,0.3,0.3,0.8,0,1L8.4,18" />
+                    </g>
+                </svg>
+            </a>
+        }
+    </div>
+
+    <div class="content-margin">
+
+        <h4 class="meal_heading">Total</h4>
+        <p>@Model.TotalVolume ml</p>
+        <h4 class="meal_heading">Today</h4>
+        @if (Model.Drinks != null)
+        {
+            @if (Model.Drinks.Count > 0)
+            {
+                foreach (var drink in Model.Drinks)
+                {
+                    <p>@drink.Name</p>
+                    <p>@drink.Volume ml</p>
+                }
+            }
+            else
+            {
+                <p>No drinks added</p>
+
+            }
+        }
+        else
+        {
+                <p>No drinks added</p>
+        }
+        @if (ViewBag.IsSubmitted)
+        {
+            <button class="button-bottom" disabled="disabled">Add Beverage</button>
+        }
+        else
+        {
+            <button class="button-bottom" onclick="location.href='@Url.Action("AddDrink", "FoodAndDrink")'">Add Beverage</button>
+        }
+    </div>
+</div>

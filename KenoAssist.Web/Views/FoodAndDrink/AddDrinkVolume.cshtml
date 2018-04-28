@@ -1,14 +1,35 @@
 ﻿<div class="page">
     @model DrinkModel
-        <div class="heading">
-            <div class="vertical_align">
-                <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
-            </div>
-            <h1 class="minus-margin-60">Add Beverage</h1>
+    <div class="heading">
+        <div class="vertical_align">
+            <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
         </div>
-        <div class="content-margin">
+        <h1 class="minus-margin-60">Add Beverage</h1>
+    </div>
+    @using (Html.BeginForm("AddedDrink", "FoodAndDrink", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
 
-            <a href="@Url.Action(" AddIncident", "Incident" )" class="button-bottom">Submit</a>
-        </div>
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.Name)
 
+
+
+    <div class="content-margin" style="margin-bottom: 64px;">
+        <p>How much did @ViewBag.Name drink?</p>
+        @Html.TextBoxFor(m => m.Volume, new { placeholder = "", @class = "" })
+        <p>Quick Entry</p>
+
+        <p>100ml</p>
+        @Html.RadioButtonFor(m => m.Volume, 100) 
+
+        <p>250ml</p>
+        @Html.RadioButtonFor(m => m.Volume, 250) 
+
+        <p>500ml</p>
+        @Html.RadioButtonFor(m => m.Volume, 500)
+
+    </div>
+
+    <input class="button-bottom" type="submit" value="Submit"/>
+    }
 </div>

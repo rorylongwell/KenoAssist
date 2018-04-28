@@ -6,6 +6,7 @@ using KenoAssist.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Keno.Common;
 using KenoAssist.Web.Helper;
+using Microsoft.AspNetCore.Http;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,7 +24,11 @@ namespace KenoAssist.Web.Controllers
 
 		private List<DrinkModel> drinksList;
 
+		List<DrinkIntakeModel> drinkIntakeList;
+
 		IEnumerable<FoodIntakeModel> menu;
+
+		IEnumerable<FoodIntakeModel> foodIntakeList;
 
         public FoodAndDrinkController()
         {
@@ -138,13 +143,110 @@ namespace KenoAssist.Web.Controllers
 			drinksList = new List<DrinkModel>(){
 
 				new DrinkModel(){Id = 1, Name = "Diluted Juice"},
-				new DrinkModel(){Id = 1, Name = "Tea"},
-				new DrinkModel(){Id = 1, Name = "Coffee"},
-				new DrinkModel(){Id = 1, Name = "Water"},
-				new DrinkModel(){Id = 1, Name = "Milk"},
-				new DrinkModel(){Id = 1, Name = "Orange Juice"},
-				new DrinkModel(){Id = 1, Name = "Apple Juice"},
-				new DrinkModel(){Id = 1, Name = "Cranberry Juice"},
+				new DrinkModel(){Id = 2, Name = "Tea"},
+				new DrinkModel(){Id = 3, Name = "Coffee"},
+				new DrinkModel(){Id = 4, Name = "Water"},
+				new DrinkModel(){Id = 5, Name = "Milk"},
+				new DrinkModel(){Id = 6, Name = "Orange Juice"},
+				new DrinkModel(){Id = 7, Name = "Apple Juice"},
+				new DrinkModel(){Id = 8, Name = "Cranberry Juice"},
+
+			};
+
+			drinkIntakeList = new List<DrinkIntakeModel>{
+				new DrinkIntakeModel()
+				{
+					ClientId = 1,
+					Date = DateTime.Now,
+					Drinks = new List<DrinkModel>()
+					{
+					new DrinkModel(){Id = 1, Name = "Orange Juice", Volume=250},
+					new DrinkModel(){Id = 2, Name = "Tea", Volume=250},
+					new DrinkModel(){Id = 3, Name = "Diluted Juice", Volume=500},
+					new DrinkModel(){Id = 4, Name = "Diluted Juice", Volume=250},
+					},
+					TotalVolume = 1250
+
+				},
+				new DrinkIntakeModel()
+				{
+					ClientId = 1,
+					Date = DateTime.Now.AddDays(-1),
+					Drinks = new List<DrinkModel>()
+					{
+					new DrinkModel(){Id = 1, Name = "Orange Juice", Volume=250},
+					new DrinkModel(){Id = 3, Name = "Diluted Juice", Volume=500},
+					new DrinkModel(){Id = 4, Name = "Diluted Juice", Volume=250},
+					},
+					TotalVolume = 1000
+
+				},
+				new DrinkIntakeModel()
+				{
+					ClientId = 1,
+					Date = DateTime.Now.AddDays(-2),
+					Drinks = new List<DrinkModel>()
+					{
+					new DrinkModel(){Id = 1, Name = "Orange Juice", Volume=250},
+						new DrinkModel(){Id = 2, Name = "Tea", Volume=250},
+					new DrinkModel(){Id = 3, Name = "Diluted Juice", Volume=300},
+					new DrinkModel(){Id = 4, Name = "Diluted Juice", Volume=250},
+					},
+					TotalVolume = 1050
+
+				},
+                
+			};
+
+			foodIntakeList = new List<FoodIntakeModel>
+			{
+				new FoodIntakeModel()
+			{
+				ClientId =1 ,
+				Date = DateTime.Now,
+				Breakfast = new List<FoodModel>()
+				{
+					new FoodModel(){Id = 1, Name = "Toast and Jam"},
+					new FoodModel(){Id = 2, Name = "An Orange"}
+				},
+				Lunch = new List<FoodModel>()
+				{
+					new FoodModel(){Id = 3, Name = "Chicken Sandwich"},
+					new FoodModel(){Id = 4, Name = "Strawberry Yogurt"}
+				},
+				Dinner = new List<FoodModel>()
+				{
+					new FoodModel(){Id = 5, Name = "Battered Fish and Chips"},
+					new FoodModel(){Id = 6, Name = "Cake and Custard"}
+				},
+				Snacks = new List<FoodModel>()
+				{
+				}
+				},
+					new FoodIntakeModel()
+	{
+				ClientId =1 ,
+						Date = DateTime.Now.AddDays(-1),
+				Breakfast = new List<FoodModel>()
+						{
+							new FoodModel(){Id = 1, Name = "Scrambled eggs and toast"},
+					new FoodModel(){Id = 2, Name = "An Orange"}
+				},
+				Lunch = new List<FoodModel>()
+				{
+							new FoodModel(){Id = 3, Name = "Sausage rolls"},
+					new FoodModel(){Id = 4, Name = "Strawberry Yogurt"}
+				},
+				Dinner = new List<FoodModel>()
+						{new FoodModel(){Id = 5, Name = "Beef stew"},
+					new FoodModel(){Id = 6, Name = "Cake and Custard"}
+				},
+				Snacks = new List<FoodModel>()
+				{
+				}
+
+
+			}
 
 			};
 
@@ -156,65 +258,45 @@ namespace KenoAssist.Web.Controllers
             return View();
         }
 
-        public IActionResult Food()
+		public IActionResult Food(int addDays = 0)
         {
-            var food = new List<FoodModel>()
-            {
-                new FoodModel(){Id = 1, Name = "Toast and Jam", FoodTypeId = (long)Constants.EFoodType.Breakfast},
-                new FoodModel(){Id = 2, Name = "An Orange", FoodTypeId = (long)Constants.EFoodType.Snack},
-                new FoodModel(){Id = 3, Name = "Chicken Sandwich", FoodTypeId = (long)Constants.EFoodType.Lunch},
-                new FoodModel(){Id = 4, Name = "Strawberry Yogurt" , FoodTypeId = (long)Constants.EFoodType.Snack},
-                new FoodModel(){Id = 5, Name = "Battered Fish and Chips", FoodTypeId = (long)Constants.EFoodType.Dinner},
-                new FoodModel(){Id = 6, Name = "Cake and Custard", FoodTypeId = (long)Constants.EFoodType.Dinner},
-            };
+				DateTime day = DateTime.Now.AddDays(addDays);
 
+				var foodIntake = foodIntakeList.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
+                if (foodIntake == null)
+        {
+				foodIntake = new FoodIntakeModel();
+				foodIntake.Breakfast = new List<FoodModel>();
+				foodIntake.Lunch = new List<FoodModel>();
+				foodIntake.Dinner = new List<FoodModel>();
+				foodIntake.Snacks = new List<FoodModel>();
+        }
+			bool IsSubmitted = foodIntake.Date.Date < DateTime.Now.Date;
 
-
-            var foodIntake = new FoodIntakeModel()
-            {
-                ClientId =1 ,
-                Date = DateTime.Now,
-                Breakfast = new List<FoodModel>()
-                {
-                    new FoodModel(){Id = 1, Name = "Toast and Jam"},
-                    new FoodModel(){Id = 2, Name = "An Orange"}
-                },
-                Lunch = new List<FoodModel>()
-                {
-                    new FoodModel(){Id = 3, Name = "Chicken Sandwich"},
-                    new FoodModel(){Id = 4, Name = "Strawberry Yogurt"}
-                },
-                Dinner = new List<FoodModel>()
-                {
-                    new FoodModel(){Id = 5, Name = "Battered Fish and Chips"},
-                    new FoodModel(){Id = 6, Name = "Cake and Custard"}
-                },
-                Snacks = new List<FoodModel>()
-                {
-                }
-
-            };
-
+        ViewBag.IsSubmitted = IsSubmitted;
+        ViewBag.DayCount = addDays;
+        ViewBag.CurrentDay = Helper.Common.GetDayName(day);
+              
 
             return View(foodIntake);
         }
 
-        public IActionResult Drink()
+		public IActionResult Drink(int addDays = 0)
         {
-            var drinkIntake = new DrinkIntakeModel()
-            {
-                ClientId = 1,
-                Date = DateTime.Now,
-                Drinks = new List<DrinkModel>()
-                {
-                    new DrinkModel(){Id = 1, Name = "Orange Juice", Volume=250},
-                    new DrinkModel(){Id = 2, Name = "Tea", Volume=250},
-                    new DrinkModel(){Id = 3, Name = "Diluted Juice", Volume=500},
-                    new DrinkModel(){Id = 4, Name = "Diluted Juice", Volume=250},
-                },
-                TotalVolume = 1250
+			DateTime day = DateTime.Now.AddDays(addDays); 
 
-            };
+			var drinkIntake = drinkIntakeList.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
+
+			if(drinkIntake == null)
+			{
+				drinkIntake = new DrinkIntakeModel();
+			}
+			bool IsSubmitted = drinkIntake.Date.Date < DateTime.Now.Date;
+
+			ViewBag.IsSubmitted = IsSubmitted;
+            ViewBag.DayCount = addDays;
+			ViewBag.CurrentDay = Helper.Common.GetDayName(day);
+
             return View(drinkIntake);
         }
 
@@ -241,9 +323,7 @@ namespace KenoAssist.Web.Controllers
             {
                 IsSubmitted = false;
             }
-
-
-
+                     
             ViewBag.IsSubmitted = IsSubmitted;
             ViewBag.DayCount = addDays;
             ViewBag.CurrentDay = Helper.Common.GetDayName(day);
@@ -359,6 +439,8 @@ namespace KenoAssist.Web.Controllers
 		public IActionResult AddDrinkVolume(DrinkSelectionModel model)
 		{
 			var drink = drinksList.Where(m => m.Id == model.SelectedDrink).FirstOrDefault();
+			var name = HttpContext.Session.GetString("Name");
+            ViewBag.Name = name.Substring(0, name.IndexOf(" "));
 			return View(drink);
         }
         
@@ -374,8 +456,26 @@ namespace KenoAssist.Web.Controllers
 			{
 				drinkModel.Drinks = drinks.Where(m => m.Name.ToLower().Contains(searchString.ToLower())).ToList();
 			}
-                     
+                   
 			return View("AddDrink", drinkModel);
         }
+
+		public IActionResult AddedDrink(DrinkModel drink)
+		{
+			DateTime day = DateTime.Now;
+
+            var drinkIntake = drinkIntakeList.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
+
+			drinkIntake.Drinks.Add(drink);
+
+			var totalVolume = drinkIntake.TotalVolume;
+			drinkIntake.TotalVolume = totalVolume + drink.Volume;
+
+			ViewBag.IsSubmitted = false;
+			ViewBag.DayCount = 0;
+            ViewBag.CurrentDay = Helper.Common.GetDayName(day);
+
+			return View("Drink", drinkIntake);      
+		}
     }
 }
