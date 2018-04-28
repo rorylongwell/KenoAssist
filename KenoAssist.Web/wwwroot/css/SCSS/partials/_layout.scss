@@ -97,8 +97,12 @@ body{
 
 }
 
+.client-list > a:last-child{
+    margin-bottom:8px;
+}
+
 .client-list > a > div > p:first-child {
-    padding-bottom: 10px;
+    padding-bottom: 10px
 
 }
 
@@ -319,17 +323,21 @@ body{
         position: relative
     }
 
-    .default-menu > a {
-        height: 200px;
-        //width: calc(100% - 16px);
-        width: 100%;
-        margin-bottom: 8px;
-        background-color: $Plain-colour;
-        text-decoration: none;
-        //padding: 10px 0 10px 8px;
-        box-shadow: $btn-shadow;
-        border-radius: 4px
-    }
+.incident_container {
+    margin-top: 128px;
+
+}
+.default-menu > a {
+    height: 120px;
+    //width: calc(100% - 16px);
+    width: 100%;
+    margin-bottom: 8px;
+    background-color: $Plain-colour;
+    text-decoration: none;
+    //padding: 10px 0 10px 8px;
+    box-shadow: $btn-shadow;
+    border-radius: 4px
+}
 
     .default-menu > a > p,
     .default-menu > a > p,
@@ -351,14 +359,17 @@ body{
         width: 120px
     }
 
-    .client_info_bar {
-        height: 60px;
-        margin: 61px 0 8px 0;
-        width: 100%;
-        background: $Plain-colour;
-        display: flex;
-        box-shadow: 0px 2px 2px #D4D3D3
-    }
+.client_info_bar {
+    top:60px;
+    z-index: 2;
+    position: fixed;
+    height: 60px;
+    //margin: 56px 0 8px 0;
+    width: 100%;
+    background: $Plain-colour;
+    display: flex;
+    box-shadow: 0px 2px 2px #D4D3D3
+}
 
     .client_info_bar > img {
         height: 40px;
