@@ -16,7 +16,7 @@
     </div>
 
 
-    using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
+    @using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
     {
         <div class="date_header vertical-align">
             <p>@ViewBag.Date</p>
@@ -27,8 +27,9 @@
         </div>
 
         <p class="primary_heading">Mains</p>
+       <div id="mains">
         @{
-        <div id="mains">
+     
          int i = 1;
 
          foreach (var main in Model.Mains)
@@ -36,72 +37,106 @@
 
             <label>
                 <div class="menu_option">
-
                     @main.Name
-                    @Html.RadioButtonFor(x => x.SelectedMain, main.Id, new { @class = "clickable", id = "mainCheckBox" + @i })
+                    @Html.RadioButtonFor(x => x.SelectedMain, main.Id, new { @class = "clickable1"})
                    
                 </div>
             </label>
             i++;
             }
-       </div>
+     
         }
+        </div>
         <p class="primary_heading">Sides</p>
+    <div id="sides">
         @foreach (var side in Model.Sides)
         {
 
             <label>
                 <div class="menu_option">
                     @side.Name
-                    @Html.RadioButtonFor(x => x.SelectedSide, side.Id)
+                    @Html.RadioButtonFor(x => x.SelectedSide, side.Id, new { @class = "clickable2" })
 
                 </div>
             </label>
         }
-
+        </div>
         <input type="submit" name="submitButton" value="Next" class="button-bottom" />
     }
 </div>
 
 @section scripts
 {
-<script>
-
-@*function RadioSelected(){
-    var radio = document.getElementById("myRadio");
-  radio.setAttribute("class", "menu_selected");
-}*@    
-    
-$('input:radio').each(function () {
-
-        var $this = $(this),
-            id = $this.attr('id'),
-            url = $this.attr('datasrc');
-
-        if ($(this).prop('checked')) {
-            urls.push('<div class="' + id + '">' + url + '</div>');
-        }
-
-    });
-    
+<script>    
 $(document).ready(function() {
-  <!--$(".clickable").click(function() {
-    if(this.checked){
-    $(this).parent('div').addClass("menu_selected");
-    }
-  });-->
-    $.each( $('#mains'), function(i, left) {
-   $('input', mains).each(function() {
-         if ($(this).prop('checked')) {
-        $(this).parent('div').addClass("menu_selected");
-    }
-    else{
-     $(this).parent('div').removeClass("menu_selected");
-    }
-   });
-})
-});
+   $(".clickable").click(function() {
+
+            
+    
+             $(this).attr("checked","checked");
+
+            $('input', $('#mains')).each(function(){
+                var isChecked = ($(this).attr("checked") == "checked");
+                if(isChecked){
+                    $(this).parent().addClass("menu_selected");
+                }else{
+                    $(this).parent().removeClass("menu_selected");
+                }
+              
+            })
+            })
+        });
+
+</script>
+
+<script>    
+$(document).ready(function() {
+   $(".clickable1").click(function() {
+            $('input', $('#mains')).not(this).each(function(){
+                $(this).removeAttr("checked");
+            })
+    
+             $(this).attr("checked","checked");
+
+            $('input', '#mains').each(function(){
+                var isChecked = ($(this).attr("checked") == "checked");
+                if(isChecked){
+                    $(this).parent().addClass("menu_selected");
+                }else{
+                    $(this).parent().removeClass("menu_selected");
+                }
+              
+            })
+            })
+        });
+
+</script>
+<script>    
+$(document).ready(function() {
+   $(".clickable2").click(function() {
+
+            $('input', '#sides').not(this).each(function(){
+                $(this).removeAttr("checked");
+            })
+    
+             $(this).attr("checked","checked");
+
+            $('input', '#sides').each(function(){
+                var isChecked = ($(this).attr("checked") == "checked");
+                if(isChecked){
+                    $(this).parent().addClass("menu_selected");
+                }else{
+                    $(this).parent().removeClass("menu_selected");
+                }
+              
+            })
+            })
+        });
+
 </script>
 }
+}
 
-
+<!--$('input', $('#mains')).each(function(){
+                $(this).removeAttr("checked");
+            })-->

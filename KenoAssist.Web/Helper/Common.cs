@@ -52,6 +52,26 @@ namespace KenoAssist.Web.Helper
             }
 		}
 
+        public static string RemoveSuffix(string date)
+        {
+            if(date.Contains("st")){
+                return date.Replace("st","");   
+            }
+            if (date.Contains("rd"))
+            {
+                return date.Replace("rd", "");
+            }
+            if (date.Contains("nd"))
+            {
+                return date.Replace("nd", "");
+            }
+            if (date.Contains("th"))
+            {
+                return date.Replace("th", "");
+            }
+            return date;
+        }
+
         public static string GetTimeString(DateTime date)
         {
             string result = string.Empty;

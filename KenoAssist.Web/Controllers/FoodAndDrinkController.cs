@@ -264,13 +264,13 @@ namespace KenoAssist.Web.Controllers
 
 				var foodIntake = foodIntakeList.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
                 if (foodIntake == null)
-        {
-				foodIntake = new FoodIntakeModel();
-				foodIntake.Breakfast = new List<FoodModel>();
-				foodIntake.Lunch = new List<FoodModel>();
-				foodIntake.Dinner = new List<FoodModel>();
-				foodIntake.Snacks = new List<FoodModel>();
-        }
+                {
+				    foodIntake = new FoodIntakeModel();
+				    foodIntake.Breakfast = new List<FoodModel>();
+				    foodIntake.Lunch = new List<FoodModel>();
+				    foodIntake.Dinner = new List<FoodModel>();
+				    foodIntake.Snacks = new List<FoodModel>();
+                }
 			bool IsSubmitted = foodIntake.Date.Date < DateTime.Now.Date;
 
         ViewBag.IsSubmitted = IsSubmitted;
@@ -333,7 +333,7 @@ namespace KenoAssist.Web.Controllers
        
         public IActionResult MenuSubmit(string Date)
         {
-
+            Date = Common.RemoveSuffix(Date);
 			DateTime day = Convert.ToDateTime(Date);
 
 			FoodIntakeModel food = HttpContext.Session.GetObjectFromJson<FoodIntakeModel>("NewMenuSelection");
@@ -351,8 +351,6 @@ namespace KenoAssist.Web.Controllers
             {
                 IsSubmitted = false;
             }
-
-
 
             ViewBag.IsSubmitted = IsSubmitted;
 			ViewBag.DayCount = day.Day - DateTime.Now.Day;
