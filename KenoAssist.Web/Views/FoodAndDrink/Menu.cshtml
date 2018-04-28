@@ -14,6 +14,7 @@
         <h1 class="minus-margin-60">Food Menu</h1>
     </div>
 
+
     <div class="date_header vertical-align">
 
     @if (ViewBag.DayCount > 0)
@@ -95,4 +96,5 @@
     {
         <button class="button-bottom" onclick="location.href='@Url.Action("MealSelection", "FoodAndDrink", new {Date = ViewBag.CurrentDay, PageNo = 1 })';return false;">Meal Selection</button>
     }
+        </div>
 </div>

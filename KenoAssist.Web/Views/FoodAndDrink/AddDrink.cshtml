@@ -1,0 +1,34 @@
+﻿@model DrinkSelectionModel
+
+<script>
+function searchClick() {
+        var searchString = document.getElementById('searchBox').value;
+        location.href = '@Url.Action("SearchDrink", "FoodAndDrink")?searchString=' + searchString;
+        return false;
+}
+</script>
+
+<div class="page">
+    <div class="heading">
+        <div class="vertical_align">
+            <a href="@Url.Action("Drink", "FoodAndDrink" )"><p class="return">&#10094 back</p></a>
+        </div>
+        <h1 class="minus-margin-60">Add Beverage</h1>
+    </div>
+    <div class="content-margin">
+        @using (Html.BeginForm("AddDrinkVolume", "FoodAndDrink", FormMethod.Post))
+        {
+
+            <input id="searchBox" type="text" />
+            <button onclick="return searchClick()"><p class="return">Search</p></button>
+
+            @foreach (var drink in Model.Drinks)
+            {
+                <p>@drink.Name</p>
+                @Html.RadioButtonFor(x => x.SelectedDrink, drink.Id, new { onclick = "this.form.submit();" })
+            }
+
+
+        }
+        </div>
+    </div>

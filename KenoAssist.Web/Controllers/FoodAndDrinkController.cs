@@ -21,6 +21,8 @@ namespace KenoAssist.Web.Controllers
 		private List<FoodModel> selectedLunch;
 		private List<FoodModel> selectedDinner;
 
+		private List<DrinkModel> drinksList;
+
 		IEnumerable<FoodIntakeModel> menu;
 
         public FoodAndDrinkController()
@@ -132,6 +134,19 @@ namespace KenoAssist.Web.Controllers
                 }
 
             };
+
+			drinksList = new List<DrinkModel>(){
+
+				new DrinkModel(){Id = 1, Name = "Diluted Juice"},
+				new DrinkModel(){Id = 1, Name = "Tea"},
+				new DrinkModel(){Id = 1, Name = "Coffee"},
+				new DrinkModel(){Id = 1, Name = "Water"},
+				new DrinkModel(){Id = 1, Name = "Milk"},
+				new DrinkModel(){Id = 1, Name = "Orange Juice"},
+				new DrinkModel(){Id = 1, Name = "Apple Juice"},
+				new DrinkModel(){Id = 1, Name = "Cranberry Juice"},
+
+			};
 
            
         }
@@ -332,6 +347,35 @@ namespace KenoAssist.Web.Controllers
                     return View();
             }
         }
+
+		public IActionResult AddDrink(){
+			
+			var drinkModel = new DrinkSelectionModel();
+			drinkModel.Drinks = drinksList;
+			return View(drinkModel);
+		}
         
+		[HttpPost]
+		public IActionResult AddDrinkVolume(DrinkSelectionModel model)
+		{
+			var drink = drinksList.Where(m => m.Id == model.SelectedDrink).FirstOrDefault();
+			return View(drink);
+        }
+        
+		public IActionResult SearchDrink(string searchString){
+			
+			var drinkModel = new DrinkSelectionModel();
+
+			var drinks = drinksList;
+
+			drinkModel.Drinks = drinks;
+
+			if(!string.IsNullOrEmpty(searchString))
+			{
+				drinkModel.Drinks = drinks.Where(m => m.Name.ToLower().Contains(searchString.ToLower())).ToList();
+			}
+                     
+			return View("AddDrink", drinkModel);
+        }
     }
 }

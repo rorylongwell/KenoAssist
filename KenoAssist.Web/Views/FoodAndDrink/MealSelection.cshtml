@@ -15,6 +15,7 @@
 
     @using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
     {
+<<<<<<< HEAD
         <div class="date_header vertical-align">
         <p>@ViewBag.Date</p>
         </div>
@@ -52,12 +53,36 @@
             </div>
         </label>
         }
+=======
+        <div class="content-margin" style="margin-bottom: 64px;">
+            <p>@ViewBag.Date</p>
+            <h2>@ViewBag.PageTitle</h2>
+            <h3>Mains</h3>
 
+            @foreach (var main in Model.Mains)
+            {
+                <p>@main.Name</p>
+                @Html.RadioButtonFor(x => x.SelectedMain, main.Id)
+            }
+>>>>>>> 9edefdf2b6936401d46dffcb2378feba1a3e3b99
+
+            <h3>Sides</h3>
+            @foreach (var side in Model.Sides)
+            {
+                <p>@side.Name</p>
+                @Html.RadioButtonFor(x => x.SelectedSide, side.Id)
+            }
+        </div>
         <input type="submit" name="submitButton" value="Next" class="button-bottom" />
     }
+<<<<<<< HEAD
 </div>
 
 <!--function RadioSelected(){
     var radio = document.getElementById("myRadio");
   radio.setAttribute("class", "menu_selected");
 }-->
+=======
+
+</div>
+>>>>>>> 9edefdf2b6936401d46dffcb2378feba1a3e3b99
