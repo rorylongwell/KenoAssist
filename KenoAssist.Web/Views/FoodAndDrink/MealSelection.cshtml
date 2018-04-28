@@ -70,19 +70,7 @@
 @*function RadioSelected(){
     var radio = document.getElementById("myRadio");
   radio.setAttribute("class", "menu_selected");
-}*@
-
-$.each( $('#mains'), function(i, left) {
-   $('input', mains).each(function() {
-         if ($(this).prop('checked')) {
-        $(this).parent('div').addClass("menu_selected");
-    }
-    else{
-     $(this).parent('div').removeClass("menu_selected");
-    }
-   });
-})
-    
+}*@    
     
 $('input:radio').each(function () {
 
@@ -97,11 +85,21 @@ $('input:radio').each(function () {
     });
     
 $(document).ready(function() {
-  $(".clickable").click(function() {
+  <!--$(".clickable").click(function() {
     if(this.checked){
     $(this).parent('div').addClass("menu_selected");
     }
-  });
+  });-->
+    $.each( $('#mains'), function(i, left) {
+   $('input', mains).each(function() {
+         if ($(this).prop('checked')) {
+        $(this).parent('div').addClass("menu_selected");
+    }
+    else{
+     $(this).parent('div').removeClass("menu_selected");
+    }
+   });
+})
 });
 </script>
 }
