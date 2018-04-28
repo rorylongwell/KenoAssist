@@ -48,13 +48,21 @@
         <p class="checkbox_text">Add photographic evidence</p>
                       <div class="checkbox_slider float-right">
 
-        <input type="checkbox" onclick="toggleImages()" id="checkboxThreeInput" class="display_none" />
+         @if(ViewBag.PhotoSelected){
+             <input type="checkbox" onclick="toggleImages()" id="checkboxThreeInput" class="display_none" checked="checked" />
+         }
+         else{
+             <input type="checkbox" onclick="toggleImages()" id="checkboxThreeInput" class="display_none" />
+         }
+        
         <label for="checkboxThreeInput">
         </label></div>
-        
-  <div id="imageDiv" style="display:none">
 
-    <input type="file" name="file-1[] files" id="file-1" class="inputfile inputfile-1"data-multiple-caption="{count} files selected" multiple />
+  <div id="imageDiv" style ="@(ViewBag.PhotoSelected ?"display:block" :"display:none")">
+
+
+
+<input type="file" name="file-1[] files" id="file-1" class="inputfile inputfile-1"data-multiple-caption="{count} files selected" multiple />
                     <label for="file-1" class="file-uploader">
 
         <div>
@@ -76,8 +84,7 @@
 }       
 }
         
- <button id="imageUpload" type="submit" name="submitButton" value="Upload" class="fullwidth-ghost-btn upload-btn" disabled="disabled"
-        >
+ <button id="imageUpload" type="submit" name="submitButton" value="Upload" class="fullwidth-ghost-btn upload-btn" disabled="disabled">
             <label>
                 <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

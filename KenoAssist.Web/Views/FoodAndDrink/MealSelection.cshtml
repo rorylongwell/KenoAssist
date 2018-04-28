@@ -1,88 +1,109 @@
-﻿@model MealSelectionModel
+@model MealSelectionModel
 <div class="page">
     <div class="heading">
         <div class="vertical_align">
-            <a href="@Url.Action("Menu", "FoodAndDrink")">                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-<g>
-    <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6"/>
-</g></svg>
+            <a href="@Url.Action("Menu", "FoodAndDrink")">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g>
+                        <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6" />
+                    </g>
+                </svg>
 
-            <span>back</span></a>
+                <span>back</span>
+            </a>
         </div>
         <h1 class="minus-margin-60">Meal Selection</h1>
     </div>
 
 
-    @using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
+    using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
     {
-<<<<<<< HEAD
         <div class="date_header vertical-align">
-        <p>@ViewBag.Date</p>
+            <p>@ViewBag.Date</p>
         </div>
 
         <div class="meal_header vertical-align">
-        <p>@ViewBag.PageTitle</p>
+            <p>@ViewBag.PageTitle</p>
         </div>
-    
+
         <p class="primary_heading">Mains</p>
+        @{
+        <div id="mains">
+         int i = 1;
 
-    
-        @foreach (var main in Model.Mains)
-        {
+         foreach (var main in Model.Mains)
+            {
 
-    <label>
-         <div class="menu_option">
+            <label>
+                <div class="menu_option">
 
-        @main.Name
-            @Html.RadioButtonFor(x => x.SelectedMain, main.Id)
-           
-             </div>
-    </label>
-
-    }
-   
+                    @main.Name
+                    @Html.RadioButtonFor(x => x.SelectedMain, main.Id, new { @class = "clickable", id = "mainCheckBox" + @i })
+                   
+                </div>
+            </label>
+            i++;
+            }
+       </div>
+        }
         <p class="primary_heading">Sides</p>
         @foreach (var side in Model.Sides)
         {
 
-       <label>
-         <div class="menu_option">
-            @side.Name
-            @Html.RadioButtonFor(x => x.SelectedSide, side.Id)
+            <label>
+                <div class="menu_option">
+                    @side.Name
+                    @Html.RadioButtonFor(x => x.SelectedSide, side.Id)
 
-            </div>
-        </label>
+                </div>
+            </label>
         }
-=======
-        <div class="content-margin" style="margin-bottom: 64px;">
-            <p>@ViewBag.Date</p>
-            <h2>@ViewBag.PageTitle</h2>
-            <h3>Mains</h3>
 
-            @foreach (var main in Model.Mains)
-            {
-                <p>@main.Name</p>
-                @Html.RadioButtonFor(x => x.SelectedMain, main.Id)
-            }
->>>>>>> 9edefdf2b6936401d46dffcb2378feba1a3e3b99
-
-            <h3>Sides</h3>
-            @foreach (var side in Model.Sides)
-            {
-                <p>@side.Name</p>
-                @Html.RadioButtonFor(x => x.SelectedSide, side.Id)
-            }
-        </div>
         <input type="submit" name="submitButton" value="Next" class="button-bottom" />
     }
-<<<<<<< HEAD
 </div>
 
-<!--function RadioSelected(){
+@section scripts
+{
+<script>
+
+@*function RadioSelected(){
     var radio = document.getElementById("myRadio");
   radio.setAttribute("class", "menu_selected");
-}-->
-=======
+}*@
 
-</div>
->>>>>>> 9edefdf2b6936401d46dffcb2378feba1a3e3b99
+$.each( $('#mains'), function(i, left) {
+   $('input', mains).each(function() {
+         if ($(this).prop('checked')) {
+        $(this).parent('div').addClass("menu_selected");
+    }
+    else{
+     $(this).parent('div').removeClass("menu_selected");
+    }
+   });
+})
+    
+    
+$('input:radio').each(function () {
+
+        var $this = $(this),
+            id = $this.attr('id'),
+            url = $this.attr('datasrc');
+
+        if ($(this).prop('checked')) {
+            urls.push('<div class="' + id + '">' + url + '</div>');
+        }
+
+    });
+    
+$(document).ready(function() {
+  $(".clickable").click(function() {
+    if(this.checked){
+    $(this).parent('div').addClass("menu_selected");
+    }
+  });
+});
+</script>
+}
+
+

@@ -174,6 +174,7 @@ namespace KenoAssist.Web.Controllers
                         return View(incidentReport);
 
                     ViewBag.UploadEnabled = false;
+					ViewBag.PhotoSelected = false;
                     return View("AddInjury",incidentReport);
                 default:
                     return View();
@@ -192,8 +193,8 @@ namespace KenoAssist.Web.Controllers
             {
                 ModelState.AddModelError("InjuryArea", "Enter injury areas");
             }
-
-
+            
+			ViewBag.PhotoSelected = false;
             switch (submitButton)
             {
                 case "Upload":
@@ -218,7 +219,7 @@ namespace KenoAssist.Web.Controllers
                         incidentReport.PhotoUrl.Add(Path.Combine("~/images/incident_images", fileName));
                     }
 
-
+					ViewBag.PhotoSelected = true;
                     return View(incidentReport);
                 case "Next":
                     if (!ModelState.IsValid)
@@ -233,7 +234,7 @@ namespace KenoAssist.Web.Controllers
                         ViewBag.Images = 0;
                         ViewBag.UploadEnabled = false;
                     }
-
+                   
                     return View("IncidentReport", incidentReport);
                 default:
                     return View();
