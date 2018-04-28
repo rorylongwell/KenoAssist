@@ -197,7 +197,7 @@ input,
 .form-control {
     width: calc(100% - 2px);
     height: 46px;
-     margin-bottom: 2px;
+     //margin-bottom: 2px;
 }
 
 //button with images
@@ -275,16 +275,24 @@ input[type='file'] {
 
 }
 
-.file-uploader > div > svg {
+.file-uploader > div > svg,
+#imageUpload > label > div > svg {
     fill: $Plain-colour;
-    vertical-align: middle;
     margin-right: 6px;
-    width: 18px;
-    height: 18px
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    line-height: 40px;
+
 }
 
-.file-uploader > div > span {
-    vertical-align: middle;
+#imageUpload {
+
+    height: 40px;
+
+} .file-uploader > div > span {
+    vertical-align: middle
+
 }
 
 textarea.incident-report {
@@ -308,3 +316,70 @@ textarea.incident-report {
     background-color: #D6D6D6;
     color: $Primary-text;
 }
+
+.display_none
+{
+    display:none;
+}
+
+.checkbox_slider {
+    @include insetShadow;
+    width: 70px;
+    height: 40px;
+    background: $Plain-colour;
+    margin: 10px 0 20px 0;
+    border-radius: 50px;
+    position: relative;
+    border: 1px solid #CDCDCD;
+     cursor: pointer;
+     float:left;
+}
+
+.checkbox_text{
+    float:left;
+    margin:10px 20px 0 0;
+    line-height:40px;
+    vertical-align:middle;
+}
+
+
+    .checkbox_slider:before {
+        //content: 'On';
+        position: absolute;
+        top: 12px;
+        left: 13px;
+        height: 2px;
+        color: #26ca28;
+        font-size: 16px
+    }
+
+    .checkbox_slider:after {
+        //content: 'Off';
+        position: absolute;
+        top: 12px;
+        left: 84px;
+        height: 2px;
+        color: #111;
+        font-size: 16px
+    }
+
+.checkbox_slider label {
+    display: block;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    background: darken(#F6F6F6, 10%)
+}
+    /**
+ * Create the checkbox event for the label
+ */
+    .checkbox_slider input[type=checkbox]:checked + label {
+        left: 30px;
+        background: $Primary-colour
+    }
+
