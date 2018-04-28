@@ -5,9 +5,17 @@
 
           <div class="vertical_align">
 
-        <a href="@Url.Action("Client", "Client")"><p class="return">&#10094 back</p></a>
+        <a href="@Url.Action("Client", "Client")">               
 
-            </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g>
+    <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6"/>
+</g>
+                    </svg>
+
+            <span>back</span>
+            </a>
+        </div>
 
 <h1 class="minus-margin-60">Incidents and Injuries</h1>
 </div>
@@ -24,6 +32,7 @@
 
 <p>@ViewBag.Name</p>
             </div>
+    <div class="incident_container">
        <div class="margin-top-4 default-menu">
 
  
@@ -57,6 +66,8 @@
 </a>
 }
                 </div>
+
+    </div>
 
               <a href="@Url.Action("AddIncident", "Incident")" class="button-bottom">Add Report</a>
             </div>
