@@ -4,3 +4,13 @@
     -o-#{$property}: $css;
     #{$property}: $css
 }
+
+
+@mixin insetShadow() {
+    -webkit-box-shadow: inset 0  2px 3px #EAEAEA;
+    ;
+    -moz-box-shadow: inset 0 2px 3px #EAEAEA;
+    -ms-box-shadow: inset 0 2px 3px #EAEAEA;
+    -o-box-shadow: inset 0 2px 3px #EAEAEA;
+     box-shadow: inset 0 2px 3px #EAEAE;
+}

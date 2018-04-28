@@ -5,9 +5,16 @@
     <div class="heading">
       <div class="vertical_align">
 
-        <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
+        <a href="javascript:void(0);" onclick="history.go(-1);">
 
-            </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g>
+    <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6"/>
+</g></svg>
+
+            <span>back</span></a>
+        </div>
         
 <h1 class="minus-margin-60">Add Incident</h1>
 </div>
@@ -37,25 +44,26 @@
   @Html.TextBoxFor(m => m.InjuryArea, new { placeholder = "", @class = "" });
 
 
-  <label>Include Photos</label>
-  <input type="checkbox" onclick="toggleImages()"/>
+  <label>Image Evidence</label>
+        <p class="checkbox_text">Add photographic evidence</p>
+                      <div class="checkbox_slider float-right">
+
+        <input type="checkbox" onclick="toggleImages()" id="checkboxThreeInput" class="display_none" />
+        <label for="checkboxThreeInput">
+        </label></div>
         
-        
-  <div id="imageDiv" style="display:none">      
-  <label>Photo Evidence</label>
+  <div id="imageDiv" style="display:none">
 
     <input type="file" name="file-1[] files" id="file-1" class="inputfile inputfile-1"data-multiple-caption="{count} files selected" multiple />
                     <label for="file-1" class="file-uploader">
 
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-<g>
-    <path class="st28" d="M22,4.7h-3.7l-0.7-1.6c-0.2-0.4-0.5-0.6-0.9-0.6H7.4C7,2.5,6.6,2.7,6.4,3.1L5.7,4.7H4.9V4.5c0-0.6-0.5-1-1-1
-        H3.4c-0.6,0-1,0.5-1,1v0.3H2c-0.6,0-1,0.5-1,1v14.7c0,0.6,0.5,1,1,1H22c0.6,0,1-0.5,1-1V5.8C23,5.2,22.5,4.7,22,4.7z M4.4,8.8
-        c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C5.5,8.4,5,8.8,4.4,8.8z M12,18.9c-3.2,0-5.8-2.6-5.8-5.8
-        c0-3.2,2.6-5.8,5.8-5.8c3.2,0,5.8,2.6,5.8,5.8C17.8,16.3,15.2,18.9,12,18.9z M21,8.8h-2.7V6.7H21V8.8z"/>
-    <circle class="st28" cx="12" cy="13.1" r="3.9"/>
-</g></svg>            <span>Select Photo&hellip;</span>
+<path class="st27" d="M19.2,6.7h-2.7L16,5.5c-0.1-0.3-0.4-0.4-0.7-0.4H8.6C8.3,5.1,8.1,5.3,8,5.5L7.4,6.7H6.8V6.5
+    c0-0.4-0.3-0.7-0.7-0.7H5.7C5.3,5.8,5,6.1,5,6.5v0.2H4.8C4.3,6.7,4,7.1,4,7.5v10.7c0,0.4,0.3,0.8,0.8,0.8h14.5
+    c0.4,0,0.8-0.3,0.8-0.8V7.5C20,7.1,19.7,6.7,19.2,6.7z M12,16.4c-2,0-3.6-1.6-3.6-3.6c0-2,1.6-3.6,3.6-3.6c2,0,3.6,1.6,3.6,3.6
+    C15.6,14.8,14,16.4,12,16.4z"/>
+</svg>          <span>Select Photo&hellip;</span>
                 </div>
         </label>
 
@@ -74,12 +82,13 @@
                 <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 <g>
-    <path class="st28" d="M22,4.7h-3.7l-0.7-1.6c-0.2-0.4-0.5-0.6-0.9-0.6H7.4C7,2.5,6.6,2.7,6.4,3.1L5.7,4.7H4.9V4.5c0-0.6-0.5-1-1-1
-        H3.4c-0.6,0-1,0.5-1,1v0.3H2c-0.6,0-1,0.5-1,1v14.7c0,0.6,0.5,1,1,1H22c0.6,0,1-0.5,1-1V5.8C23,5.2,22.5,4.7,22,4.7z M4.4,8.8
-        c-0.6,0-1.1-0.5-1.1-1.1c0-0.6,0.5-1.1,1.1-1.1c0.6,0,1.1,0.5,1.1,1.1C5.5,8.4,5,8.8,4.4,8.8z M12,18.9c-3.2,0-5.8-2.6-5.8-5.8
-        c0-3.2,2.6-5.8,5.8-5.8c3.2,0,5.8,2.6,5.8,5.8C17.8,16.3,15.2,18.9,12,18.9z M21,8.8h-2.7V6.7H21V8.8z"/>
-    <circle class="st28" cx="12" cy="13.1" r="3.9"/>
-</g></svg>            <span>Select Photo&hellip;</span>
+    <polyline class="st28" points="5,15.6 5,18.9 19,18.9 19,15.6    "/>
+    <line class="st28" x1="12" y1="14.9" x2="12" y2="4.4"/>
+    <g>
+        <path class="st28" d="M8.1,8.8l3.6-4.5c0.2-0.2,0.5-0.2,0.7,0L16,8.8"/>
+    </g>
+</g>
+</svg><span>Photo Upload&hellip;</span>
                 </div>
                 </label>
         </button>
@@ -117,3 +126,8 @@
 }    
         
     </script>
+        
+
+</div>
+
+  

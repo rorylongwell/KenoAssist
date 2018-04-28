@@ -39,13 +39,10 @@
 	.st33{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
 	.st34{fill:none;stroke:#009CA4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
-<rect x="-44.4" y="-253.5" class="st0" width="171.1" height="299.2"/>
-<text transform="matrix(1 0 0 1 -44.415 -242.1601)"><tspan x="0" y="0" class="st1 st2 st3">Icons Needed</tspan><tspan x="0" y="14.4" class="st1 st4 st5">Food and water</tspan><tspan x="0" y="28.8" class="st1 st4 st5">Medication</tspan><tspan x="0" y="43.2" class="st1 st4 st5">Incidents and Injuries</tspan><tspan x="0" y="57.6" class="st1 st4 st5">Personal Hygiene</tspan><tspan x="0" y="72" class="st1 st4 st5">Messaging</tspan><tspan x="0" y="86.4" class="st1 st4 st5">Contacts</tspan><tspan x="0" y="100.8" class="st1 st4 st5">Sleep</tspan><tspan x="0" y="115.2" class="st1 st4 st5">Client Records</tspan><tspan x="0" y="129.6" class="st1 st4 st5">Camera</tspan><tspan x="0" y="144" class="st1 st4 st5">Food</tspan><tspan x="0" y="158.4" class="st1 st4 st5">Drink</tspan><tspan x="0" y="172.8" class="st1 st4 st5">Food Menu</tspan></text>
-<g>
-	<polyline class="st34" points="5,15.6 5,18.9 19,18.9 19,15.6 	"/>
-	<line class="st34" x1="12" y1="14.9" x2="12" y2="4.4"/>
-	<g>
-		<path class="st34" d="M8.1,8.8l3.6-4.5c0.2-0.2,0.5-0.2,0.7,0L16,8.8"/>
-	</g>
-</g>
+<rect x="-10.4" y="-253.5" class="st0" width="171.1" height="299.2"/>
+<text transform="matrix(1 0 0 1 -10.415 -242.1601)"><tspan x="0" y="0" class="st1 st2 st3">Icons Needed</tspan><tspan x="0" y="14.4" class="st1 st4 st5">Food and water</tspan><tspan x="0" y="28.8" class="st1 st4 st5">Medication</tspan><tspan x="0" y="43.2" class="st1 st4 st5">Incidents and Injuries</tspan><tspan x="0" y="57.6" class="st1 st4 st5">Personal Hygiene</tspan><tspan x="0" y="72" class="st1 st4 st5">Messaging</tspan><tspan x="0" y="86.4" class="st1 st4 st5">Contacts</tspan><tspan x="0" y="100.8" class="st1 st4 st5">Sleep</tspan><tspan x="0" y="115.2" class="st1 st4 st5">Client Records</tspan><tspan x="0" y="129.6" class="st1 st4 st5">Camera</tspan><tspan x="0" y="144" class="st1 st4 st5">Food</tspan><tspan x="0" y="158.4" class="st1 st4 st5">Drink</tspan><tspan x="0" y="172.8" class="st1 st4 st5">Food Menu</tspan></text>
+<path class="st33" d="M19.2,6.7h-2.7L16,5.5c-0.1-0.3-0.4-0.4-0.7-0.4H8.6C8.3,5.1,8.1,5.3,8,5.5L7.4,6.7H6.8V6.5
+	c0-0.4-0.3-0.7-0.7-0.7H5.7C5.3,5.8,5,6.1,5,6.5v0.2H4.8C4.3,6.7,4,7.1,4,7.5v10.7c0,0.4,0.3,0.8,0.8,0.8h14.5
+	c0.4,0,0.8-0.3,0.8-0.8V7.5C20,7.1,19.7,6.7,19.2,6.7z M12,16.4c-2,0-3.6-1.6-3.6-3.6c0-2,1.6-3.6,3.6-3.6c2,0,3.6,1.6,3.6,3.6
+	C15.6,14.8,14,16.4,12,16.4z"/>
 </svg>
