@@ -314,7 +314,7 @@ body{
     }
     //incidents and injuries
     .default-menu {
-        height: 50%;
+        //height: 50%;
         display: flex;
         flex-direction: column;
         margin: 0 4px;
@@ -901,6 +901,20 @@ body{
 .st28 {
     fill: none;
     stroke: #009CA4;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10
+}
+
+
+.st29 {
+    fill: #009CA5
+}
+
+.st30 {
+    fill: none;
+    stroke: #009CA5;
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;

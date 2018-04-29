@@ -384,7 +384,6 @@ body {
 
 /* line 316, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .default-menu {
-  height: 50%;
   display: flex;
   flex-direction: column;
   margin: 0 4px;
@@ -1055,6 +1054,21 @@ body {
 .st28 {
   fill: none;
   stroke: #009CA4;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+/* line 911, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.st29 {
+  fill: #009CA5;
+}
+
+/* line 915, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.st30 {
+  fill: none;
+  stroke: #009CA5;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
