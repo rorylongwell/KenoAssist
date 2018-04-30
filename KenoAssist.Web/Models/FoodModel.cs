@@ -13,6 +13,6 @@ namespace KenoAssist.Web.Models
         public long Id { get; set; }
         public string Name { get; set; }
         public long FoodTypeId { get; set; }
-        public int PercentageAmount { get; set; }
+        public Nullable<int> PercentageAmount { get; set; }
     }
 }

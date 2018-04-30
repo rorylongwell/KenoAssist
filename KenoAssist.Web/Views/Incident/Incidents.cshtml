@@ -32,12 +32,12 @@
 
 <p>@ViewBag.Name</p>
             </div>
-    <div class="incident_container">
-       <div class="margin-top-4 default-menu">
+    <div class="incident_container" >
+       <div class="margin-top-4 default-menu" >
 
  
 @foreach(var incident in Model){
-<a href="@Url.Action("Incident", "Incident", new { incidentId = incident.IncidentId })">
+<a style="overflow: hidden;" href="@Url.Action("Incident", "Incident", new { incidentId = incident.IncidentId })">
 
             
 @{
@@ -62,7 +62,7 @@
                 </div>
                 
     <p class="margin-top-8 title incident_report_menu">Incident</p>
-    <p class="details-left  margin-top-4">@incident.Description</p>
+    <p class="margin-top-4">@incident.Description</p>
 </a>
 }
                 </div>

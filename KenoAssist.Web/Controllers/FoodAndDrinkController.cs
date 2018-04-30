@@ -214,8 +214,8 @@ namespace KenoAssist.Web.Controllers
 				},
 				Dinner = new List<FoodModel>()
 				{
-                        new FoodModel(){Id = 5, Name = "Battered Fish and Chips", PercentageAmount=90, FoodTypeId=1},
-                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=50, FoodTypeId=2}
+                        new FoodModel(){Id = 5, Name = "Battered Fish and Chips", PercentageAmount=null, FoodTypeId=1},
+                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=null, FoodTypeId=2}
 				},
 				Snacks = new List<FoodModel>()
 				{
@@ -556,10 +556,11 @@ namespace KenoAssist.Web.Controllers
             var food = new FoodIntakeDetailsModel();
             var name = HttpContext.Session.GetString("Name");
             var firstName = name.Substring(0, name.IndexOf(" "));
+            food.MealId = mealId;
             switch(mealId)
             {
                 case 1:
-                    food.Main = model.Breakfast.Where(m => m.FoodTypeId == 1 ).FirstOrDefault();
+                    food.Main = model.Breakfast.Where(m => m.FoodTypeId == 1).FirstOrDefault();
                     food.Side = model.Breakfast.Where(m => m.FoodTypeId == 2).FirstOrDefault();
                     food.Summary = string.Format("{0} eat well today as normal", firstName);
                     break;
@@ -582,5 +583,88 @@ namespace KenoAssist.Web.Controllers
 
             return View(food);
         }
+
+        public IActionResult AddFoodIntakeDetails(DateTime date, int mealId){
+            var food = new FoodIntakeDetailsModel();
+            var model = foodIntakeList.Where(m => m.Date.Date == date.Date).FirstOrDefault();
+            ViewBag.Date = Common.GetDayName(date);
+            food.MealId = mealId;
+            switch (mealId)
+            {
+                case 1:
+                    food.Main = model.Breakfast.Where(m => m.FoodTypeId == 1).FirstOrDefault();
+                    food.Side = model.Breakfast.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    break;
+                case 2:
+                    food.Main = model.Lunch.Where(m => m.FoodTypeId == 1).FirstOrDefault();
+                    food.Side = model.Lunch.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    break;
+                case 3:
+                    food.Main = model.Dinner.Where(m => m.FoodTypeId == 1).FirstOrDefault();
+                    food.Side = model.Dinner.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    break;
+            }
+            return View(food);
+        }
+
+        [HttpPost]
+        public IActionResult AddedFoodIntake(FoodIntakeDetailsModel model)
+        {
+            var foodIntake = foodIntakeList.Where(m => m.Date.Date == DateTime.Now.Date).FirstOrDefault();
+
+            if(0 > model.Main.PercentageAmount && model.Main.PercentageAmount < 100){
+                ModelState.AddModelError("Main.PercentageAmount","Enter a number between 0 and 100");
+            }
+            if (0 > model.Side.PercentageAmount && model.Side.PercentageAmount < 100)
+            {
+                ModelState.AddModelError("Side.PercentageAmount", "Enter a number between 0 and 100");
+            }
+            if(model.Main.PercentageAmount == null)
+            {
+                ModelState.AddModelError("Main.PercentageAmount", "Enter a number between 0 and 100");
+            }
+            if (model.Side.PercentageAmount == null)
+            {
+                ModelState.AddModelError("Side.PercentageAmount", "Enter a number between 0 and 100");
+            }
+            if (string.IsNullOrEmpty(model.Summary))
+            {
+                ModelState.AddModelError("Summary", "Enter a summary");
+            }
+
+            if (!ModelState.IsValid)
+                return View("AddFoodIntakeDetails",model);
+
+            switch (model.MealId)
+            {
+                case 1:
+                    foodIntake.Breakfast = new List<FoodModel>();
+                    foodIntake.Breakfast.Add(model.Main);
+                    foodIntake.Breakfast.Add(model.Side);
+                    break;
+                case 2:
+                    foodIntake.Lunch = new List<FoodModel>();
+                    foodIntake.Lunch.Add(model.Main);
+                    foodIntake.Lunch.Add(model.Side);
+                    break;
+                case 3:
+                    foodIntake.Dinner = new List<FoodModel>();
+                    foodIntake.Dinner.Add(model.Main);
+                    foodIntake.Dinner.Add(model.Side);
+                    break;
+            }
+            ViewBag.IsSubmitted = false;
+            ViewBag.DayCount = 0;
+            ViewBag.CurrentDay = Helper.Common.GetDayName(DateTime.Now.Date);
+
+            ViewBag.BreakfastCount = (foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount) / 2;
+            ViewBag.LunchCount = (foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount) / 2;
+            ViewBag.DinnerCount = (foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2;
+            ViewBag.SnackCount = 0;
+
+
+            return View("Food", foodIntake);
+        }
+
     }
 }
