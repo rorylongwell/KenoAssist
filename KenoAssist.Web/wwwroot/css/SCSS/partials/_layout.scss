@@ -59,11 +59,10 @@ body{
 // Spacing
 
 .content-margin {
-    width: calc(100% - 8px);
+    width: 100%;
     margin: 0 auto;
-    margin-top: 68px;
-    display: block
-
+    margin-top: 64px;
+     display: block;
 }
 
 .content-margin-40{
@@ -257,7 +256,7 @@ body{
     }
 
     @include respond-to(medium-screens) {
-        width: 18%
+        width: 28%
     }
 
     @include respond-to(large-screens) {
@@ -345,7 +344,7 @@ body{
         //height: 50%;
         display: flex;
         flex-direction: column;
-        margin: 0 4px;
+        //margin: 0 4px;
         display: flex;
         justify-content: flex-start; /* adjustment */
         position: relative
@@ -496,6 +495,10 @@ body{
     .padding-top-12 {
         padding-top: 12px
     }
+
+    .margin-bottom-60{
+    margin-bottom: 60px;
+                      }
 
     .containter_fullpage {
         margin: 0 4px 0 4px
