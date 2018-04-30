@@ -7,10 +7,41 @@
 
 
 @mixin insetShadow() {
-    -webkit-box-shadow: inset 0  2px 3px #EAEAEA;
+    -webkit-box-shadow: inset 0 2px 3px #EAEAEA;
     ;
     -moz-box-shadow: inset 0 2px 3px #EAEAEA;
     -ms-box-shadow: inset 0 2px 3px #EAEAEA;
     -o-box-shadow: inset 0 2px 3px #EAEAEA;
-     box-shadow: inset 0 2px 3px #EAEAE;
+    box-shadow: inset 0 2px 3px #EAEAE
+}
+
+
+@mixin respond-to($media) {
+    @if $media == small-screen {
+        @media only screen and (max-width: 320px) {
+            @content;
+        }
+    }
+    @else if $media == medium-screens {
+        @media only screen and (min-width: 600px) {
+            @content;
+        }
+    }
+    @else if $media == large-screens {
+        @media only screen and (min-width: 900px) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-screens {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $media == wide-screens {
+        @media only screen and (min-width: 1800px) {
+            @content;
+        }
+    }
 }
