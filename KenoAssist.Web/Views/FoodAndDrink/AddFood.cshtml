@@ -1,3 +1,31 @@
-﻿@Model AddFoodModel
+﻿@model FoodSelectionModel
 
+<script>
+function searchClick() {
+        var searchString = document.getElementById('searchBox').value;
+        location.href = '@Url.Action("SearchFood", "FoodAndDrink")?searchString=' + searchString;
+        return false;
+}
+</script>
 
+<div class="page">
+    <div class="heading">
+        <div class="vertical_align">
+            <a href="@Url.Action("Food", "FoodAndDrink" )"><p class="return">&#10094 back</p></a>
+        </div>
+        <h1 class="minus-margin-60">Add Food</h1>
+    </div>
+    <div class="content-margin">
+        @using (Html.BeginForm("AddFoodAmount", "FoodAndDrink", FormMethod.Post))
+        {
+            <input id="searchBox" type="text" />
+            <button onclick="return searchClick()" value="Search"></button>
+
+            foreach (var food in Model.Food)
+            {
+                <p>@food.Name</p>
+                @Html.RadioButtonFor(x => x.SelectedFood, food.Id, new { onclick = "this.form.submit();" })
+            }
+        }
+        </div>
+    </div>

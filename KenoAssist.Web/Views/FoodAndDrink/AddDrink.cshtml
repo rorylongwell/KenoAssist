@@ -22,7 +22,7 @@ function searchClick() {
             <input id="searchBox" type="text" />
             <button onclick="return searchClick()"><p class="return">Search</p></button>
 
-            @foreach (var drink in Model.Drinks)
+            foreach (var drink in Model.Drinks)
             {
                 <p>@drink.Name</p>
                 @Html.RadioButtonFor(x => x.SelectedDrink, drink.Id, new { onclick = "this.form.submit();" })

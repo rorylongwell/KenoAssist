@@ -16,20 +16,25 @@
 
     <div class="content-margin" style="margin-bottom: 64px;">
         <p>How much did @ViewBag.Name drink?</p>
-        @Html.TextBoxFor(m => m.Volume, new { placeholder = "", @class = "" })
+        <input id="manualInput" type="number" onmouseout="AddValue(document.getElementById('manualInput').value)"/>
         <p>Quick Entry</p>
 
         <p>100ml</p>
-        @Html.RadioButtonFor(m => m.Volume, 100) 
+        @Html.RadioButtonFor(m => m.Volume, 100,new {onclick="AddValue(100)"}) 
 
         <p>250ml</p>
-        @Html.RadioButtonFor(m => m.Volume, 250) 
+        @Html.RadioButtonFor(m => m.Volume, 250,new {onclick="AddValue(250)"}) 
 
         <p>500ml</p>
-        @Html.RadioButtonFor(m => m.Volume, 500)
-
+        @Html.RadioButtonFor(m => m.Volume, 500,new {onclick="AddValue(500)"})
+        @Html.TextBoxFor(m => m.Volume, new { id="valueInput",style="opacity:0" })
     </div>
 
     <input class="button-bottom" type="submit" value="Submit"/>
     }
 </div>
+<script>
+    function AddValue(value) {
+  $("#valueInput").val(value); 
+}
+</script>

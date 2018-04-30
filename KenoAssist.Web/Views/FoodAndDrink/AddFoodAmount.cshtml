@@ -1,0 +1,41 @@
+﻿<div class="page">
+    @model FoodModel
+    <div class="heading">
+        <div class="vertical_align">
+            <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
+        </div>
+        <h1 class="minus-margin-60">Add Food</h1>
+    </div>
+    @using (Html.BeginForm("AddedFood", "FoodAndDrink", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.Name)
+    @Html.HiddenFor(m => m.FoodTypeId)
+    
+
+
+
+    <div class="content-margin" style="margin-bottom: 64px;">
+        <p>How much did @ViewBag.Name eat?</p>
+        <input id="manualInput" type="number" onmouseout="AddValue(document.getElementById('manualInput').value)"/>
+        <p>Quick Entry</p>
+        <p>50&#37;</p>
+        @Html.RadioButtonFor(m => m.PercentageAmount, 50, new {onclick="AddValue(50)"}) 
+
+        <p>75&#37;</p>
+        @Html.RadioButtonFor(m => m.PercentageAmount, 75, new {onclick="AddValue(75)"}) 
+
+        <p>100&#37;</p>
+        @Html.RadioButtonFor(m => m.PercentageAmount, 100, new {onclick="AddValue(100)"})
+        @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput",style="opacity:0" })
+    </div>
+
+    <input class="button-bottom" type="submit" value="Submit"/>
+    }
+</div>
+<script>
+    function AddValue(value) {
+  $("#valueInput").val(value); 
+}
+</script>

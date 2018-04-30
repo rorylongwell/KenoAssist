@@ -25,11 +25,21 @@
                 </svg>
             </a>
         }
+        else
+        {
+         <a class="right_arrow_disabled">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g>
+                        <path class="st21" d="M8.4,6l6.9,5.5c0.3,0.3,0.3,0.8,0,1L8.4,18" />
+                    </g>
+                </svg>
+            </a>
+        }
     </div>
 
         <div class="margin-top-4 default-menu">
 
-            <a>
+            <a href="@Url.Action("FoodIntakeDetails", "FoodAndDrink" , new { date=Model.Date, mealId = 1})">
                 <p class="meal_heading">Breakfast</p>
                 @if (Model.Breakfast.Count > 0)
                 {
@@ -37,6 +47,8 @@
                     {
                         <p>@food.Name</p>
                     }
+                    <canvas id="donutBreakfast" width="40" height="40"></canvas>
+                    <p>@(ViewBag.BreakfastCount)&#37;</p>
                 }
                 else
                 {
@@ -44,7 +56,7 @@
                     <br/>
                 }
             </a>
-            <a>
+            <a href="@Url.Action("FoodIntakeDetails", "FoodAndDrink" , new { date=Model.Date, mealId = 1})">
                 <p class="meal_heading">Lunch</p>
                 @if (Model.Lunch.Count > 0)
                 {
@@ -52,6 +64,8 @@
                     {
                         <p>@food.Name</p>
                     }
+                    <canvas id="donutLunch" width="40" height="40"></canvas>
+                    <p>@(ViewBag.LunchCount)&#37;</p>
                 }
                 else
                 {
@@ -59,7 +73,7 @@
                     <br/>
                 }
             </a>
-            <a>
+            <a href="@Url.Action("FoodIntakeDetails", "FoodAndDrink" , new { date=Model.Date, mealId = 1})">
                 <p class="meal_heading">Dinner</p>
                 @if (Model.Dinner.Count > 0)
                 {
@@ -67,6 +81,8 @@
                     {
                         <p>@food.Name</p>
                     }
+                    <canvas id="donutDinner" width="40" height="40"></canvas>
+                    <p>@(ViewBag.DinnerCount)&#37;</p>
                 }
                 else
                 {
@@ -75,13 +91,15 @@
                 }
             </a>
             <a>
-                <p class="meal_heading">Snacks</p>
+                <p class="meal_heading">Additional Food</p>
                 @if (Model.Snacks.Count > 0)
                 {
                     foreach (var food in Model.Snacks)
                     {
                         <p>@food.Name</p>
                     }
+                    <canvas id="donutSnack" width="40" height="40"></canvas>
+                    <p>@(ViewBag.SnackCount)&#37;</p>
                 }
                 else
                 {
@@ -99,3 +117,139 @@
             <button class="button-bottom" onclick="location.href='@Url.Action("AddFood", "FoodAndDrink")'">Add Food</button>
         }
     </div>
+
+
+    <script>
+    var donutBreakfastEL = document.getElementById("donutBreakfast").getContext("2d");
+    var donutBreakfast = new Chart(donutBreakfastEL).Doughnut(
+    // Datas
+    [
+        {
+            value: @(ViewBag.BreakfastCount),
+            color:"#009CA5",
+            highlight: "#F6F6F6",
+            label: "Red"
+        },
+        {
+            value: (100 - @(ViewBag.BreakfastCount)),
+            color: "#E6E6E6",
+            highlight: "#F6F6F6",
+            label: "Green"
+        }
+    ],
+    // Options
+    {
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 2,
+        percentageInnerCutout : 50,
+        animationSteps : 100,
+        animationEasing : "easeOutBounce",
+        animateRotate : true,
+        animateScale : false,
+        responsive: true,
+        maintainAspectRatio: true,
+        showScale: true,
+        animateScale: true
+    });
+
+     var donutLunchEL = document.getElementById("donutLunch").getContext("2d");
+    var donutLunch = new Chart(donutLunchEL).Doughnut(
+    // Datas
+    [
+         {
+            value: @ViewBag.LunchCount,
+            color:"#009CA5",
+            highlight: "#F6F6F6",
+            label: "Red"
+        },
+        {
+            value: (100 - @ViewBag.LunchCount),
+            color: "#E6E6E6",
+            highlight: "#F6F6F6",
+            label: "Green"
+        }
+    ],
+    // Options
+    {
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 2,
+        percentageInnerCutout : 50,
+        animationSteps : 100,
+        animationEasing : "easeOutBounce",
+        animateRotate : true,
+        animateScale : false,
+        responsive: true,
+        maintainAspectRatio: true,
+        showScale: true,
+        animateScale: true
+    });
+
+     var donutDinnerEL = document.getElementById("donutDinner").getContext("2d");
+    var donutDinner = new Chart(donutDinnerEL).Doughnut(
+    // Datas
+    [
+        {
+            value: @ViewBag.DinnerCount,
+            color:"#009CA5",
+            highlight: "#F6F6F6",
+            label: "Red"
+        },
+        {
+            value: (100 - @ViewBag.DinnerCount),
+            color: "#E6E6E6",
+            highlight: "#F6F6F6",
+            label: "Green"
+        }
+    ],
+    // Options
+    {
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 2,
+        percentageInnerCutout : 50,
+        animationSteps : 100,
+        animationEasing : "easeOutBounce",
+        animateRotate : true,
+        animateScale : false,
+        responsive: true,
+        maintainAspectRatio: true,
+        showScale: true,
+        animateScale: true
+    });
+
+         var donutSnackEL = document.getElementById("donutSnack").getContext("2d");
+    var donutSnack = new Chart(donutSnackEL).Doughnut(
+    // Datas
+    [
+        {
+            value: @ViewBag.SnackCount,
+            color:"#009CA5",
+            highlight: "#F6F6F6",
+            label: "Red"
+        },
+        {
+            value: (100 - @ViewBag.SnackCount),
+            color: "#E6E6E6",
+            highlight: "#F6F6F6",
+            label: "Green"
+        }
+    ],
+    // Options
+    {
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 2,
+        percentageInnerCutout : 50,
+        animationSteps : 100,
+        animationEasing : "easeOutBounce",
+        animateRotate : true,
+        animateScale : false,
+        responsive: true,
+        maintainAspectRatio: true,
+        showScale: true,
+        animateScale: true
+    });
+    
+    </script>

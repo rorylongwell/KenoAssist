@@ -8,11 +8,10 @@ using Microsoft.AspNetCore.Http;
 namespace KenoAssist.Web.Models
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
-    public class FoodModel
+    public class FoodSelectionModel
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
-        public long FoodTypeId { get; set; }
-        public int PercentageAmount { get; set; }
+        public List<FoodModel> Food { get; set; }
+        public long SelectedFood { get; set; }
     }
+
 }

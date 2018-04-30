@@ -5,6 +5,6 @@ namespace KenoAssist.Web.Models
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public decimal Volume { get; set; }
+        public int Volume { get; set; }
     }
 }

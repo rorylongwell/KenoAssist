@@ -14,8 +14,15 @@
         </div>
         <h1 class="minus-margin-60">Meal Selection</h1>
     </div>
-
-
+    <div class="client_info_bar">
+        @{
+                string profileUrl = ViewBag.ProfileImage;
+                <img src="@Url.Content(profileUrl)">
+                <p>@ViewBag.AllergyInfo</p>
+                }  
+    </div>
+    <div class="content-margin">
+    <div class="margin-top-4 default-menu">
     @using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
     {
         <div class="date_header vertical-align">
@@ -63,32 +70,12 @@
         </div>
         <input type="submit" name="submitButton" value="Next" class="button-bottom" />
     }
+    </div>
+   </div>
 </div>
 
 @section scripts
 {
-<script>    
-$(document).ready(function() {
-   $(".clickable").click(function() {
-
-            
-    
-             $(this).attr("checked","checked");
-
-            $('input', $('#mains')).each(function(){
-                var isChecked = ($(this).attr("checked") == "checked");
-                if(isChecked){
-                    $(this).parent().addClass("menu_selected");
-                }else{
-                    $(this).parent().removeClass("menu_selected");
-                }
-              
-            })
-            })
-        });
-
-</script>
-
 <script>    
 $(document).ready(function() {
    $(".clickable1").click(function() {
