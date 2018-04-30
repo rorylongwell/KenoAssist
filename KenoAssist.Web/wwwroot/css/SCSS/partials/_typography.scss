@@ -90,3 +90,17 @@ span.title {
     //color: $Warning-color;
     color: $Primary-colour;
 }
+
+
+.meal_heading {
+    color: $Primary-colour;
+    font-weight: 700
+}
+
+.consumption_amount,
+.consumption_amount > span {
+    color: $Primary-text;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px
+}
