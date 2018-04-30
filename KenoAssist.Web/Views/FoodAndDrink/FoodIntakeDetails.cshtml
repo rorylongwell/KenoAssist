@@ -1,6 +1,6 @@
 ﻿<div class="page">
 
-            @model IList<FoodModel>
+            @model FoodIntakeDetailsModel
     <div class="heading">
 
           <div class="vertical_align">
@@ -20,11 +20,121 @@
 <h1 class="minus-margin-60">Meal Selection</h1>
 </div>
     <div class="content-margin">
-        <div class="margin-top-4 default-menu">
-
            <div class="date_header vertical-align">
                 <p>@ViewBag.Date</p>
             </div>
-            </div>
+            <p class="meal_heading">Mains</p>
+            <p>@Model.Main.Name</p>
+            <canvas id="donutMain" width="40" height="40"></canvas>
+        
+            <p class="meal_heading">Sides</p>
+            <p>@Model.Side.Name</p>
+            <canvas id="donutSide" width="40" height="40"></canvas>
+        
+            <p class="meal_heading">Summary</p>
+            <p>@Model.Summary</p>
+            <canvas id="donutTotal" width="40" height="40"></canvas>
     </div>
 </div>
+
+ <script>
+    var donutMainEL = document.getElementById("donutMain").getContext("2d");
+    var donutMain = new Chart(donutMainEL).Doughnut(
+    // Datas
+    [
+        {
+            value: @(ViewBag.MainCount),
+            color:"#009CA5",
+            highlight: "#F6F6F6",
+            label: "Red"
+        },
+        {
+            value: (100 - @(ViewBag.MainCount)),
+            color: "#E6E6E6",
+            highlight: "#F6F6F6",
+            label: "Green"
+        }
+    ],
+    // Options
+    {
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 2,
+        percentageInnerCutout : 50,
+        animationSteps : 100,
+        animationEasing : "easeOutBounce",
+        animateRotate : true,
+        animateScale : false,
+        responsive: true,
+        maintainAspectRatio: true,
+        showScale: true,
+        animateScale: true
+    });
+
+     var donutSideEL = document.getElementById("donutSide").getContext("2d");
+    var donutSide = new Chart(donutSideEL).Doughnut(
+    // Datas
+    [
+         {
+            value: @ViewBag.SideCount,
+            color:"#009CA5",
+            highlight: "#F6F6F6",
+            label: "Red"
+        },
+        {
+            value: (100 - @ViewBag.SideCount),
+            color: "#E6E6E6",
+            highlight: "#F6F6F6",
+            label: "Green"
+        }
+    ],
+    // Options
+    {
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 2,
+        percentageInnerCutout : 50,
+        animationSteps : 100,
+        animationEasing : "easeOutBounce",
+        animateRotate : true,
+        animateScale : false,
+        responsive: true,
+        maintainAspectRatio: true,
+        showScale: true,
+        animateScale: true
+    });
+
+     var donutTotalEL = document.getElementById("donutTotal").getContext("2d");
+    var donutTotal = new Chart(donutTotalEL).Doughnut(
+    // Datas
+    [
+        {
+            value: @ViewBag.TotalCount,
+            color:"#009CA5",
+            highlight: "#F6F6F6",
+            label: "Red"
+        },
+        {
+            value: (100 - @ViewBag.TotalCount),
+            color: "#E6E6E6",
+            highlight: "#F6F6F6",
+            label: "Green"
+        }
+    ],
+    // Options
+    {
+        segmentShowStroke : true,
+        segmentStrokeColor : "#fff",
+        segmentStrokeWidth : 2,
+        percentageInnerCutout : 50,
+        animationSteps : 100,
+        animationEasing : "easeOutBounce",
+        animateRotate : true,
+        animateScale : false,
+        responsive: true,
+        maintainAspectRatio: true,
+        showScale: true,
+        animateScale: true
+    });
+    </script>
+  

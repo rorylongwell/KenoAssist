@@ -8,8 +8,6 @@ using Keno.Common;
 using KenoAssist.Web.Helper;
 using Microsoft.AspNetCore.Http;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace KenoAssist.Web.Controllers
 {
     public class FoodAndDrinkController : Controller
@@ -206,18 +204,18 @@ namespace KenoAssist.Web.Controllers
 				Date = DateTime.Now,
 				Breakfast = new List<FoodModel>()
 				{
-                        new FoodModel(){Id = 1, Name = "Toast and Jam", PercentageAmount=80},
-                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=50}
+                        new FoodModel(){Id = 1, Name = "Toast and Jam", PercentageAmount=80, FoodTypeId=1},
+                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=50, FoodTypeId=2}
 				},
 				Lunch = new List<FoodModel>()
 				{
-                        new FoodModel(){Id = 3, Name = "Chicken Sandwich", PercentageAmount=100},
-                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt", PercentageAmount=80}
+                        new FoodModel(){Id = 3, Name = "Chicken Sandwich", PercentageAmount=100, FoodTypeId=1},
+                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt", PercentageAmount=80, FoodTypeId=2}
 				},
 				Dinner = new List<FoodModel>()
 				{
-                        new FoodModel(){Id = 5, Name = "Battered Fish and Chips", PercentageAmount=90},
-                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=50}
+                        new FoodModel(){Id = 5, Name = "Battered Fish and Chips", PercentageAmount=90, FoodTypeId=1},
+                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=50, FoodTypeId=2}
 				},
 				Snacks = new List<FoodModel>()
 				{
@@ -229,17 +227,17 @@ namespace KenoAssist.Web.Controllers
 						Date = DateTime.Now.AddDays(-1),
 				Breakfast = new List<FoodModel>()
 						{
-                        new FoodModel(){Id = 1, Name = "Scrambled eggs and toast", PercentageAmount=100},
-                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=40}
+                        new FoodModel(){Id = 1, Name = "Scrambled eggs and toast", PercentageAmount=100, FoodTypeId=1},
+                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=40, FoodTypeId=2}
 				},
 				Lunch = new List<FoodModel>()
 				{
-                        new FoodModel(){Id = 3, Name = "Sausage rolls", PercentageAmount=100},
-                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt", PercentageAmount=50}
+                        new FoodModel(){Id = 3, Name = "Sausage rolls", PercentageAmount=100, FoodTypeId=1},
+                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt", PercentageAmount=50, FoodTypeId=2}
 				},
 				Dinner = new List<FoodModel>()
-                    {new FoodModel(){Id = 5, Name = "Beef stew", PercentageAmount=90},
-                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=80}
+                    {new FoodModel(){Id = 5, Name = "Beef stew", PercentageAmount=90, FoodTypeId=1},
+                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=80, FoodTypeId=2}
 				},
 				Snacks = new List<FoodModel>()
 				{
@@ -551,19 +549,31 @@ namespace KenoAssist.Web.Controllers
             var model = foodIntakeList.Where(m => m.Date.Date == date.Date).FirstOrDefault();
             ViewBag.Date = Common.GetDayName(date);
             ViewBag.ProfileImage = HttpContext.Session.GetString("Photo");
-            var food = new List<FoodModel>();
+            var food = new FoodIntakeDetailsModel();
+            var name = HttpContext.Session.GetString("Name");
+            var firstName = name.Substring(0, name.IndexOf(" "));
             switch(mealId)
             {
                 case 1:
-                    food.AddRange(model.Breakfast);
+                    food.Main = model.Breakfast.Where(m => m.FoodTypeId == 1 ).FirstOrDefault();
+                    food.Side = model.Breakfast.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    food.Summary = string.Format("{0} eat well today as normal", firstName);
                     break;
                 case 2:
-                    food.AddRange(model.Lunch);
+                    food.Main = model.Lunch.Where(m => m.FoodTypeId == 1).FirstOrDefault();
+                    food.Side = model.Lunch.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    food.Summary = string.Format("{0} eat well today as normal", firstName);
                     break;
                 case 3:
-                    food.AddRange(model.Dinner);
+                    food.Main = model.Dinner.Where(m => m.FoodTypeId == 1).FirstOrDefault();
+                    food.Side = model.Dinner.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    food.Summary = string.Format("{0} eat well today as normal", firstName);
                     break;
             }
+
+            ViewBag.MainCount = food.Main.PercentageAmount;
+            ViewBag.SideCount = food.Side.PercentageAmount;
+            ViewBag.TotalCount = (food.Main.PercentageAmount + food.Side.PercentageAmount)/2;
 
 
             return View(food);
