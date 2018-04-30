@@ -306,6 +306,8 @@ namespace KenoAssist.Web.Controllers
             ViewBag.DayCount = addDays;
 			ViewBag.CurrentDay = Helper.Common.GetDayName(day);
 
+            ViewBag.Percentage = (drinkIntake.TotalVolume * 100)/2000;
+
             return View(drinkIntake);
         }
 
@@ -375,7 +377,7 @@ namespace KenoAssist.Web.Controllers
             ViewBag.PageNo = 1;
             ViewBag.ProfileImage = HttpContext.Session.GetString("Photo");
             var name = HttpContext.Session.GetString("Name");
-            ViewBag.AllergyInfo = string.Format("{0} is lactose intolerant. The menu options have been filtered to accommated this.",name);
+            ViewBag.AllergyInfo = string.Format("<span class='bold'>{0}</span> is <span class='bold'>lactose intolerant</span>. The menu options have been filtered to accommated this.",name);
 
 			var mealItems = new MealSelectionModel();
 			mealItems.Mains = breakfastList.Where(m => m.FoodTypeId == 1).ToList();
@@ -487,6 +489,8 @@ namespace KenoAssist.Web.Controllers
 			ViewBag.IsSubmitted = false;
 			ViewBag.DayCount = 0;
             ViewBag.CurrentDay = Helper.Common.GetDayName(day);
+
+            ViewBag.Percentage = (drinkIntake.TotalVolume * 100) / 2000;
 
 			return View("Drink", drinkIntake);      
 		}

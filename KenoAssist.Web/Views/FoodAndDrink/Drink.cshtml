@@ -52,7 +52,7 @@
         <div id="container" style="clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);">
             
 <div id="glass">
-<div id="water" style="height: 60%;"></div>
+<div id="water" style="height: @ViewBag.Percentage%;"></div>
 </div>
 </div>
 
@@ -64,7 +64,7 @@
             <div class="drink_container">
         @if (Model.Drinks != null)
         {
-            @if (Model.Drinks.Count > 0)
+            if (Model.Drinks.Count > 0)
             {
 
                 foreach (var drink in Model.Drinks)

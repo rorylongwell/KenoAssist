@@ -18,7 +18,7 @@
         @{
                 string profileUrl = ViewBag.ProfileImage;
                 <img src="@Url.Content(profileUrl)">
-                <p>@ViewBag.AllergyInfo</p>
+                <p>@Html.Raw(ViewBag.AllergyInfo)</p>
                 }  
     </div>
     <div class="content-margin">
@@ -122,8 +122,3 @@ $(document).ready(function() {
 
 </script>
 }
-}
-
-<!--$('input', $('#mains')).each(function(){
-                $(this).removeAttr("checked");
-            })-->
