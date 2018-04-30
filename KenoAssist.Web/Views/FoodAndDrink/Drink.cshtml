@@ -2,7 +2,14 @@
 <div class="page">
     <div class="heading">
         <div class="vertical_align">
-            <a href="@Url.Action("Index", "FoodAndDrink")"><p class="return">&#10094 back</p></a>
+            <a href="@Url.Action("Index", "FoodAndDrink")">                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g>
+    <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6"/>
+</g>
+                    </svg>
+
+            <span>back</span>
+            </a>
         </div>
         <h1 class="minus-margin-60">Beverage Intake</h1>
     </div>
@@ -30,20 +37,34 @@
         }
     </div>
 
-    <div class="content-margin">
+    <div>
 
-        <h4 class="meal_heading">Total</h4>
-        <p>@Model.TotalVolume ml</p>
-        <h4 class="meal_heading">Today</h4>
+        <div id="container" style="clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);">
+            
+<div id="glass">
+<div id="water" style="height: 60%;"></div>
+</div>
+</div>
+
+        <p class="consumption_amount"><span>@Model.TotalVolume ml</span> Drank</p>
+
+
+        <div class="main_container">
+        <p class="meal_heading">Today</p>
+            <div class="drink_container">
         @if (Model.Drinks != null)
         {
             @if (Model.Drinks.Count > 0)
             {
+
                 foreach (var drink in Model.Drinks)
                 {
+                <div>
                     <p>@drink.Name</p>
                     <p>@drink.Volume ml</p>
+                    </div>
                 }
+
             }
             else
             {
@@ -55,6 +76,8 @@
         {
                 <p>No drinks added</p>
         }
+        </div>
+            </div>
         @if (ViewBag.IsSubmitted)
         {
             <button class="button-bottom" disabled="disabled">Add Beverage</button>

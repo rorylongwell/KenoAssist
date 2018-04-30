@@ -695,12 +695,6 @@ body{
     .warning_container > svg {
         margin: 0 8px
     }
-
-    .meal_heading {
-        color: $Primary-colour;
-        font-weight: 700
-    }
-
     .meal_container {
         margin-top: 4px;
         width: 100%;
@@ -722,9 +716,51 @@ body{
         border-bottom: none
     }
 
+.main_container {
+    margin-top: 40px;
+    width: 100%;
+    background-color: $Plain-colour
+}
+
+.drink_container {
+    margin-top: 4px;
+    width: 100%;
+    background-color: $Plain-colour;
+    overflow:hidden;
+}
+
+.main_container > p {
+    float: left;
+    width: calc(100% - 40px);
+    margin: 0px 0 8px 10px;
+    padding: 15px 0;
+    border-bottom: solid 0.5px #F6F6F6
+}
+
+.drink_container > div {
+    padding-bottom: 10px;
+    width: 100%;
+     margin: 0 10px;
+}
+
+.drink_container > div > p {
+    float: left;
+    width: calc(50% - 20px);
+    margin: 5px 0 8px 0;
+    padding-bottom: 15px;
+    border-bottom: solid 0.5px #F6F6F6
+}
+
+.drink_container > div:last-child > p {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.drink_container > div > p:last-child {
+    text-align:right;
+}
+
     //menu selection
-
-
     .menu_option {
         background: #ffffff;
         width: calc(100% - 11px);
@@ -746,20 +782,15 @@ body{
         margin-bottom: 0
     }
 
-
     .menu_selected {
         color: $Plain-colour;
         background-color: $Primary-complimentary
     }
-
     /*.menu_selected {
     color: $Primary-colour;
     font-weight:700;
     background-color: $Plain-colour;
 }*/
-
-
-
     //svgs
     .st0 {
         clip-path: url(#SVGID_2_);
@@ -936,7 +967,6 @@ body{
         stroke-miterlimit: 10
     }
 
-
     .st29 {
         fill: #009CA5
     }
@@ -949,3 +979,50 @@ body{
         stroke-linejoin: round;
         stroke-miterlimit: 10
     }
+
+    // beverage intake glass
+
+#container {
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    background: $Plain-colour;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    margin-bottom: 14px;
+    margin-top: 40px
+}
+
+#glass {
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    background: $Plain-colour;
+    width: 100px;
+    height: 150px;
+    position: relative
+}
+
+#water {
+    background-color: $Secondary-highlight;
+    position: absolute;
+    bottom: 0px;
+    width: 300px;
+    height: 100px;
+}
+
+#water {
+ 
+-webkit-animation: water-fill 5s;
+animation: water-fill 5s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes water-fill {
+    0% { height: 0;} 
+}
+
+@keyframes water-fill {
+    0% {
+        height: 0;
+    } 
+}
