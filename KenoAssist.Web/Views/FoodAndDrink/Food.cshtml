@@ -45,25 +45,35 @@
         }
     </div>
 
-        <div class="margin-top-4 default-menu">
+        <div class="margin-top-4 default-menu food-intake">
 
             <a href="@Url.Action((ViewBag.BreakfastCount != null) ? "FoodIntakeDetails" : "AddFoodIntakeDetails" , new { date=Model.Date, mealId = 1})">
-                <p class="meal_heading">Breakfast</p>
+
+
+            <div class="left">
+                <p class="meal_heading margin-bottom-4">Breakfast</p>
+            </div>
                 @if (Model.Breakfast.Count > 0)
                 {
-                    foreach (var food in Model.Breakfast)
-                    {
+            <div class="left">
+                    @foreach (var food in Model.Breakfast)
+                    {    
+            
                         <p>@food.Name</p>
-                    }
-
+                     }</div>
+            
                     if(ViewBag.BreakfastCount != null)
                     {
+            <div class="right">
                     <canvas id="donutBreakfast" width="40" height="40"></canvas>
                     <p>@(ViewBag.BreakfastCount)&#37;</p>
+                </div>
                     }
                     else
                     {
+            <div class="right">
                     <p>No data added</p>
+                </div>
                     }
                 }
                 else
@@ -71,23 +81,33 @@
                     <p>No Data</p>
                 }
             </a>
+
+
+        
             <a href="@Url.Action((ViewBag.LunchCount != null) ? "FoodIntakeDetails" : "AddFoodIntakeDetails", new { date=Model.Date, mealId = 2})">
-                <p class="meal_heading">Lunch</p>
+                <div class="left"><p class="meal_heading margin-bottom-4">Lunch</p></div>
                 @if (Model.Lunch.Count > 0)
                 {
-                    foreach (var food in Model.Lunch)
+            <div class="left">
+                    @foreach (var food in Model.Lunch)
                     {
+
                         <p>@food.Name</p>
-                    }
+                    }</div>
 
                     if(ViewBag.LunchCount != null)
                     {
+            <div class="right">
                     <canvas id="donutLunch" width="40" height="40"></canvas>
                     <p>@(ViewBag.LunchCount)&#37;</p>
+
+                </div>
                     }
                     else
                     {
+            <div class="right">
                     <p>No data added</p>
+                </div>
                     }
                 }
                 else
@@ -96,31 +116,41 @@
                 }
             </a>
             <a href="@Url.Action((ViewBag.DinnerCount != null) ? "FoodIntakeDetails" : "AddFoodIntakeDetails", "FoodAndDrink" , new { date=Model.Date, mealId = 3})">
-                <p class="meal_heading">Dinner</p>
+               
+
+                <div class="left"><p class="meal_heading margin-bottom-4">Dinner</p></div>  
                 @if (Model.Dinner.Count > 0)
-                {
-                    foreach (var food in Model.Dinner)
+               {
+            <div class="left">
+                    @foreach (var food in Model.Dinner)
                     {
                         <p>@food.Name</p>
                     }
-
+                    </div>
+ 
                     if(ViewBag.DinnerCount != null)
-                    {
+
+                {  <div class="right">
+            
                     <canvas id="donutDinner" width="40" height="40"></canvas>
-                    <p>@(ViewBag.DinnerCount)&#37;</p>
+                    <p>@(ViewBag.DinnerCount)&#37;</p></div>
                     }
                     else
                     {
-                    <p>No data added</p>
+            <div class="right">
+                    <p class="title">No data added</p>
+                </div>
                     }
+                
                 }
                 else
                 {
                     <p>No Data</p>
-                }
+                } 
             </a>
+  
             <a>
-                <p class="meal_heading">Additional Food</p>
+                <p class="meal_heading margin-bottom-4">Additional Food</p>
                 @if (Model.Snacks.Count > 0)
                 {
                     foreach (var food in Model.Snacks)
@@ -133,7 +163,6 @@
                 else
                 {
                     <p>No Data</p>
-                    <!--<br/>-->
                 }
             </a>
         </div>

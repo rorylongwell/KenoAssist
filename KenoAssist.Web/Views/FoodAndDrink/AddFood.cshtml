@@ -18,14 +18,22 @@ function searchClick() {
     <div class="content-margin">
         @using (Html.BeginForm("AddFoodAmount", "FoodAndDrink", FormMethod.Post))
         {
-            <input id="searchBox" type="text" />
+        <div class="search_bar">
+            <input id="searchBox" placeholder="Search.." type="text" />
             <button onclick="return searchClick()" value="Search"></button>
 
+           </div>
+
+        <p class="primary_heading">Suggestions and Search Results</p>
             foreach (var food in Model.Food)
-            {
+
+            {      <div class="menu_option">
                 <p>@food.Name</p>
                 @Html.RadioButtonFor(x => x.SelectedFood, food.Id, new { onclick = "this.form.submit();" })
-            }
+              </div>
+        } 
+     
         }
+       
         </div>
     </div>

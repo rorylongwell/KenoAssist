@@ -480,6 +480,11 @@ body{
         margin-top: 14px
     }
 
+.margin-top-16 {
+    margin-top: 14px
+}
+
+
     .margin-top-20 {
         margin-top: 20px
     }
@@ -785,10 +790,10 @@ body{
         margin-bottom: 0
     }
 
-    .menu_selected {
-        color: $Plain-colour;
-        background-color: $Primary-complimentary
-    }
+.menu_selected {
+    color: $Plain-colour;
+    background-color: $Secondary-highlight;
+}
     /*.menu_selected {
     color: $Primary-colour;
     font-weight:700;
@@ -1028,4 +1033,168 @@ animation: water-fill 5s;
     0% {
         height: 0;
     } 
+}
+
+//food intake
+
+.food-intake > a {
+    height: 65px;
+    vertical-align: middle;
+        line-height:normal;
+        padding:10px;
+
+}
+
+.food-intake {
+    width: calc(100% - 28px);
+    margin-left:4px;
+}
+
+.no_entry{
+    height:100%;
+    vertical-align:middle;
+    align-items:center;
+}
+
+.left {
+    float: left;
+    width: 85%;
+
+}
+
+.right {
+    top: 0;
+    right: 0;
+    text-align: center;
+    width: auto;
+    align-items: center;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.right > p{
+    
+}
+
+.float-left {
+    display: flex;
+    justify-content: flex-start
+}
+
+.float-right {
+    flex: 0 1 auto;
+    width: 100px;
+    height: 100px;
+    margin-left: auto
+}
+
+
+.search_bar {
+    margin-left: 4px;
+    width:calc(100% - 4px);
+}
+
+.search_bar input[type=text] {
+    width: 92%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right:none;
+
+}
+
+.search_bar input[type=text]:hover,
+.search_bar input[type=text]:focus {
+    border-right: none
+
+}
+
+
+.search_bar button {
+    height: 44px;
+    margin-top: 10px;
+    padding-left: 9px;
+    margin-bottom: 20px;
+    width: calc(8% - 15px);
+    float: right;
+    padding: 6px 10px;
+    margin-right: 4px;
+    background: $Primary-colour;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.quick_entry {
+    width: 100%;
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    height:100%;
+  
+}
+
+.quick_entry > div {
+    margin-left: 8px;
+    height: 50%;
+    width: calc(33.3% - 6px);
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    border-radius: 4px;
+     box-shadow: $btn-shadow;
+}
+
+.quick_entry > div:first-child{
+    margin-left:0;
+}
+.quick_entry > div > input {
+    opacity: 0;
+    cursor: pointer;
+    opacity: 0;
+    float: right;
+    width: 20px;
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    height: 0
+
+}
+
+.quick_entry > div > p{
+    margin-bottom:20px;
+}
+
+.quick_entry > div > img {
+    width: 50%;
+    margin: 20px 0 10px 0;
+
+
+    @include respond-to(small-screens) {
+        width: 50%
+    }
+
+    @include respond-to(medium-screens) {
+        width: 25%
+    }
+
+    @include respond-to(large-screens) {
+        width: 20%
+    }
+
+
+    @include respond-to(desktop-screens) {
+        width: 20%
+    }
+
+    @include respond-to(wide-screens) {
+        width: 20%
+
+    }
 }
