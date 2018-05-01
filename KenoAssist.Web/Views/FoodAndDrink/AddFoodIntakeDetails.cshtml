@@ -30,16 +30,17 @@
            <div class="date_header vertical-align">
                 <p>@ViewBag.Date</p>
             </div>
+
             <p class="meal_heading">Mains</p>
             @Html.ValidationMessageFor(m => m.Main.PercentageAmount)
             <p>@Model.Main.Name</p>
             @Html.TextBoxFor(m => m.Main.PercentageAmount, new { @type = "number" })
-                    
+
             <p class="meal_heading">Sides</p>
             @Html.ValidationMessageFor(m => m.Side.PercentageAmount)
             <p>@Model.Side.Name</p>
             @Html.TextBoxFor(m => m.Side.PercentageAmount, new { @type = "number" })
-        
+
             <p class="meal_heading">Summary</p>
             @Html.ValidationMessageFor(m => m.Summary)
             <p>@Model.Summary</p>

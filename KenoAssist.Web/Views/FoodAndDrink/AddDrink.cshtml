@@ -11,7 +11,15 @@ function searchClick() {
 <div class="page">
     <div class="heading">
         <div class="vertical_align">
-            <a href="@Url.Action("Drink", "FoodAndDrink" )"><p class="return">&#10094 back</p></a>
+            <a href="@Url.Action("Drink", "FoodAndDrink" )">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g>
+                        <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6" />
+                    </g>
+                </svg>
+
+                <span>back</span>
+            </a>
         </div>
         <h1 class="minus-margin-60">Add Beverage</h1>
     </div>
@@ -27,10 +35,14 @@ function searchClick() {
     
             foreach (var drink in Model.Drinks)
       
-            {  <div class="menu_option">
+            {  
+            <label>
+            <div class="menu_option">
                 <p>@drink.Name</p>
                 @Html.RadioButtonFor(x => x.SelectedDrink, drink.Id, new { onclick = "this.form.submit();" })
-             </div>}
+             </div>
+            </label>
+        }
            
 
         }

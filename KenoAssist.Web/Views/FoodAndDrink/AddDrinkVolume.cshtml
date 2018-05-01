@@ -14,32 +14,27 @@
 
 
 
-    <div class="content-margin-40">
+    <div class="content-margin" style="margin-bottom: 64px;">
         <p>How much did @ViewBag.Name drink?</p>
         <input id="manualInput" type="number" onmouseout="AddValue(document.getElementById('manualInput').value)"/>
         <p>Quick Entry</p>
-               <div class="quick_entry">
 
-            <div>
-                <img src="../images/app_icons/beverage_intake_100.svg"/>
+        <label>
         <p>100ml</p>
         @Html.RadioButtonFor(m => m.Volume, 100,new {onclick="AddValue(100)"}) 
-        </div>
+        </label>
 
-        <div>
-                <img src="../images/app_icons/beverage_intake_250.svg"/>
+        <label>
         <p>250ml</p>
         @Html.RadioButtonFor(m => m.Volume, 250,new {onclick="AddValue(250)"}) 
-        </div>
-                    
-        <div>
-                <img src="../images/app_icons/beverage_intake_500.svg"/>
+        </label>
+
+        <label>
         <p>500ml</p>
         @Html.RadioButtonFor(m => m.Volume, 500,new {onclick="AddValue(500)"})
-        </div>
-            </div>
-                    @Html.TextBoxFor(m => m.Volume, new { id="valueInput",style="opacity:0" })
-
+        </label>
+        
+        @Html.TextBoxFor(m => m.Volume, new { id="valueInput",style="opacity:0" })
     </div>
 
     <input class="button-bottom" type="submit" value="Submit"/>

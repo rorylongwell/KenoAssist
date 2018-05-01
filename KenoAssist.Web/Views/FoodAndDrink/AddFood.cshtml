@@ -11,11 +11,19 @@ function searchClick() {
 <div class="page">
     <div class="heading">
         <div class="vertical_align">
-            <a href="@Url.Action("Food", "FoodAndDrink" )"><p class="return">&#10094 back</p></a>
+            <a href="@Url.Action("Food", "FoodAndDrink" )">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g>
+                        <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6" />
+                    </g>
+                </svg>
+
+                <span>back</span>
+            </a>
         </div>
         <h1 class="minus-margin-60">Add Food</h1>
     </div>
-    <div class="content-margin">
+    <div id="food" class="content-margin">
         @using (Html.BeginForm("AddFoodAmount", "FoodAndDrink", FormMethod.Post))
         {
         <div class="search_bar">
@@ -26,11 +34,14 @@ function searchClick() {
 
         <p class="primary_heading">Suggestions and Search Results</p>
             foreach (var food in Model.Food)
-
-            {      <div class="menu_option">
+            { 
+         <label>
+        <div class="menu_option">
                 <p>@food.Name</p>
-                @Html.RadioButtonFor(x => x.SelectedFood, food.Id, new { onclick = "this.form.submit();" })
-              </div>
+  
+                @Html.RadioButtonFor(x => x.SelectedFood, food.Id,new {onclick = "this.form.submit();"})
+        </div> 
+        </label>
         } 
      
         }

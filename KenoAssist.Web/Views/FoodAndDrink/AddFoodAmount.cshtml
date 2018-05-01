@@ -2,7 +2,15 @@
     @model FoodModel
     <div class="heading">
         <div class="vertical_align">
-            <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
+            <a href="javascript:void(0);" onclick="history.go(-1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g>
+                        <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6" />
+                    </g>
+                </svg>
+
+                <span>back</span>
+            </a>
         </div>
         <h1 class="minus-margin-60">Add Food</h1>
     </div>
@@ -22,26 +30,35 @@
         <p>Quick Entry</p>
 
         <div class="quick_entry">
-        
-        <div>
 
+
+           
+        <div>
+       <label>
                 <img src="../images/app_icons/beverage_intake_100.svg"/>
         <p>50&#37;</p>
         @Html.RadioButtonFor(m => m.PercentageAmount, 50, new {onclick="AddValue(50)"}) 
+        </label>
         </div>
-
+       
         <div>
+        <label>
                 <img src="../images/app_icons/beverage_intake_250.svg"/>
         <p>75&#37;</p>
         @Html.RadioButtonFor(m => m.PercentageAmount, 75, new {onclick="AddValue(75)"}) 
+        </label>
         </div>
-
+            
         <div>
+        <label>
                 <img src="../images/app_icons/beverage_intake_500.svg"/>
         <p>100&#37;</p>
         @Html.RadioButtonFor(m => m.PercentageAmount, 100, new {onclick="AddValue(100)"})
+        </label>            
                 </div>
         </div>
+
+        
         @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput",style="opacity:0" })
 
         </div>
