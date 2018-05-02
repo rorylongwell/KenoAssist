@@ -88,13 +88,15 @@
         }
         </div>
             </div>
-        @if (ViewBag.IsSubmitted)
+        @if(ViewBag.IsStaff){
+        if (ViewBag.IsSubmitted)
         {
             <button class="button-bottom" disabled="disabled">Add Beverage</button>
         }
         else
         {
             <button class="button-bottom" onclick="location.href='@Url.Action("AddDrink", "FoodAndDrink")'">Add Beverage</button>
+        }
         }
     </div>
 </div>

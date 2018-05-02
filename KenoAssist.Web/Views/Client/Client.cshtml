@@ -21,7 +21,15 @@
         }
 
 
-        <a href="@Url.Action("Index", "Account")"><img src="~/images/account_imgs/account_img_nurse.png">
+        <a href="@Url.Action("Index", "Account")">
+        @if(ViewBag.IsStaff){
+            <img src="~/images/account_imgs/account_img_nurse.png">
+
+            }
+            else
+            {
+            <img src="~/images/account_imgs/small_family_account_img.png">
+            }
 </a>
     
 </div>

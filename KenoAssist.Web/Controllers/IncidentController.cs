@@ -124,6 +124,9 @@ namespace KenoAssist.Web.Controllers
             var name = HttpContext.Session.GetString("Name");
             var firstName = name.Substring(0, name.IndexOf(" "));
 
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
+
             foreach(var incident in incidentReports)
             {
                 var description = descriptions.Where(m =>m.Key == incident.IncidentId).FirstOrDefault();
@@ -139,6 +142,9 @@ namespace KenoAssist.Web.Controllers
             IncidentReportModel incidentReport = incidentReports.Where(i => i.IncidentId == incidentId).FirstOrDefault();
             var name = HttpContext.Session.GetString("Name");
             var firstName = name.Substring(0, name.IndexOf(" "));
+
+            var user= HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
 
             var description = descriptions.Where(m => m.Key == incidentReport.IncidentId).FirstOrDefault();
             incidentReport.Description = string.Format(description.Value, firstName);
@@ -263,6 +269,9 @@ namespace KenoAssist.Web.Controllers
             {
                 ModelState.AddModelError("Description", "Enter a report");
             }
+
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
 
             if (!ModelState.IsValid)
                 return View(incidentReport);

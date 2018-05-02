@@ -111,7 +111,8 @@
     }
 
     </div>
-    @if (ViewBag.IsSubmitted)
+    @if(ViewBag.IsStaff){
+    if (ViewBag.IsSubmitted)
     {
         <button class="button-bottom" disabled="disabled">Meal Selection</button>
     }
@@ -119,5 +120,6 @@
     {
         <button class="button-bottom" onclick="location.href='@Url.Action("MealSelection", "FoodAndDrink", new {Date = ViewBag.CurrentDay, PageNo = 1 })';return false;">Meal Selection</button>
     }
-        </div>
+    }
 </div>
+

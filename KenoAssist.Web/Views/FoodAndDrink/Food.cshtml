@@ -166,7 +166,9 @@
                 }
             </a>
         </div>
-        @if (ViewBag.IsSubmitted)
+
+    @if(ViewBag.IsStaff){
+        if (ViewBag.IsSubmitted)
         {
             <button class="button-bottom" disabled="disabled">Add Food</button>
         }
@@ -174,6 +176,7 @@
         {
             <button class="button-bottom" onclick="location.href='@Url.Action("AddFood", "FoodAndDrink")'">Add Food</button>
         }
+    }
     </div>
 
 
@@ -184,7 +187,7 @@
     [
         {
             value: @(ViewBag.BreakfastCount),
-            color:"#009CA5",
+            color: "@ViewBag.BreakfastColour",
             highlight: "#F6F6F6",
             label: "Red"
         },
@@ -211,7 +214,7 @@
     [
          {
             value: @ViewBag.LunchCount,
-            color:"#009CA5",
+            color: "@ViewBag.LunchColour",
             highlight: "#F6F6F6",
             label: "Red"
         },
@@ -238,7 +241,7 @@
     [
         {
             value: @ViewBag.DinnerCount,
-            color:"#009CA5",
+            color: "@ViewBag.DinnerColour",
             highlight: "#F6F6F6",
             label: "Red"
         },
@@ -265,7 +268,7 @@
     [
         {
             value: @ViewBag.SnackCount,
-            color:"#009CA5",
+            color:"@ViewBag.SnackColour",
             highlight: "#F6F6F6",
             label: "Red"
         },

@@ -4,11 +4,56 @@
 
           <div class="vertical_align">
 
-        <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
+        <a href="javascript:void(0);" onclick="history.go(-1);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g>
+    <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6"/>
+</g>
+                    </svg>
+
+            <span>back</span>
+            </a>
 
             </div>
 
 <h1 class="minus-margin-60">Family Account</h1>
+</div>
+ <div class="content-margin background_container">
+     <img src="~/images/account_imgs/large_family_account_img.png">
+     <br />
+     <h2>Sophie Ellison</h2>
+     <br />
+     <p>Daughter</p>
+
+     <div class="margin-top-4 default-menu">
+         @foreach (var notification in Model)
+        {
+         <!-- Incident notification-->
+        if (notification.NotificationTypeId == 1)
+        {
+         <a href="@Url.Action("RedirectToIncident", "Account")">
+
+             <p class="highlight-text">Incidents & Injuries</p>
+             <p>@Common.GetTimeString(notification.Date)</p>
+             <p>@notification.Description</p>
+
+         </a>
+    }
+
+ <!-- Message notification-->
+if (notification.NotificationTypeId == 2)
+{
+ <a>
+
+     <p class="highlight-text">Message from Emma Willis</p>
+     <p>@Common.GetTimeString(notification.Date)</p>
+     <p>@notification.Description</p>
+ </a>
+}
+}
+</div>
+
+        
 </div>
 
  <a href="@Url.Action("Index", "Login")" class="button-bottom">Sign Out</a>   

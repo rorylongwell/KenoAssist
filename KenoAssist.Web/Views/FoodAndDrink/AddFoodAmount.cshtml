@@ -24,7 +24,7 @@
 
 
 
-    <div class="content-margin-40">
+    <div id="buttons" class="content-margin-40">
         <p>How much did @ViewBag.Name eat?</p>
         <input id="manualInput" type="number" onmouseout="AddValue(document.getElementById('manualInput').value)"/>
         <p>Quick Entry</p>
@@ -37,7 +37,7 @@
        <label>
                 <img src="../images/app_icons/beverage_intake_100.svg"/>
         <p>50&#37;</p>
-        @Html.RadioButtonFor(m => m.PercentageAmount, 50, new {onclick="AddValue(50)"}) 
+        @Html.RadioButtonFor(m => m.PercentageAmount, 50, new {id="button1",onclick="AddValue(50)"}) 
         </label>
         </div>
        
@@ -45,7 +45,7 @@
         <label>
                 <img src="../images/app_icons/beverage_intake_250.svg"/>
         <p>75&#37;</p>
-        @Html.RadioButtonFor(m => m.PercentageAmount, 75, new {onclick="AddValue(75)"}) 
+        @Html.RadioButtonFor(m => m.PercentageAmount, 75, new {id="button2",onclick="AddValue(75)"}) 
         </label>
         </div>
             
@@ -53,7 +53,7 @@
         <label>
                 <img src="../images/app_icons/beverage_intake_500.svg"/>
         <p>100&#37;</p>
-        @Html.RadioButtonFor(m => m.PercentageAmount, 100, new {onclick="AddValue(100)"})
+        @Html.RadioButtonFor(m => m.PercentageAmount, 100, new {id="button3",onclick="AddValue(100)"})
         </label>            
                 </div>
         </div>
@@ -71,3 +71,20 @@
   $("#valueInput").val(value); 
 }
 </script>
+
+@section scripts
+{
+<script>    
+$(document).ready(function() {
+   $("#button1").click(function() {
+            $('input', $('#buttons')).not(this).each(function(){
+                $(this).removeAttr("checked");
+            })
+    
+             $(this).attr("checked","checked");
+
+            })
+        });
+
+</script>
+}

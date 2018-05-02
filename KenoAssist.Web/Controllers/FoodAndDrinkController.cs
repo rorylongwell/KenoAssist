@@ -210,7 +210,7 @@ namespace KenoAssist.Web.Controllers
 				Lunch = new List<FoodModel>()
 				{
                         new FoodModel(){Id = 3, Name = "Chicken Sandwich", PercentageAmount=100, FoodTypeId=1},
-                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt", PercentageAmount=80, FoodTypeId=2}
+                        new FoodModel(){Id = 4, Name = "Strawberry Yogurt", PercentageAmount=20, FoodTypeId=2}
 				},
 				Dinner = new List<FoodModel>()
 				{
@@ -228,16 +228,16 @@ namespace KenoAssist.Web.Controllers
 				Breakfast = new List<FoodModel>()
 						{
                         new FoodModel(){Id = 1, Name = "Scrambled eggs and toast", PercentageAmount=100, FoodTypeId=1},
-                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=40, FoodTypeId=2}
+                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=70, FoodTypeId=2}
 				},
 				Lunch = new List<FoodModel>()
 				{
-                        new FoodModel(){Id = 3, Name = "Sausage rolls", PercentageAmount=100, FoodTypeId=1},
+                        new FoodModel(){Id = 3, Name = "Sausage rolls", PercentageAmount=65, FoodTypeId=1},
                         new FoodModel(){Id = 4, Name = "Strawberry Yogurt", PercentageAmount=50, FoodTypeId=2}
 				},
 				Dinner = new List<FoodModel>()
-                    {new FoodModel(){Id = 5, Name = "Beef stew", PercentageAmount=90, FoodTypeId=1},
-                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=80, FoodTypeId=2}
+                    {new FoodModel(){Id = 5, Name = "Beef stew", PercentageAmount=20, FoodTypeId=1},
+                        new FoodModel(){Id = 6, Name = "Cake and Custard", PercentageAmount=35, FoodTypeId=2}
 				},
 				Snacks = new List<FoodModel>()
 				{
@@ -260,27 +260,74 @@ namespace KenoAssist.Web.Controllers
         {
 				DateTime day = DateTime.Now.AddDays(addDays);
 
-				var foodIntake = foodIntakeList.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
-                if (foodIntake == null)
-                {
-				    foodIntake = new FoodIntakeModel();
+            ViewBag.BreakfastCount = 0;
+            ViewBag.LunchCount = 0;
+            ViewBag.DinnerCount = 0;
+            ViewBag.SnackCount = 0;
+            int breakfast=0;
+            int lunch=0;
+            int dinner=0;
+
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
+
+		    var foodIntake = foodIntakeList.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
+            if (foodIntake == null)
+            {
+				foodIntake = new FoodIntakeModel();
 				    foodIntake.Breakfast = new List<FoodModel>();
 				    foodIntake.Lunch = new List<FoodModel>();
 				    foodIntake.Dinner = new List<FoodModel>();
 				    foodIntake.Snacks = new List<FoodModel>();
-                ViewBag.BreakfastCount = 0;
-                ViewBag.LunchCount = 0;
-                ViewBag.DinnerCount = 0;
-                ViewBag.SnackCount = 0;
-            }else
+            }
+            else
             {
-                ViewBag.BreakfastCount = (foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount)/2;
-                ViewBag.LunchCount = (foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount)/2;
-                ViewBag.DinnerCount = (foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount)/2;
-                ViewBag.SnackCount = 0;
+                if ((foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount) / 2 != null)
+                {
+                    breakfast = (int)(foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount) / 2;
+                    ViewBag.BreakfastCount = breakfast;
+                }
+                else
+                {
+                    ViewBag.BreakfastCount = null;
+                }
+                if ((foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount) / 2 != null)
+                {
+                    lunch = (int)(foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount) / 2;
+                    ViewBag.LunchCount = lunch;
+                }
+                else
+                {
+                    ViewBag.LunchCount = null;
+                }
+                if ((foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2 != null)
+                {
+                    dinner = (int)(foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2;
+                    ViewBag.DinnerCount = dinner;
+                }
+                else
+                {
+                    ViewBag.DinnerCount = null;
+                }
+
+                if(foodIntake.Snacks.Any())
+                {
+                    ViewBag.SnackCount = foodIntake.Snacks[0].PercentageAmount;
+                }
+                else
+                {
+                    ViewBag.SnackCount = 0;
+                }
+
+
+
+
             }
 			bool IsSubmitted = foodIntake.Date.Date < DateTime.Now.Date;
 
+            ViewBag.BreakfastColour = GetColourString(breakfast);
+            ViewBag.LunchColour = GetColourString(lunch);
+            ViewBag.DinnerColour = GetColourString(dinner);
 
         ViewBag.IsSubmitted = IsSubmitted;
         ViewBag.DayCount = addDays;
@@ -301,6 +348,9 @@ namespace KenoAssist.Web.Controllers
 				drinkIntake = new DrinkIntakeModel();
 			}
 			bool IsSubmitted = drinkIntake.Date.Date < DateTime.Now.Date;
+
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
 
 			ViewBag.IsSubmitted = IsSubmitted;
             ViewBag.DayCount = addDays;
@@ -334,6 +384,9 @@ namespace KenoAssist.Web.Controllers
             {
                 IsSubmitted = false;
             }
+
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
                      
             ViewBag.IsSubmitted = IsSubmitted;
             ViewBag.DayCount = addDays;
@@ -534,6 +587,11 @@ namespace KenoAssist.Web.Controllers
         public IActionResult AddedFood(FoodModel food)
         {
             DateTime day = DateTime.Now;
+            int breakfast = 0;
+            int lunch = 0;
+            int dinner = 0;
+            int snack = 0;
+
 
             var foodIntake = foodIntakeList.Where(f => f.Date.Day.Equals(day.Day)).FirstOrDefault();
 
@@ -548,7 +606,69 @@ namespace KenoAssist.Web.Controllers
             ViewBag.DinnerCount = (foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2;
             ViewBag.SnackCount = foodIntake.Snacks[0].PercentageAmount;
 
+            if ((foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount) / 2 != null)
+            {
+                breakfast = (int)(foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount) / 2;
+                ViewBag.BreakfastCount = breakfast;
+            }
+            else
+            {
+                ViewBag.BreakfastCount = null;
+            }
+            if ((foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount) / 2 != null)
+            {
+                lunch = (int)(foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount) / 2;
+                ViewBag.LunchCount = lunch;
+            }
+            else
+            {
+                ViewBag.LunchCount = null;
+            }
+            if ((foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2 != null)
+            {
+                dinner = (int)(foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2;
+                ViewBag.DinnerCount = dinner;
+            }
+            else
+            {
+                ViewBag.DinnerCount = null;
+            }
+            if (foodIntake.Snacks[0].PercentageAmount != null)
+            {
+                snack = (int)foodIntake.Snacks[0].PercentageAmount;
+                ViewBag.SnackCount = snack;
+            }
+            else
+            {
+                ViewBag.SnackCount = null;
+            }
+
+
+            ViewBag.BreakfastColour = GetColourString(breakfast);
+            ViewBag.LunchColour = GetColourString(lunch);
+            ViewBag.DinnerColour = GetColourString(dinner);
+            ViewBag.SnackColour = GetColourString(snack);
+
             return View("Food", foodIntake);
+        }
+
+        public string GetColourString(int value)
+        {
+            string red = "#C95345";
+            string orange = "#CD8C2A";
+            string green = "#74AA4E";
+            if(value <= 33)
+            {
+                return red;
+            }
+            if(value <= 66)
+            {
+                return orange; 
+            }
+            else
+            {
+                return green;
+            }
         }
 
         public IActionResult FoodIntakeDetails(DateTime date, int mealId)
@@ -583,6 +703,9 @@ namespace KenoAssist.Web.Controllers
             ViewBag.SideCount = food.Side.PercentageAmount;
             ViewBag.TotalCount = (food.Main.PercentageAmount + food.Side.PercentageAmount)/2;
 
+            ViewBag.MainColour = GetColourString((int)food.Main.PercentageAmount);
+            ViewBag.SideColour = GetColourString((int)food.Side.PercentageAmount);
+            ViewBag.TotalColour = GetColourString((int)(food.Main.PercentageAmount + food.Side.PercentageAmount) / 2);
 
             return View(food);
         }

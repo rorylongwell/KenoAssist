@@ -31,7 +31,26 @@ namespace KenoAssist.Web.Controllers
 
         public IActionResult FamilyAccount()
         {
-            return View();
+            var notifications = new List<NotificationModel>(){
+
+                new NotificationModel(){
+                    Id = 1,
+                    Description ="Incident & injury report involving you was created. It has been submitted for review bu management.",
+                    Date = DateTime.Now,
+                    NotificationTypeId = 1
+
+                },
+                new NotificationModel(){
+                    Id = 2,
+                    Description ="How is he doing today? My son isn't too well and was sent home from school. I was going to visit tomorrow instead of tonight.",
+                    Date = DateTime.Now,
+                    NotificationTypeId = 2
+                }
+
+            };
+
+
+            return View(notifications);
         }
 
         public IActionResult StaffAccount()

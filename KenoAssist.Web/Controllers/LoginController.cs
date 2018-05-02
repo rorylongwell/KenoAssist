@@ -37,6 +37,9 @@ namespace KenoAssist.Web.Controllers
 
                 if (model.Username.ToLower().Equals("family"))
                 {
+                    HttpContext.Session.SetString("Name", string.Format("{0} {1}", "John", "Ellision"));
+                    HttpContext.Session.SetString("Room", "Room 12");
+                    HttpContext.Session.SetString("Photo", "~/images/profile_imgs/john_ellison.png");
                     HttpContext.Session.SetString("UserType", "family");
                     return RedirectToAction("Client", "Client");
                 }
