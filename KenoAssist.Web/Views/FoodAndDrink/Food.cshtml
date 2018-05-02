@@ -153,12 +153,15 @@
                 <p class="meal_heading margin-bottom-4">Additional Food</p>
                 @if (Model.Snacks.Count > 0)
                 {
-                    foreach (var food in Model.Snacks)
+            <div class="left">
+                    @foreach (var food in Model.Snacks)
                     {
                         <p>@food.Name</p>
-                    }
+                    }</div>
+            <div class="right">
                     <canvas id="donutSnack" width="40" height="40"></canvas>
                     <p>@(ViewBag.SnackCount)&#37;</p>
+                </div>
                 }
                 else
                 {
