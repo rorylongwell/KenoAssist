@@ -541,6 +541,9 @@ namespace KenoAssist.Web.Controllers
 			var totalVolume = drinkIntake.TotalVolume;
 			drinkIntake.TotalVolume = totalVolume + drink.Volume;
 
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
+
 			ViewBag.IsSubmitted = false;
 			ViewBag.DayCount = 0;
             ViewBag.CurrentDay = Helper.Common.GetDayName(day);

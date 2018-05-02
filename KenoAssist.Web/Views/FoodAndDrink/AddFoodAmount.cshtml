@@ -78,10 +78,10 @@
 $(document).ready(function() {
    $("#button1").click(function() {
             $('input', $('#buttons')).not(this).each(function(){
-                $(this).removeAttr("checked");
+                $(this).removeClass("checked");
             })
     
-             $(this).attr("checked","checked");
+             $(this).addClass("checked");
 
             })
         });
