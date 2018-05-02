@@ -65,12 +65,26 @@ body{
      display: block;
 }
 
-.content-margin-40{
+.content-margin-40 {
     width: calc(100% - 40px);
     margin: 0 auto;
     margin-top: 98px;
     display: block;
-    overflow:hidden;
+    overflow: hidden;
+   
+
+    @include respond-to(large-screens) {
+        width: 50%
+    }
+
+
+    @include respond-to(desktop-screens) {
+        width: 50%
+    }
+
+    @include respond-to(wide-screens) {
+        width: 50%
+    }
 }
 
 //column
@@ -988,6 +1002,16 @@ body{
         stroke-miterlimit: 10
     }
 
+
+.st31 {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10
+}
+
     // beverage intake glass
 
 #container {
@@ -1095,10 +1119,10 @@ animation: water-fill 5s;
 }
 
 .search_bar input[type=text] {
-    width: 92%;
+    width: calc(100% - 80px);
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-right:none;
+    border-right: none
 
 }
 
@@ -1110,11 +1134,11 @@ animation: water-fill 5s;
 
 
 .search_bar button {
-    height: 44px;
+    height: 47px;
     margin-top: 10px;
     padding-left: 9px;
     margin-bottom: 20px;
-    width: calc(8% - 15px);
+    width: 60px;
     float: right;
     padding: 6px 10px;
     margin-right: 4px;
@@ -1124,6 +1148,11 @@ animation: water-fill 5s;
     cursor: pointer;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+     box-shadow: $btn-shadow;
+}
+
+.search_bar button:hover{
+    color: darken($Primary-colour, 10%);
 }
 
 .quick_entry {
@@ -1154,7 +1183,7 @@ animation: water-fill 5s;
 .quick_entry > div:first-child{
     margin-left:0;
 }
-.quick_entry > div > input {
+.quick_entry > div > label > input {
     opacity: 0;
     cursor: pointer;
     opacity: 0;
@@ -1167,11 +1196,16 @@ animation: water-fill 5s;
 
 }
 
-.quick_entry > div > p{
-    margin-bottom:20px;
+.quick_entry > div:active {
+    box-shadow: inset 0 0 0 2px $Primary-colour;
 }
 
-.quick_entry > div > img {
+.quick_entry > div > p {
+    margin-bottom: 20px
+
+}
+
+.quick_entry > div > label > img {
     width: 50%;
     margin: 20px 0 10px 0;
 
