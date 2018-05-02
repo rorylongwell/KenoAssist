@@ -5,6 +5,7 @@ function searchClick() {
         var searchString = document.getElementById('searchBox').value;
         location.href = '@Url.Action("SearchFood", "FoodAndDrink")?searchString=' + searchString;
         return false;
+    
 }
 </script>
 
@@ -37,7 +38,7 @@ function searchClick() {
 
            </div>
 
-        <p class="primary_heading">Suggestions and Search Results</p>
+        <p id="title" class="primary_heading">@ViewBag.Title</p>
             foreach (var food in Model.Food)
             { 
          <label>

@@ -137,6 +137,12 @@ namespace KenoAssist.Web.Controllers
         {
             ViewBag.IsForm = false;
             IncidentReportModel incidentReport = incidentReports.Where(i => i.IncidentId == incidentId).FirstOrDefault();
+            var name = HttpContext.Session.GetString("Name");
+            var firstName = name.Substring(0, name.IndexOf(" "));
+
+            var description = descriptions.Where(m => m.Key == incidentReport.IncidentId).FirstOrDefault();
+            incidentReport.Description = string.Format(description.Value, firstName);
+     
             return View(incidentReport);
         }
 

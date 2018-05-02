@@ -447,6 +447,7 @@ namespace KenoAssist.Web.Controllers
 			
 			var drinkModel = new DrinkSelectionModel();
 			drinkModel.Drinks = drinksList;
+            ViewBag.Title = "Suggestions";
 			return View(drinkModel);
 		}
         
@@ -456,6 +457,7 @@ namespace KenoAssist.Web.Controllers
 			var drink = drinksList.Where(m => m.Id == model.SelectedDrink).FirstOrDefault();
 			var name = HttpContext.Session.GetString("Name");
             ViewBag.Name = name.Substring(0, name.IndexOf(" "));
+            ViewBag.Title = "Search Results";
 			return View(drink);
         }
         
@@ -499,6 +501,7 @@ namespace KenoAssist.Web.Controllers
         {
             var food = new FoodSelectionModel();
             food.Food = breakfastList.Concat(lunchList).Concat(dinnerList).ToList();
+            ViewBag.Title = "Suggestions";
             return View(food);
         }
 
@@ -515,7 +518,7 @@ namespace KenoAssist.Web.Controllers
             {
                 foodModel.Food = food.Where(m => m.Name.ToLower().Contains(searchString.ToLower())).ToList();
             }
-
+            ViewBag.Title = "Search Results";
             return View("AddFood", foodModel);
         }
 
