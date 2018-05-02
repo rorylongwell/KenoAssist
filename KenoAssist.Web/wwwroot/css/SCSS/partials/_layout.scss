@@ -1199,6 +1199,10 @@ animation: water-fill 5s;
 .quick_entry > div:active {
     box-shadow: inset 0 0 0 2px $Primary-colour;
 }
+ 
+.checked {
+    box-shadow: inset 0 0 0 2px $Primary-colour;
+}
 
 .quick_entry > div > p {
     margin-bottom: 20px
@@ -1232,3 +1236,4 @@ animation: water-fill 5s;
 
     }
 }
+

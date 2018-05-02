@@ -1386,39 +1386,44 @@ body {
 }
 
 /* line 1203, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+.checked {
+  box-shadow: inset 0 0 0 2px #009CA6;
+}
+
+/* line 1207, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .quick_entry > div > p {
   margin-bottom: 20px;
 }
 
-/* line 1208, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+/* line 1212, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
 .quick_entry > div > label > img {
   width: 50%;
   margin: 20px 0 10px 0;
 }
 
 @media only screen and (min-width: 400px) and (max-width: 900px) {
-  /* line 1208, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+  /* line 1212, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
   .quick_entry > div > label > img {
     width: 25%;
   }
 }
 
 @media only screen and (min-width: 900px) and (max-width: 1200px) {
-  /* line 1208, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+  /* line 1212, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
   .quick_entry > div > label > img {
     width: 20%;
   }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1800px) {
-  /* line 1208, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+  /* line 1212, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
   .quick_entry > div > label > img {
     width: 20%;
   }
 }
 
 @media only screen and (min-width: 1800px) {
-  /* line 1208, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
+  /* line 1212, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_layout.scss */
   .quick_entry > div > label > img {
     width: 20%;
   }
