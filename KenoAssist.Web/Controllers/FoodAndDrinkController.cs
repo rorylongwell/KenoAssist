@@ -554,7 +554,9 @@ namespace KenoAssist.Web.Controllers
 			ViewBag.DayCount = 0;
             ViewBag.CurrentDay = Helper.Common.GetDayName(day);
 
-            ViewBag.Percentage = (drinkIntake.TotalVolume * 100) / 2000;
+            decimal percentage= (drinkIntake.TotalVolume * 100) / 2000;
+            ViewBag.Percentage = percentage;
+            ViewBag.Colour = GetDrinkColourString(percentage);
 
 			return View("Drink", drinkIntake);      
 		}
@@ -687,11 +689,11 @@ namespace KenoAssist.Web.Controllers
             string red = "#C95345";
             string orange = "#CD8C2A";
             string green = "#74AA4E";
-            if (value <= 750)
+            if (value <= 33)
             {
                 return red;
             }
-            if (value <= 1500)
+            if (value <= 66)
             {
                 return orange;
             }
@@ -716,16 +718,19 @@ namespace KenoAssist.Web.Controllers
                     food.Main = model.Breakfast.Where(m => m.FoodTypeId == 1).FirstOrDefault();
                     food.Side = model.Breakfast.Where(m => m.FoodTypeId == 2).FirstOrDefault();
                     food.Summary = string.Format("{0} eat well today as normal", firstName);
+                    ViewBag.Meal = "Breakfast";
                     break;
                 case 2:
                     food.Main = model.Lunch.Where(m => m.FoodTypeId == 1).FirstOrDefault();
                     food.Side = model.Lunch.Where(m => m.FoodTypeId == 2).FirstOrDefault();
                     food.Summary = string.Format("{0} eat well today as normal", firstName);
+                    ViewBag.Meal = "Lunch";
                     break;
                 case 3:
                     food.Main = model.Dinner.Where(m => m.FoodTypeId == 1).FirstOrDefault();
                     food.Side = model.Dinner.Where(m => m.FoodTypeId == 2).FirstOrDefault();
                     food.Summary = string.Format("{0} eat well today as normal", firstName);
+                    ViewBag.Meal = "Dinner";
                     break;
             }
 
