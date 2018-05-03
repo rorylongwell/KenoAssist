@@ -356,7 +356,10 @@ namespace KenoAssist.Web.Controllers
             ViewBag.DayCount = addDays;
 			ViewBag.CurrentDay = Helper.Common.GetDayName(day);
 
-            ViewBag.Percentage = (drinkIntake.TotalVolume * 100)/2000;
+            decimal percentage = (drinkIntake.TotalVolume * 100) / 2000;
+            ViewBag.Percentage = percentage;
+
+            ViewBag.Colour = GetDrinkColourString(percentage);
 
             return View(drinkIntake);
         }
@@ -672,6 +675,25 @@ namespace KenoAssist.Web.Controllers
             if(value <= 66)
             {
                 return orange; 
+            }
+            else
+            {
+                return green;
+            }
+        }
+
+        public string GetDrinkColourString(decimal value)
+        {
+            string red = "#C95345";
+            string orange = "#CD8C2A";
+            string green = "#74AA4E";
+            if (value <= 750)
+            {
+                return red;
+            }
+            if (value <= 1500)
+            {
+                return orange;
             }
             else
             {
