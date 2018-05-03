@@ -17,23 +17,51 @@
             </a>
         </div>
 
-<h1 class="minus-margin-60">Meal Selection</h1>
+<h1 class="minus-margin-60">Food Intake</h1>
 </div>
     <div class="content-margin">
            <div class="date_header vertical-align">
-                <p>@ViewBag.Date</p>
+                <p>@ViewBag.Date</p><!--You need to make this change to what it should say, eg the meal of the day -->
             </div>
+
+                <div class="meal_header vertical-align">
+            <p>Lunch</p>
+        </div>
+        <div class="fullpage_whiteBG">
+            <div>
+        <div class="left">
             <p class="meal_heading">Mains</p>
             <p>@Model.Main.Name</p>
-            <canvas id="donutMain" width="40" height="40"></canvas>
+            </div>
         
+        <div class="right">
+            <canvas id="donutMain" width="50px" height="50px"></canvas>
+        </div>
+        </div>
+
+            <div>
+        <div class="left">
             <p class="meal_heading">Sides</p>
             <p>@Model.Side.Name</p>
-            <canvas id="donutSide" width="40" height="40"></canvas>
-        
+           </div>
+        <div class="right">
+            <canvas id="donutSide" width="50px" height="50px"></canvas>
+        </div>
+
+                </div>
+
+            <div>
+
+        <div class="left">
             <p class="meal_heading">Summary</p>
             <p>@Model.Summary</p>
-            <canvas id="donutTotal" width="40" height="40"></canvas>
+            </div>
+        
+        <div class="right">
+            <canvas id="donutTotal" width="50px" height="50px"></canvas>
+         </div>
+
+                </div>
     </div>
 </div>
 
@@ -57,18 +85,11 @@
     ],
     // Options
     {
-        segmentShowStroke : true,
-        segmentStrokeColor : "#fff",
-        segmentStrokeWidth : 2,
+       segmentShowStroke : false,
         percentageInnerCutout : 50,
         animationSteps : 100,
-        animationEasing : "easeOutBounce",
+        animationEasing : "easeOutCubic",
         animateRotate : true,
-        animateScale : false,
-        responsive: true,
-        maintainAspectRatio: true,
-        showScale: true,
-        animateScale: true
     });
 
      var donutSideEL = document.getElementById("donutSide").getContext("2d");
@@ -90,18 +111,11 @@
     ],
     // Options
     {
-        segmentShowStroke : true,
-        segmentStrokeColor : "#fff",
-        segmentStrokeWidth : 2,
+        segmentShowStroke : false,
         percentageInnerCutout : 50,
         animationSteps : 100,
-        animationEasing : "easeOutBounce",
+        animationEasing : "easeOutCubic",
         animateRotate : true,
-        animateScale : false,
-        responsive: true,
-        maintainAspectRatio: true,
-        showScale: true,
-        animateScale: true
     });
 
      var donutTotalEL = document.getElementById("donutTotal").getContext("2d");
@@ -123,18 +137,11 @@
     ],
     // Options
     {
-        segmentShowStroke : true,
-        segmentStrokeColor : "#fff",
-        segmentStrokeWidth : 2,
+        segmentShowStroke : false,
         percentageInnerCutout : 50,
         animationSteps : 100,
-        animationEasing : "easeOutBounce",
+        animationEasing : "easeOutCubic",
         animateRotate : true,
-        animateScale : false,
-        responsive: true,
-        maintainAspectRatio: true,
-        showScale: true,
-        animateScale: true
     });
     </script>
   

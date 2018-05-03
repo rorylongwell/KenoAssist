@@ -27,7 +27,7 @@ function searchClick() {
     <div id="food" class="content-margin">
         @using (Html.BeginForm("AddFoodAmount", "FoodAndDrink", FormMethod.Post))
         {
-        <div class="search_bar">
+        <div class="search_bar" style="width:60%; margin: 0 auto; display: block; text-align:center; margin-top:40px;">
             <input id="searchBox" placeholder="Search.." type="text" />
             <button onclick="return searchClick()" value="Search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <g>
