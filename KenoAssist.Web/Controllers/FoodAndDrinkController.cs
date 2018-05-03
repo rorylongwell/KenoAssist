@@ -416,6 +416,9 @@ namespace KenoAssist.Web.Controllers
                 IsSubmitted = false;
             }
 
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
+
             ViewBag.IsSubmitted = IsSubmitted;
 			ViewBag.DayCount = day.Day - DateTime.Now.Day;
             ViewBag.CurrentDay = Helper.Common.GetDayName(day);
@@ -646,6 +649,8 @@ namespace KenoAssist.Web.Controllers
                 ViewBag.SnackCount = null;
             }
 
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
 
             ViewBag.BreakfastColour = GetColourString(breakfast);
             ViewBag.LunchColour = GetColourString(lunch);

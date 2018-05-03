@@ -4,8 +4,8 @@
       <File FileName="KenoAssist.Web/Views/FoodAndDrink/Drink.cshtml" Line="1" Column="1" />
       <File FileName="KenoAssist.Web/Views/Account/FamilyAccount.cshtml" Line="1" Column="1" />
       <File FileName="KenoAssist.Web/Views/Account/StaffAccount.cshtml" Line="1" Column="1" />
-      <File FileName="KenoAssist.Web/Controllers/FoodAndDrinkController.cs" Line="353" Column="28" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/FoodIntakeDetails.cshtml" Line="1" Column="1" />
+      <File FileName="KenoAssist.Web/Controllers/FoodAndDrinkController.cs" Line="650" Column="52" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/FoodIntakeDetails.cshtml" Line="9" Column="1" />
       <File FileName="KenoAssist.Web/Views/Incident/Incidents.cshtml" Line="1" Column="1" />
       <File FileName="KenoAssist.Web/Models/FoodModel.cs" Line="16" Column="29" />
       <File FileName="KenoAssist.Web/Controllers/IncidentController.cs" Line="1" Column="1" />
@@ -16,8 +16,8 @@
       <File FileName="KenoAssist.Web/Controllers/AccountController.cs" Line="1" Column="1" />
       <File FileName="KenoAssist.Web/Controllers/ClientController.cs" Line="75" Column="17" />
       <File FileName="KenoAssist.Web/Views/Client/Client.cshtml" Line="1" Column="1" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFoodIntakeDetails.cshtml" Line="47" Column="46" />
-      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFoodAmount.cshtml" Line="32" Column="34" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFoodIntakeDetails.cshtml" Line="46" Column="13" />
+      <File FileName="KenoAssist.Web/Views/FoodAndDrink/AddFoodAmount.cshtml" Line="79" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

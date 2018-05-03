@@ -2,7 +2,15 @@
     @model DrinkModel
     <div class="heading">
         <div class="vertical_align">
-            <a href="javascript:void(0);" onclick="history.go(-1);"><p class="return">&#10094 back</p></a>
+            <a href="javascript:void(0);" onclick="history.go(-1);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<g>
+    <path class="st27" d="M15.6,18l-6.9-5.5c-0.3-0.3-0.3-0.8,0-1L15.6,6"/>
+</g>
+                    </svg>
+
+            <span>back</span>
+            </a>
         </div>
         <h1 class="minus-margin-60">Add Beverage</h1>
     </div>
@@ -14,14 +22,14 @@
 
 
 
-    <div class="content-margin-40">
+    <div id="buttons" class="content-margin-40">
         <p>How much did @ViewBag.Name drink?</p>
         <input id="manualInput" type="number" onmouseout="AddValue(document.getElementById('manualInput').value)"/>
         <p>Quick Entry</p>
 
         <div class="quick_entry">
             
-        <div class="menu_option">
+        <div id="button1" class="menu_option" onclick="AddValue(100)">
         <label>
         <img src="../images/app_icons/beverage_intake_100.svg"/>
         <p>100ml</p>
@@ -29,7 +37,7 @@
         </label>
         </div>
             
-        <div class="menu_option">
+        <div id="button2" class="menu_option" onclick="AddValue(250)">
         <label>
         <img src="../images/app_icons/beverage_intake_250.svg"/>
         <p>250ml</p>
@@ -37,7 +45,7 @@
         </label>
         </div>
             
-         <div class="menu_option">
+         <div id="button3" class="menu_option" onclick="AddValue(500)">
         <label>
         <img src="../images/app_icons/beverage_intake_500.svg"/>
         <p>500ml</p>
@@ -50,11 +58,50 @@
         @Html.TextBoxFor(m => m.Volume, new { id="valueInput",style="opacity:0" })
     </div>
 
-    <input class="button-bottom" type="submit" value="Submit"/>
+    <input id="submitButton" class="button-bottom" type="submit" value="Submit"/>
     }
 </div>
 <script>
     function AddValue(value) {
   $("#valueInput").val(value); 
+     $("#submitButton").removeAttr('disabled');
+
+    if(value == "")
+    {
+     $("#submitButton").attr('disabled','disabled');
+    }
 }
 </script>
+
+@section scripts
+{
+<script>    
+$(document).ready(function() {
+   $("#button1").click(function() {
+            $('input', $('#buttons')).not(this).each(function(){
+                $(this).parent().closest('div').removeClass("checked");
+            })
+    
+             $(this).addClass("checked");
+
+            })
+     $("#button2").click(function() {
+            $('input', $('#buttons')).not(this).each(function(){
+                $(this).parent().closest('div').removeClass("checked");
+            })
+    
+            $(this).addClass("checked");
+
+            })
+     $("#button3").click(function() {
+            $('input', $('#buttons')).not(this).each(function(){
+                $(this).parent().closest('div').removeClass("checked");
+            })
+    
+            $(this).addClass("checked");
+
+            })
+        });
+
+</script>
+}

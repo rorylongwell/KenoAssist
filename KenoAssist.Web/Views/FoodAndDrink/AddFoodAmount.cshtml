@@ -33,7 +33,7 @@
 
 
            
-        <div>
+        <div id="button1" onclick="AddValue(50)">
        <label>
                 <img src="../images/app_icons/beverage_intake_100.svg"/>
         <p>50&#37;</p>
@@ -41,7 +41,7 @@
         </label>
         </div>
        
-        <div>
+        <div id="button2" onclick="AddValue(75)">
         <label>
                 <img src="../images/app_icons/beverage_intake_250.svg"/>
         <p>75&#37;</p>
@@ -49,7 +49,7 @@
         </label>
         </div>
             
-        <div>
+        <div id="button3" onclick="AddValue(100)">
         <label>
                 <img src="../images/app_icons/beverage_intake_500.svg"/>
         <p>100&#37;</p>
@@ -58,17 +58,27 @@
                 </div>
         </div>
 
+        <p>Summary</p>
+        <textarea></textarea>
         
-        @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput",style="opacity:0" })
+        @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput",style="opacity:0"})
 
         </div>
 
-    <input class="button-bottom" type="submit" value="Submit"/>
+    <input id="submitButton" disabled="disabled" class="button-bottom" type="submit" value="Submit"/>
     }
 </div>
 <script>
     function AddValue(value) {
-  $("#valueInput").val(value); 
+  $("#valueInput").val(value);
+
+    $("#submitButton").removeAttr('disabled');
+
+    if(value == "")
+    {
+     $("#submitButton").attr('disabled','disabled');
+    }
+
 }
 </script>
 
@@ -78,10 +88,26 @@
 $(document).ready(function() {
    $("#button1").click(function() {
             $('input', $('#buttons')).not(this).each(function(){
-                $(this).removeClass("checked");
+                $(this).parent().closest('div').removeClass("checked");
             })
     
              $(this).addClass("checked");
+
+            })
+     $("#button2").click(function() {
+            $('input', $('#buttons')).not(this).each(function(){
+                $(this).parent().closest('div').removeClass("checked");
+            })
+    
+            $(this).addClass("checked");
+
+            })
+     $("#button3").click(function() {
+            $('input', $('#buttons')).not(this).each(function(){
+                $(this).parent().closest('div').removeClass("checked");
+            })
+    
+            $(this).addClass("checked");
 
             })
         });
