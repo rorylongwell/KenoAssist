@@ -30,21 +30,27 @@
            <div class="date_header vertical-align">
                 <p>@ViewBag.Date</p>
             </div>
+        <div class="meal_header vertical-align">
+            <p>Lunch</p><!-- Rory can you add the code in here to make this say lunch, dinner etc...-->
+        </div>
+        
 
+        <div class="content-margin-40 extra_margin_top">
             <p class="meal_heading">Mains</p>
             @Html.ValidationMessageFor(m => m.Main.PercentageAmount)
             <p>@Model.Main.Name</p>
-            @Html.TextBoxFor(m => m.Main.PercentageAmount, new { @type = "number" })
+            @Html.TextBoxFor(m => m.Main.PercentageAmount, new { @type = "number", placeholder = "e.g. 30"})
 
             <p class="meal_heading">Sides</p>
             @Html.ValidationMessageFor(m => m.Side.PercentageAmount)
             <p>@Model.Side.Name</p>
-            @Html.TextBoxFor(m => m.Side.PercentageAmount, new { @type = "number" })
+            @Html.TextBoxFor(m => m.Side.PercentageAmount, new { @type = "number", placeholder = "e.g. 30" })
 
             <p class="meal_heading">Summary</p>
             @Html.ValidationMessageFor(m => m.Summary)
             <p>@Model.Summary</p>
-            @Html.TextAreaFor(m => m.Summary)
+            @Html.TextAreaFor(m => m.Summary, new { placeholder = "e.g. Client ate very well, finished most of their meal..." })
+            </div>
     </div>
     <input class="button-bottom" type="submit" value="Submit"/>
     }

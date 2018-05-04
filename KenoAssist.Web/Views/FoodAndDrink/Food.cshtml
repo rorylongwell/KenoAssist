@@ -115,10 +115,12 @@
                     <p>No Data</p>
                 }
             </a>
+        
             <a href="@Url.Action((ViewBag.DinnerCount != null) ? "FoodIntakeDetails" : "AddFoodIntakeDetails", "FoodAndDrink" , new { date=Model.Date, mealId = 3})">
                
 
-                <div class="left"><p class="meal_heading margin-bottom-4">Dinner</p></div>  
+                <div class="left">
+            <p class="meal_heading margin-bottom-4">Dinner</p></div>  
                 @if (Model.Dinner.Count > 0)
                {
             <div class="left">
@@ -126,7 +128,7 @@
                     {
                         <p>@food.Name</p>
                     }
-                    </div>
+               </div>
  
                     if(ViewBag.DinnerCount != null)
 
@@ -149,24 +151,34 @@
                 } 
             </a>
   
-            <a>
+            <a href="">
+            <div>
+                <div class="left">
                 <p class="meal_heading margin-bottom-4">Additional Food</p>
+                </div>
+                
                 @if (Model.Snacks.Count > 0)
                 {
             <div class="left">
                     @foreach (var food in Model.Snacks)
                     {
                         <p>@food.Name</p>
-                    }</div>
+                    <br>
+                    }
+            </div>
+                
             <div class="right">
                     <canvas id="donutSnack" width="40" height="40"></canvas>
                     <p>@(ViewBag.SnackCount)&#37;</p>
-                </div>
+               </div>
                 }
                 else
-                {
+                { 
+            <div class="left">
                     <p>No Data</p>
+                </div>
                 }
+                </div>
             </a>
         </div>
 

@@ -122,3 +122,7 @@ span.title {
 .food_search_text{
     margin: 0 0 0 10px;
 }
+
+::placeholder {
+    @include crossBrowser(opacity, 0.5);
+}

@@ -25,6 +25,7 @@
 
 
     <div id="buttons" class="content-margin-40">
+        <p class="meal_heading">Amount Consumed</p>
         <p>How much did @ViewBag.Name eat?</p>
         <input id="manualInput" type="number" onmouseout="AddValue(document.getElementById('manualInput').value)"/>
         <p>Quick Entry</p>
@@ -58,8 +59,8 @@
                 </div>
         </div>
 
-        <p>Summary</p>
-        <textarea></textarea>
+        <p class="meal_heading">Summary</p>
+        <textarea class="summary" placeholder="e.g. Client has been drinking well today..."></textarea>
         
         @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput",style="opacity:0"})
 
