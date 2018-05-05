@@ -62,8 +62,7 @@ span.title {
 
 .title {
     font-size: 12px;
-    //line-height: normal;
-    color: lighten($Primary-text,15%)
+    color: lighten($Primary-text,15%);
 }
 .explaining-form-field{
     font-size:12px;
@@ -74,7 +73,6 @@ span.title {
     color: $Primary-colour;
     font-weight: 700;
     font-size: 12px;
-    line-height: normal;
 }
 
 .added-lineheight{
@@ -123,10 +121,4 @@ span.title {
 
 .food_search_text{
     margin: 0 0 0 10px;
-}
-
-.field-validation-error {
-    color: $Warning-color;
-    font-size:12px;
-    font-weight:bold;
 }

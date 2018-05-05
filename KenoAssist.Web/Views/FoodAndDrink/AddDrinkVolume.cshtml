@@ -25,11 +25,12 @@
     <div id="buttons" class="content-margin-40">
         <p>How much did @ViewBag.Name drink?</p>
         <input id="manualInput" type="number" onmouseout="AddValue(document.getElementById('manualInput').value)"/>
+
         <p>Quick Entry</p>
 
         <div class="quick_entry">
             
-        <div id="button1" class="menu_option" onclick="AddValue(100)">
+        <div id="button1" onclick="AddValue(100)">
         <label>
         <img src="../images/app_icons/beverage_intake_100.svg"/>
         <p>100ml</p>
@@ -37,7 +38,7 @@
         </label>
         </div>
             
-        <div id="button2" class="menu_option" onclick="AddValue(250)">
+        <div id="button2" onclick="AddValue(250)">
         <label>
         <img src="../images/app_icons/beverage_intake_250.svg"/>
         <p>250ml</p>
@@ -45,7 +46,7 @@
         </label>
         </div>
             
-         <div id="button3" class="menu_option" onclick="AddValue(500)">
+         <div id="button3" onclick="AddValue(500)">
         <label>
         <img src="../images/app_icons/beverage_intake_500.svg"/>
         <p>500ml</p>

@@ -52,11 +52,6 @@ body{
   
 }
 
-.gradient > form > input::placeholder, {
-    opacity: 1.0
-
-}
-
 .small-icon{
     width:24px;
 }
@@ -76,8 +71,7 @@ body{
     margin-top: 98px;
     display: block;
     overflow: hidden;
-    margin-bottom: 68px;
-
+   
 
     @include respond-to(large-screens) {
         width: 50%
@@ -93,17 +87,8 @@ body{
     }
 }
 
-
-.extra_margin_top{
-    margin-top:24px;
-}
-
-//.extra_margin_top >
-
-.meal_heading{
-    margin-bottom: 12px;
-}
 //column
+
 .client-list > a {
     margin-left: 4px;
     margin-right: 4px;
@@ -116,8 +101,7 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border-radius: $border-radius
-
+    border-radius: $border-radius;
 }
 
 .client-list > a > div > p {
@@ -234,7 +218,7 @@ body{
 
     .details-left {
         flex: 0 1 auto;
-        width: 180px;
+        width: 160px;
         //position: absolute;
         left: 8px;
         float: left
@@ -258,31 +242,22 @@ body{
         margin-right: 8px
     }
     //keno Homepage
-    .page,
-    .page_white_BG {
+    .page {
         height: calc(100vh - 100px);
         overflow: initial
         //margin-top: 64px
     }
 
-
-.page_white_BG{
-    background-color:white;
-    margin-top:-40px;
-    padding-top:10px;
-    height:calc(100vh + 10px);
-}
-
-.menu_options, {
-    height: 60%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex-flow: row wrap
-}
+    .menu_options, {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-flow: row wrap
+    }
 
     //menu icons
 .menu-icons {
@@ -392,8 +367,6 @@ body{
     .incident_container {
         margin-top: 128px
     }
-
-
 
     .default-menu > a {
         height: 120px;
@@ -707,15 +680,13 @@ body{
         width: 100%
     }
 
-.date_header > .right_arrow,
-.date_header > .right_arrow_disabled {
-    flex: 0 1 auto;
-    margin-left: auto;
-    padding-right: 12px
-}
+    .date_header > .right_arrow {
+        flex: 0 1 auto;
+        margin-left: auto;
+        padding-right: 12px
+    }
 
-    .date_header > .left_arrow,
-    .date_header > .left_arrow_disabled {
+    .date_header > .left_arrow {
         padding-left: 12px
     }
 
@@ -728,26 +699,12 @@ body{
         text-decoration: none
     }
 
-    .warning_container,
-    .warning_alert {
+    .warning_container {
         height: 60px;
         display: flex;
         align-items: center;
         vertical-align: middle
     }
-   .warning_alert{
-       height:auto;
-       margin-top:-32px;
-   }
-
-.warning_alert > span {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-    line-height: 20px;
-    color: $Plain-colour;
-}
-
 
     .warning_container > span {
         width: calc(100% - 16px);
@@ -757,8 +714,7 @@ body{
         color: $Primary-colour
     }
 
-    .warning_container > svg,
-    .warning_alert > svg {
+    .warning_container > svg {
         margin: 0 8px
     }
     .meal_container {
@@ -982,13 +938,6 @@ body{
         stroke-miterlimit: 10
     }
 
-.st21_disabled {
-    fill: none;
-    stroke: #D6D6D6;
-    stroke-width: 2;
-    stroke-miterlimit: 10
-}
-
     .st22 {
         fill: none;
         stroke: #009CA5;
@@ -1133,7 +1082,8 @@ animation: water-fill 5s;
 
 .left {
     float: left;
-    width:calc(100% - 50px);
+    width: 85%;
+
 }
 
 .right {
@@ -1144,209 +1094,141 @@ animation: water-fill 5s;
     align-items: center;
     vertical-align: middle;
     height: 100%;
-
 }
 
-.right > p.title {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0
-
-}.fullpage_whiteBG {
-    width: 100%;
-    height: 100%
-
-}
-
-.fullpage_whiteBG > div {
-    padding: 20px 12px 20px 12px;
-    background-color: $Plain-colour;
-    margin: 8px 0;
-}
-
-.fullpage_whiteBG > div:first-child{
-    margin: 0;
-
-}
-
-.fullpage_whiteBG > div > .left p {
-    margin-bottom: 12px;
-    
-} .right > p {
+.right > p{
     
 }
 
-    .float-left {
-        display: flex;
-        justify-content: flex-start
-    }
+.float-left {
+    display: flex;
+    justify-content: flex-start
+}
 
-    .float-right {
-        flex: 0 1 auto;
-        width: 100px;
-        height: 100px;
-        margin-left: auto
-    }
+.float-right {
+    flex: 0 1 auto;
+    width: 100px;
+    height: 100px;
+    margin-left: auto
+}
 
 
 .search_bar {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: calc(100% - 10px);
-    margin-left: 10px;
-    border-radius: 4px;
-
-    @include respond-to(large-screens) {
-        width: 60%;
-        margin: 0 20%
-    }
-
-
-    @include respond-to(desktop-screens) {
-        width: 60%;
-        margin: 0 20%;    }
-
-    @include respond-to(wide-screens) {
-        width: 60%;
-        margin: 0 20%
-
-    }
+    margin-left: 4px;
+    width:calc(100% - 4px);
 }
 
-    .search_bar input[type=text] {
-        width: calc(100% - 90px);
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-right: none
-    }
+.search_bar input[type=text] {
+    width: calc(100% - 80px);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none
 
-    .search_bar input[type=text]:hover,
-    .search_bar input[type=text]:focus {
-        border-right: none
-    }
+}
 
-.search_bar > div {
-    //height: 47px;
+.search_bar input[type=text]:hover,
+.search_bar input[type=text]:focus {
+    border-right: none
+
+}
+
+
+.search_bar button {
+    height: 47px;
     margin-top: 10px;
     padding-left: 9px;
     margin-bottom: 20px;
-    //width: 60px;
-    float: left;
+    width: 60px;
+    float: right;
     padding: 6px 10px;
     margin-right: 4px;
     background: $Primary-colour;
     font-size: 17px;
-    align-items:center;
-    justify-content:center;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.search_bar > div > button {
-    margin-top:3px;
-    height: 100%;
-    width: 100%;
-    display: block;
-    background: $Primary-colour;
+    border: none;
     cursor: pointer;
-    border: none; //box-shadow: $btn-shadow;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+     box-shadow: $btn-shadow;
 }
 
+.search_bar button:hover{
+    color: darken($Primary-colour, 10%);
+}
 
-    .search_bar > div > button:hover {
-        color: darken($Primary-colour, 10%)
+.quick_entry {
+    width: 100%;
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    height:100%;
+  
+}
+
+.quick_entry > div {
+    margin-left: 8px;
+    height: 50%;
+    width: calc(33.3% - 6px);
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    border-radius: 4px;
+     box-shadow: $btn-shadow;
+}
+
+.quick_entry > div:first-child{
+    margin-left:0;
+}
+.quick_entry > div > label > input {
+    opacity: 0;
+    cursor: pointer;
+    opacity: 0;
+    float: right;
+    width: 20px;
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    height: 0
+
+}
+
+.quick_entry > div:active {
+    box-shadow: inset 0 0 0 2px $Primary-colour;
+}
+
+.quick_entry > div > p {
+    margin-bottom: 20px
+
+}
+
+.quick_entry > div > label > img {
+    width: 50%;
+    margin: 20px 0 10px 0;
+
+
+    @include respond-to(small-screens) {
+        width: 50%
     }
 
-    .quick_entry {
-        width: 100%;
-        margin: 20px 0 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex-flow: row wrap;
-        height: 100%
+    @include respond-to(medium-screens) {
+        width: 25%
     }
 
-    .quick_entry > div {
-        margin: 0 0 24px 8px;
-        height: 50%;
-        width: calc(33.3% - 6px);
-        background-color: #ffffff;
-        text-align: center;
-        vertical-align: middle;
-        display: table;
-        border-radius: 4px;
-        box-shadow: $btn-shadow;
+    @include respond-to(large-screens) {
+        width: 20%
     }
 
-    .quick_entry > div:first-child {
-        margin-left: 0
+
+    @include respond-to(desktop-screens) {
+        width: 20%
     }
 
-    .quick_entry > div > label > input {
-        opacity: 0;
-        cursor: pointer;
-        opacity: 0;
-        float: right;
-        width: 20px;
-        margin-top: 0;
-        padding-left: 0;
-        margin-bottom: 0;
-        height: 0
+    @include respond-to(wide-screens) {
+        width: 20%
+
     }
-
-    /*.quick_entry > div:active {
-        box-shadow: inset 0 0 0 2px $Primary-colour
-    }*/
-
-    .quick_entry > div > p {
-        margin-bottom: 20px
-    }
-
-.quick_entry > div > label > p {
-    margin: 0 0 20px 0;}
-
-    .quick_entry > div > label > img {
-        width: 50%;
-        margin: 20px 0 10px 0;
-        
-
-
-        @include respond-to(small-screens) {
-            width: 50%
-        }
-
-        @include respond-to(medium-screens) {
-            width: 25%
-        }
-
-        @include respond-to(large-screens) {
-            width: 20%
-        }
-
-
-        @include respond-to(desktop-screens) {
-            width: 20%
-        }
-
-        @include respond-to(wide-screens) {
-            width: 20%
-        }
-    }
-
-    .quick_entry > div.checked {
-        box-shadow: inset 0 0 0 2px $Primary-colour
-    }
-
+}

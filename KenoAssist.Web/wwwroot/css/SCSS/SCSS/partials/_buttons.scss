@@ -5,7 +5,7 @@
     height: 40px;
     border-radius: 0;
     -webkit-appearance: none;
-    color: $Secondary-highlight;
+    color: $Primary-complimentary;
     background-color: $Plain-colour;
     border: none;
     margin: 0 auto;
@@ -136,13 +136,10 @@ textarea {
     -webkit-box-shadow: none;
     box-shadow: none;
     box-shadow: inset 0 0 0;
-    -webkit-appearance: none;
 
     @include crossBrowser(box-shadow, none);
     @include crossBrowser(border-radius, 0);
 }
-
-
 .button-bottom:focus {
         outline: none;
 }
@@ -197,14 +194,10 @@ input,
 
 }
 
-#ddlStaff{
-    margin-bottom:0;
-}
-
 .form-control {
     width: calc(100% - 2px);
-    height: 46px
-    //margin-bottom: 2px;
+    height: 46px;
+     //margin-bottom: 2px;
 }
 
 //button with images
@@ -302,9 +295,7 @@ input[type='file'] {
 
 }
 
-textarea.incident-report,
-#Summary,
-.summary {
+textarea.incident-report {
     height: 400px;
     width: calc(100% - 18px);
     background-color: $Plain-colour;
@@ -316,12 +307,7 @@ textarea.incident-report,
     font-family: $Paragraph-font;
     border-radius: 4px;
     box-shadow: inset 0 2px 3px #EAEAEA;
-    resize: none;
-}
-
-#Summary,
-.summary {
-    height: 100px;
+  
 
 }
 
@@ -397,6 +383,3 @@ textarea.incident-report,
         background: $Primary-colour
     }
 
-::placeholder {
-    @include crossBrowser(opacity, 0.5);
-}
