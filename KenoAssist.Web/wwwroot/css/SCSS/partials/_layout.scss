@@ -56,11 +56,6 @@ body{
     opacity: 1.0
 
 }
-
-.small-icon{
-    width:24px;
-}
-
 // Spacing
 
 .content-margin {
@@ -234,20 +229,21 @@ body{
 
     .details-left {
         flex: 0 1 auto;
-        width: 180px;
+        width: 160px;
         //position: absolute;
         left: 8px;
         float: left
     }
 
-    .details-right > img,
-    .details-right > svg,
-    .details-right > span,
-    .details-left > img,
-    .details-left > svg,
-    .details-left > span {
-        vertical-align: middle
-    }
+.details-right > img,
+.details-right > svg,
+.details-right > span,
+.details-left > img,
+.details-left > svg,
+.details-left > span {
+    width: 180px;
+     vertical-align: middle
+}
 
 
     .details-right {
@@ -270,7 +266,7 @@ body{
     background-color:white;
     margin-top:-40px;
     padding-top:10px;
-    height:calc(100vh + 10px);
+    height:100%;
 }
 
 .menu_options, {
@@ -310,6 +306,10 @@ body{
     @include respond-to(wide-screens) {
         width: 8%
     }
+}
+
+img.small-icon {
+    width: 24px
 }
 
     .keno_client {
@@ -492,9 +492,19 @@ body{
         margin-top: 4px
     }
 
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
     .margin-bottom-4 {
         margin-bottom: 4px
     }
+
+.padding-bottom-12 {
+    margin-bottom:0;
+    padding-bottom: 12px;
+}
+
 
     .margin-left-4 {
         margin-left: 4px
@@ -1350,3 +1360,6 @@ animation: water-fill 5s;
         box-shadow: inset 0 0 0 2px $Primary-colour
     }
 
+.hidden-display {
+    opacity: 0;
+    display: none;}

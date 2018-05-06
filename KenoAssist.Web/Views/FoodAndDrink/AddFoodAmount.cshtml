@@ -62,7 +62,7 @@
         <p class="meal_heading">Summary</p>
         <textarea class="summary" placeholder="e.g. Client has been drinking well today..."></textarea>
         
-        @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput",style="opacity:0"})
+        @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput", @class="hidden-display"})
 
         </div>
 
