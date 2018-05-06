@@ -5,7 +5,7 @@ namespace KenoAssist.Web.Helper
 {
     public static class Common
     {
-        public static string GetDayName(DateTime date)
+        public static string GetDayName(DateTime date, bool shortFormat = false)
         {
             string result = string.Empty;
 
@@ -22,12 +22,19 @@ namespace KenoAssist.Web.Helper
                 return "Yesterday";
             }
 
-			var start = date.ToString("dd");
-            var end = date.ToString("MMMM yyyy");
-            
-			var suffix = GetSuffix(start);
-			start = start.TrimStart('0');
-			result = string.Format("{0}{1} {2}",start,suffix,end);
+            if (shortFormat)
+            {
+                result = date.ToString("d");
+            }
+            else
+            {
+                var start = date.ToString("dd");
+                var end = date.ToString("MMMM yyyy");
+
+                var suffix = GetSuffix(start);
+                start = start.TrimStart('0');
+                result = string.Format("{0}{1} {2}", start, suffix, end);
+            }
 
             return result;
 

@@ -755,14 +755,17 @@ namespace KenoAssist.Web.Controllers
                 case 1:
                     food.Main = model.Breakfast.Where(m => m.FoodTypeId == 1).FirstOrDefault();
                     food.Side = model.Breakfast.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    ViewBag.Meal = "Breakfast";
                     break;
                 case 2:
                     food.Main = model.Lunch.Where(m => m.FoodTypeId == 1).FirstOrDefault();
                     food.Side = model.Lunch.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    ViewBag.Meal = "Lunch";
                     break;
                 case 3:
                     food.Main = model.Dinner.Where(m => m.FoodTypeId == 1).FirstOrDefault();
                     food.Side = model.Dinner.Where(m => m.FoodTypeId == 2).FirstOrDefault();
+                    ViewBag.Meal = "Dinner";
                     break;
             }
             return View(food);
