@@ -173,10 +173,13 @@ namespace KenoAssist.Web.Controllers
 					Drinks = new List<DrinkModel>()
 					{
 					new DrinkModel(){Id = 1, Name = "Orange Juice", Volume=250},
+                        new DrinkModel(){Id = 2, Name = "Tea", Volume=300},
 					new DrinkModel(){Id = 3, Name = "Diluted Juice", Volume=500},
 					new DrinkModel(){Id = 4, Name = "Diluted Juice", Volume=250},
+                        new DrinkModel(){Id = 5, Name = "Tea", Volume=400},
+                        new DrinkModel(){Id = 6, Name = "Diluted Juice", Volume=250},
 					},
-					TotalVolume = 1000
+					TotalVolume = 1950
 
 				},
 				new DrinkIntakeModel()
@@ -777,23 +780,23 @@ namespace KenoAssist.Web.Controllers
             var foodIntake = foodIntakeList.Where(m => m.Date.Date == DateTime.Now.Date).FirstOrDefault();
 
             if(0 > model.Main.PercentageAmount && model.Main.PercentageAmount < 100){
-                ModelState.AddModelError("Main.PercentageAmount","Enter a number between 0 and 100");
+                ModelState.AddModelError("Main.PercentageAmount","Please enter a number between 0 and 100");
             }
             if (0 > model.Side.PercentageAmount && model.Side.PercentageAmount < 100)
             {
-                ModelState.AddModelError("Side.PercentageAmount", "Enter a number between 0 and 100");
+                ModelState.AddModelError("Side.PercentageAmount", "Please enter a number between 0 and 100");
             }
             if(model.Main.PercentageAmount == null)
             {
-                ModelState.AddModelError("Main.PercentageAmount", "Enter a number between 0 and 100");
+                ModelState.AddModelError("Main.PercentageAmount", "Please enter a number between 0 and 100");
             }
             if (model.Side.PercentageAmount == null)
             {
-                ModelState.AddModelError("Side.PercentageAmount", "Enter a number between 0 and 100");
+                ModelState.AddModelError("Side.PercentageAmount", "Please enter a number between 0 and 100");
             }
             if (string.IsNullOrEmpty(model.Summary))
             {
-                ModelState.AddModelError("Summary", "Enter a summary");
+                ModelState.AddModelError("Summary", "Please enter a summary");
             }
 
             if (!ModelState.IsValid)
@@ -825,11 +828,18 @@ namespace KenoAssist.Web.Controllers
             ViewBag.DayCount = 0;
             ViewBag.CurrentDay = Helper.Common.GetDayName(DateTime.Now.Date);
 
+            int breakfast = (int)(foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount) / 2;
+            int lunch = (int)(foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount) / 2;
+            int dinner = (int)(foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2;
+
             ViewBag.BreakfastCount = (foodIntake.Breakfast[0].PercentageAmount + foodIntake.Breakfast[1].PercentageAmount) / 2;
             ViewBag.LunchCount = (foodIntake.Lunch[0].PercentageAmount + foodIntake.Lunch[1].PercentageAmount) / 2;
             ViewBag.DinnerCount = (foodIntake.Dinner[0].PercentageAmount + foodIntake.Dinner[1].PercentageAmount) / 2;
             ViewBag.SnackCount = 0;
 
+            ViewBag.BreakfastColour = GetColourString(breakfast);
+            ViewBag.LunchColour = GetColourString(lunch);
+            ViewBag.DinnerColour = GetColourString(dinner);
 
             return View("Food", foodIntake);
         }

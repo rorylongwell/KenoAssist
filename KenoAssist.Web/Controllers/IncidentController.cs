@@ -169,20 +169,20 @@ namespace KenoAssist.Web.Controllers
             ViewBag.StaffList = staff;
 
             if(incidentReport.StaffNames.Count < 1){
-                ModelState.AddModelError("StaffNames","Select staff member");
+                ModelState.AddModelError("StaffNames","Please select staff member");
             }
             else if(incidentReport.StaffNames.Contains("0")){
-                ModelState.AddModelError("StaffNames", "Select staff member");
+                ModelState.AddModelError("StaffNames", "Please select staff member");
             }
 
             if (incidentReport.Date == null)
             {
-                ModelState.AddModelError("Date", "Select date");
+                ModelState.AddModelError("Date", "Please select date");
             }
 
             if (incidentReport.Time == null)
             {
-                ModelState.AddModelError("Time", "Select time");
+                ModelState.AddModelError("Time", "Please select time");
             }
 
             switch (submitButton)
@@ -207,12 +207,12 @@ namespace KenoAssist.Web.Controllers
         {
             if (string.IsNullOrEmpty(incidentReport.Injury))
             {
-                ModelState.AddModelError("Injury", "Enter injury");
+                ModelState.AddModelError("Injury", "Please enter injury");
             }
 
             if (string.IsNullOrEmpty(incidentReport.InjuryArea))
             {
-                ModelState.AddModelError("InjuryArea", "Enter injury areas");
+                ModelState.AddModelError("InjuryArea", "Please enter injury areas");
             }
             
 			ViewBag.PhotoSelected = false;
@@ -267,7 +267,7 @@ namespace KenoAssist.Web.Controllers
         {
             if (string.IsNullOrEmpty(incidentReport.Description))
             {
-                ModelState.AddModelError("Description", "Enter a report");
+                ModelState.AddModelError("Description", "Please enter a report");
             }
 
             var user = HttpContext.Session.GetString("UserType");

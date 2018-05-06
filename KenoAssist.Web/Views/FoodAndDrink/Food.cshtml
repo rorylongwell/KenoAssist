@@ -116,8 +116,9 @@
                 }
             </a>
         
-            <a href="@Url.Action((ViewBag.DinnerCount != null) ? "FoodIntakeDetails" : "AddFoodIntakeDetails", "FoodAndDrink" , new { date=Model.Date, mealId = 3})">
-               
+            <a id="dinnerButton" href="@Url.Action((ViewBag.DinnerCount != null && ViewBag.IsStaff) ? "Food" : "AddFoodIntakeDetails", "FoodAndDrink" , new { date=Model.Date, mealId = 3})">
+          
+
 
                 <div class="left">
             <p class="meal_heading margin-bottom-4">Dinner</p></div>  
@@ -304,3 +305,22 @@
     });
     
     </script>
+
+    @section scripts
+{
+    <script>
+    $(document).ready(function () {
+    var disable = "@(ViewBag.DinnerCount != null && ViewBag.IsStaff)";
+    var isStaff = "@ViewBag.IsStaff" ;
+    $("#dinnerButton").on("click", function (e) {
+        if(disable !== "False"){
+            e.preventDefault();
+    }    
+     if(isStaff === "False"){
+            e.preventDefault();
+    }    
+
+    });
+});
+    </script>
+    }
