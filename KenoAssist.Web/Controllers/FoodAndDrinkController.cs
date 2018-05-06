@@ -205,7 +205,7 @@ namespace KenoAssist.Web.Controllers
 				Breakfast = new List<FoodModel>()
 				{
                         new FoodModel(){Id = 1, Name = "Toast and Jam", PercentageAmount=80, FoodTypeId=1},
-                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=50, FoodTypeId=2}
+                        new FoodModel(){Id = 2, Name = "An Orange", PercentageAmount=70, FoodTypeId=2}
 				},
 				Lunch = new List<FoodModel>()
 				{
@@ -814,6 +814,10 @@ namespace KenoAssist.Web.Controllers
                     foodIntake.Dinner.Add(model.Side);
                     break;
             }
+
+            var user = HttpContext.Session.GetString("UserType");
+            ViewBag.IsStaff = user.Equals("staff");
+
             ViewBag.IsSubmitted = false;
             ViewBag.DayCount = 0;
             ViewBag.CurrentDay = Helper.Common.GetDayName(DateTime.Now.Date);
