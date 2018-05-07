@@ -19,14 +19,14 @@
 
 <h1 class="minus-margin-60">Staff Account</h1>
 </div>
- <div class="content-margin background_container">
-     <img src="~/images/account_imgs/large_nurse_account_img.png">
-     <br />
-     <h2>Emma Willis</h2>
-     <br />
-     <p>Nurse</p>
 
-     <div class="margin-top-4 default-menu">
+        <div class="keno_account content-margin">
+     <img src="~/images/account_imgs/large_nurse_account_img.png">
+     <h2>Emma Willis</h2>
+     <p>Nurse</p>
+            </div>
+
+     <div class="margin-top-4 default-menu notifications">
          @foreach (var notification in Model)
         {
          <!-- Incident notification-->
@@ -54,6 +54,6 @@ if (notification.NotificationTypeId == 2)
 }
      </div>
 
-     </div>
+   
      <a href="@Url.Action("Index", "Login")" class="button-bottom">Sign Out</a>
  </div>
