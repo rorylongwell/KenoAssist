@@ -18,19 +18,23 @@
         @{
                 string profileUrl = ViewBag.ProfileImage;
                 <img src="@Url.Content(profileUrl)">
-                <p>@Html.Raw(ViewBag.AllergyInfo)</p>
-                }  
+
+                 <div>
+                <p>@Html.Raw(ViewBag.AllergyInfo)</p> </div>
+
+        } 
+       
     </div>
     <div class="content-margin">
     <div class="margin-top-4 default-menu">
     @using (Html.BeginForm("MealSelection", "FoodAndDrink", new { Date = ViewBag.Date, PageNo = (ViewBag.PageNo + 1) }, FormMethod.Post))
     {
-        <div class="date_header vertical-align">
-            <p>@ViewBag.Date</p>
-        </div>
+       <!-- <div class="date_header vertical-align">
+            <p>@ViewBag.Date <span>on</span> @ViewBag.PageTitle</p>
+        </div>-->
 
-        <div class="meal_header vertical-align">
-            <p>@ViewBag.PageTitle</p>
+        <div class="meal_header date_header vertical-align">
+            <p>@ViewBag.PageTitle <span>on</span> @ViewBag.Date</p>
         </div>
 
         <p class="primary_heading">Mains</p>

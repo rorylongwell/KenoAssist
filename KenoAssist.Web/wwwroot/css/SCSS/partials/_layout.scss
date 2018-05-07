@@ -229,7 +229,7 @@ body{
 
     .details-left {
         flex: 0 1 auto;
-        width: 160px;
+        width: 170px;
         //position: absolute;
         left: 8px;
         float: left
@@ -251,7 +251,7 @@ body{
         width: 50%;
         margin-left: auto;
         text-align: right;
-        margin-right: 8px
+        //margin-right: 8px
     }
     //keno Homepage
     .page,
@@ -312,7 +312,8 @@ img.small-icon {
     width: 24px
 }
 
-    .keno_client {
+    .keno_client,
+    .keno_account {
         height: 44%;
         width: 100%;
         display: flex;
@@ -323,15 +324,34 @@ img.small-icon {
         flex-flow: column wrap
     }
 
-    .keno_client > h2 {
-        display: block;
-        color: darken($Primary-text, 15%);
-        font-weight: 700
-    }
+.keno_client > h2,
+.keno_account > h2 {
+    display: block;
+    color: darken($Primary-text, 15%);
+    font-weight: 700;
+    margin-top: 10px;}
 
-    .keno_client > img {
-        height: 140px
-    }
+.keno_client > p,
+.keno_account > p {
+    margin: 10px 0 0 0;
+}
+
+.keno_client > img,
+.keno_account > img {
+    height: 140px
+}
+
+
+.keno_account {
+    height: 44%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: column wrap
+}
 
     .menu_options > a {
         height: 33.3%;
@@ -449,23 +469,41 @@ img.small-icon {
         float: left
     }
 
-    .client_info_bar > p {
+    .client_info_bar > div {
         display: flex;
         align-items: center;
         vertical-align: middle;
-        font-size: 16px;
-        font-weight: 700
+        //font-weight: 700;
+        margin-right:10px
     }
 
-    #imageContainer {
-        background-color: #333;
-        width: 120px;
-        height: 120px;
-        border-radius: 4px 0px 0px 4px;
-        overflow: hidden;
-        float: left;
-        margin-right: 12px
-    }
+.client_info_bar > p.client_details {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    font-weight: 700;
+    margin-right: 10px;
+    font-size:16px;
+}
+
+.client_info_bar > div > p{
+    line-height:normal;
+
+} 
+
+#sides{
+    margin-bottom:55px;
+}
+
+#imageContainer {
+    background-color: #333;
+    width: 120px;
+    height: 120px;
+    border-radius: 4px 0px 0px 4px;
+    overflow: hidden;
+    float: left;
+    margin-right: 12px
+}
 
     #imageContainer > img {
         width: 120px
@@ -699,7 +737,8 @@ img.small-icon {
     .meal_header > p {
         color: $Plain-colour;
         width: 100%;
-        font-weight: 700
+        font-weight: 700;
+        text-transform: none;
     }
 
     .date_header {
@@ -838,7 +877,7 @@ img.small-icon {
 
     //menu selection
     .menu_option {
-        background: #ffffff;
+        background: $Plain-colour;
         width: calc(100% - 11px);
         margin: 4px 0;
         font-weight: 400;
@@ -849,14 +888,18 @@ img.small-icon {
         cursor: pointer
     }
 
-    .menu_option > input {
-        opacity: 0;
-        float: right;
-        width: 20px;
-        margin-top: 0;
-        padding-left: 0;
-        margin-bottom: 0
-    }
+.menu_option:hover {
+    background:darken($Plain-colour, 2%);
+} 
+
+.menu_option > input {
+    opacity: 0;
+    float: right;
+    width: 20px;
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0
+}
 
 .menu_selected {
     color: $Plain-colour;
@@ -1122,7 +1165,8 @@ animation: water-fill 5s;
 
 //food intake
 
-.food-intake > a {
+.food-intake > a,
+.notifications > a {
     height: 65px;
     vertical-align: middle;
         line-height:normal;
@@ -1130,23 +1174,42 @@ animation: water-fill 5s;
 
 }
 
-.food-intake {
+.notifications > a {
+    height: auto;
+    vertical-align: middle;
+    line-height: normal;
+    padding: 10px;
     width: calc(100% - 28px);
-    margin-left:4px;
+    margin: 0 auto;
+    margin-bottom: 8px
+
 }
 
-.no_entry{
+.notifications > a > p{
+    font-size:14px;
+    width:80%;
+    float:left;
+}
+.notifications > a > p:nth-child(2) {
+    float: right;
+    text-align: right;
+    width: 20%;
+
+}
+
+.notifications > a > p:last-child{
+    width:100%;
+}.food-intake {
+    width: calc(100% - 28px);
+    margin-left: 4px
+} .no_entry{
     height:100%;
     vertical-align:middle;
     align-items:center;
-}
-
-.left {
+} .left {
     float: left;
     width:calc(100% - 50px);
-}
-
-.right {
+} .right {
     top: 0;
     right: 0;
     text-align: center;
@@ -1155,9 +1218,7 @@ animation: water-fill 5s;
     vertical-align: middle;
     height: 100%;
 
-}
-
-.right > p.title {
+} .right > p.title {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -1167,40 +1228,27 @@ animation: water-fill 5s;
     width: 100%;
     height: 100%
 
-}
-
-.fullpage_whiteBG > div {
+} .fullpage_whiteBG > div {
     padding: 20px 12px 20px 12px;
     background-color: $Plain-colour;
     margin: 8px 0;
-}
-
-.fullpage_whiteBG > div:first-child{
+} .fullpage_whiteBG > div:first-child{
     margin: 0;
 
-}
-
-.fullpage_whiteBG > div > .left p {
+} .fullpage_whiteBG > div > .left p {
     margin-bottom: 12px;
     
 } .right > p {
     
-}
-
-    .float-left {
+} .float-left {
         display: flex;
         justify-content: flex-start
-    }
-
-    .float-right {
+    } .float-right {
         flex: 0 1 auto;
         width: 100px;
         height: 100px;
         margin-left: auto
-    }
-
-
-.search_bar {
+    } .search_bar {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1229,9 +1277,7 @@ animation: water-fill 5s;
         margin: 0 20%
 
     }
-}
-
-    .search_bar input[type=text] {
+} .search_bar input[type=text] {
         width: calc(100% - 90px);
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
