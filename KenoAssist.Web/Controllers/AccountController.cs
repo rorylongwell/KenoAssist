@@ -94,5 +94,11 @@ namespace KenoAssist.Web.Controllers
 
             return RedirectToAction("Incident", "Incident", new { incidentId = "1" });
         }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
