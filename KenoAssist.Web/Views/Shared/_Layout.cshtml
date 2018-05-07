@@ -52,6 +52,39 @@
         })(document,window.navigator,'standalone');
     </script>
 
+        <script>
+        // Set timeout variables.
+        var timoutWarning = 0; // Display warning in 14 Mins.
+        var timoutNow = 600000; // Timeout in 15 mins.
+        var logoutUrl = '@Url.Action("Index", "Login")' // URL to logout page.
+
+        var warningTimer;
+        var timeoutTimer;
+
+        // Start timers.
+        function StartTimers() {
+        warningTimer = setTimeout("IdleWarning()", timoutWarning);
+        timeoutTimer = setTimeout("IdleTimeout()", timoutNow);
+    }
+
+// Reset timers.
+function ResetTimers() {
+    clearTimeout(warningTimer);
+    clearTimeout(timeoutTimer);
+    StartTimers();
+}
+
+// Show idle timeout warning dialog.
+function IdleWarning() {
+        
+}
+
+// Logout the user.
+function IdleTimeout() {
+    window.location = logoutUrl;
+}
+        </script>
+
 
     <title>@ViewData["Title"] - KenoAssist.Web</title>
 
@@ -65,7 +98,7 @@
            <script src='http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js'></script>
 
 </head>
-<body>
+<body onload="StartTimers();" onmousemove="ResetTimers();">
    
     <div class="container body-content">
         @RenderBody()
