@@ -306,9 +306,15 @@ input[type='file'] {
 
     height: 40px;
 
-} .file-uploader > div > span {
-    vertical-align: middle
+}
 
+#imageUpload > label > div{
+
+    color:$Primary-colour;
+}
+
+.file-uploader > div > span {
+    vertical-align: middle
 }
 
 textarea.incident-report,

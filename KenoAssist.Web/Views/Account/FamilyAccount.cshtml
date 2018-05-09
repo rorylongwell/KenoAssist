@@ -35,7 +35,7 @@
 
              <p class="highlight-text">Incidents & Injuries</p>
              <p>@Common.GetTimeString(notification.Date)</p>
-             <p>@notification.Description</p>
+             <p class="incident_character_limit">@notification.Description</p>
 
          </a>
     }
@@ -47,7 +47,7 @@ if (notification.NotificationTypeId == 2)
 
      <p class="highlight-text">Message from Emma Willis</p>
      <p>@Common.GetTimeString(notification.Date)</p>
-     <p>@notification.Description</p>
+     <p class="incident_character_limit">@notification.Description</p>
  </a>
 }
 }

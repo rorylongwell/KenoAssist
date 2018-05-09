@@ -36,7 +36,7 @@
            
         <div id="button1" onclick="AddValue(50)">
        <label>
-                <img src="../images/app_icons/beverage_intake_100.svg"/>
+                <img src="../images/app_icons/food_intake-50.svg"/>
         <p>50&#37;</p>
         @Html.RadioButtonFor(m => m.PercentageAmount, 50, new {id="button1",onclick="AddValue(50)"}) 
         </label>
@@ -44,7 +44,7 @@
        
         <div id="button2" onclick="AddValue(75)">
         <label>
-                <img src="../images/app_icons/beverage_intake_250.svg"/>
+                <img src="../images/app_icons/food_intake-75.svg"/>
         <p>75&#37;</p>
         @Html.RadioButtonFor(m => m.PercentageAmount, 75, new {id="button2",onclick="AddValue(75)"}) 
         </label>
@@ -52,7 +52,7 @@
             
         <div id="button3" onclick="AddValue(100)">
         <label>
-                <img src="../images/app_icons/beverage_intake_500.svg"/>
+                <img src="../images/app_icons/food_intake-100.svg"/>
         <p>100&#37;</p>
         @Html.RadioButtonFor(m => m.PercentageAmount, 100, new {id="button3",onclick="AddValue(100)"})
         </label>            
@@ -60,7 +60,7 @@
         </div>
 
         <p class="meal_heading">Summary</p>
-        <textarea class="summary" placeholder="e.g. Client has been drinking well today..."></textarea>
+        <textarea class="summary" placeholder="e.g. Client ate very well..."></textarea>
         
         @Html.TextBoxFor(m => m.PercentageAmount, new { id="valueInput", @class="hidden-display"})
 

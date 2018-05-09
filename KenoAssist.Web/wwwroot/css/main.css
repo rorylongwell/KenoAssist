@@ -403,7 +403,7 @@ img.small-icon {
 .keno_client > h2,
 .keno_account > h2 {
   display: block;
-  color: #586066;
+  color: #212426;
   font-weight: 700;
   margin-top: 10px;
 }
@@ -1668,7 +1668,7 @@ li {
 /* line 18, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 h1, h2, h3, h4, h5, h6, p, li, label, placeholder,
 input[type='text'], .form-control {
-  color: #7C878E;
+  color: #454b4f;
   font-family: "Open Sans", Helvetica, sans-serif;
 }
 
@@ -1689,7 +1689,7 @@ h2 {
 
 /* line 37, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 span.title {
-  color: #7C878E;
+  color: #454b4f;
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 12px;
   margin-left: 4px;
@@ -1702,18 +1702,18 @@ span.title {
   font-family: "Open Sans", Helvetica, sans-serif;
   text-decoration: none;
   font-size: 12px;
-  color: #586066;
+  color: #212426;
 }
 
 /* line 57, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .opacity-text {
-  color: #a5adb1;
+  color: #697278;
 }
 
 /* line 63, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .title {
   font-size: 12px;
-  color: #a5adb1;
+  color: #757f85;
 }
 
 /* line 68, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
@@ -1757,7 +1757,7 @@ span.title {
 /* line 102, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .consumption_amount,
 .consumption_amount > span {
-  color: #7C878E;
+  color: #454b4f;
   font-weight: 700;
   text-align: center;
   font-size: 18px;
@@ -1782,7 +1782,6 @@ span.title {
 
 /* line 128, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_typography.scss */
 .field-validation-error {
-  color: #e04844;
   font-size: 12px;
   font-weight: bold;
 }
@@ -2107,12 +2106,17 @@ input[type='file'] {
   height: 40px;
 }
 
-/* line 309, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 311, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+#imageUpload > label > div {
+  color: #009CA6;
+}
+
+/* line 316, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .file-uploader > div > span {
   vertical-align: middle;
 }
 
-/* line 314, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 320, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 textarea.incident-report,
 #Summary,
 .summary {
@@ -2130,24 +2134,24 @@ textarea.incident-report,
   resize: none;
 }
 
-/* line 331, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 337, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 #Summary,
 .summary {
   height: 100px;
 }
 
-/* line 338, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 344, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .button-bottom:disabled {
   background-color: #D6D6D6;
-  color: #7C878E;
+  color: #454b4f;
 }
 
-/* line 343, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 349, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .display_none {
   display: none;
 }
 
-/* line 348, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 354, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .checkbox_slider {
   -webkit-box-shadow: inset 0 2px 3px #EAEAEA;
   -moz-box-shadow: inset 0 2px 3px #EAEAEA;
@@ -2165,7 +2169,7 @@ textarea.incident-report,
   float: left;
 }
 
-/* line 361, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 367, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .checkbox_text {
   float: left;
   margin: 10px 20px 0 0;
@@ -2173,7 +2177,7 @@ textarea.incident-report,
   vertical-align: middle;
 }
 
-/* line 369, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 375, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .checkbox_slider:before {
   position: absolute;
   top: 12px;
@@ -2183,7 +2187,7 @@ textarea.incident-report,
   font-size: 16px;
 }
 
-/* line 379, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 385, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .checkbox_slider:after {
   position: absolute;
   top: 12px;
@@ -2193,7 +2197,7 @@ textarea.incident-report,
   font-size: 16px;
 }
 
-/* line 389, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 395, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .checkbox_slider label {
   display: block;
   left: 0;
@@ -2210,13 +2214,13 @@ textarea.incident-report,
 /**
  * Create the checkbox event for the label
  */
-/* line 404, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 410, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 .checkbox_slider input[type=checkbox]:checked + label {
   left: 30px;
   background: #009CA6;
 }
 
-/* line 409, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
+/* line 415, /Users/ambermcgregor/Git/KenoAssist/KenoAssist.Web/wwwroot/css/SCSS/partials/_buttons.scss */
 ::placeholder {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;

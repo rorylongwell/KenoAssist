@@ -35,7 +35,7 @@ h2 {
 }
 
 span.title {
-    color: $Primary-text;
+    color: $Secondary-text;
     font-family: $Paragraph-font;
     font-size: 12px;
     margin-left:4px;
@@ -63,7 +63,7 @@ span.title {
 .title {
     font-size: 12px;
     //line-height: normal;
-    color: lighten($Primary-text,15%)
+    color: lighten($Primary-text,20%)
 }
 .explaining-form-field{
     font-size:12px;
@@ -126,7 +126,7 @@ span.title {
 }
 
 .field-validation-error {
-    color: $Warning-color;
+    //color: $Warning-color;
     font-size:12px;
     font-weight:bold;
 }
