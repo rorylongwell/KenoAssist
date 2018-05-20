@@ -84,7 +84,7 @@ if(Model.PhotoUrl.Count > 0){
     <div class="mySlides">
                         
 
-      <img src="@Url.Content(image)" style="width:100%">
+      <img src="@Url.Content(image)">
     </div> }
 
                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -136,12 +136,22 @@ function showSlides(n) {
 
     <p class="title margin-top-12">Incident Report</p>
     <p class="added-lineheight">@Model.Description</p>
-    </div>
-        
-        </div>
+   
+       
+
+
 
         @if(ViewBag.IsForm){
+        <div class="progress-bar-done">
+            <div class="complete"></div>
+            <div class="complete"></div>
+            <div class="complete"></div>
+            <div class="complete"></div>
+        </div>
+
         <a href="@Url.Action("Incidents", "Incident")" class="button-bottom">Done</a>  
     }
-    
+     </div>
     </div>
+ </div>
+        

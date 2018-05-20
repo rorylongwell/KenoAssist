@@ -18,6 +18,7 @@
 
      <div class="content-margin-40">
 
+
 @using (Html.BeginForm("AddInjury", "Incident", FormMethod.Post,  new { enctype = "multipart/form-data"})){
 
  @Html.HiddenFor(m => m.IncidentId)
@@ -31,6 +32,7 @@
     @Html.HiddenFor(model => Model.PhotoUrl[i])
 }
 }
+        
 
 <label>Injury</label>
   @Html.ValidationMessageFor(model => model.Injury)    
@@ -76,7 +78,7 @@
    @if(Model.PhotoUrl != null){
   foreach(var image in Model.PhotoUrl){
   <div class="column">
-    <img src="@Url.Content(image)" style="width:100%"  class="hover-shadow cursor">
+    <img src="@Url.Content(image)"  class="hover-shadow cursor">
   </div>
 }       
 }
@@ -98,6 +100,18 @@
         </button>
 
      </div>
+
+
+
+
+                               <div class="progress-bar">
+            <div class="complete"></div>
+            <div class="complete"></div>
+            <div class="not-complete"></div>
+            <div class="not-complete"></div>
+        </div>
+
+
 
 
 <input type="submit" name="submitButton" value="Next" class="button-bottom" />

@@ -46,6 +46,15 @@ for(int i = 0; i < Model.StaffNames.Count; i++)
    @Html.ValidationMessageFor(model => model.Description)
   @Html.TextAreaFor(m => m.Description, new { placeholder = "Today whilst getting client ready...", @class = "incident-report" });
 
+
+<div class="progress-bar">
+            <div class="complete"></div>
+            <div class="complete"></div>
+            <div class="complete"></div>
+            <div class="not-complete"></div>
+        </div>
+
+        
   <input type="submit" name="submitButton" value="Next"  class="button-bottom"/>
 }
 

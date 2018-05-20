@@ -26,13 +26,16 @@
 
 }
 
-.fullwidth-ghost-btn {
+.login-field:focus {
+    border: none;        
+} .fullwidth-ghost-btn {
     width: 100%;
     border: 2px solid $Primary-colour;
     background: none;
     color: $Primary-colour;
     border-radius: 0;
-     box-shadow: $btn-shadow;
+    box-shadow: $btn-shadow
+
 }
 
 .fullwidth-ghost-btn:hover {
@@ -320,7 +323,7 @@ input[type='file'] {
 textarea.incident-report,
 #Summary,
 .summary {
-    height: 400px;
+    height: 370px;
     width: calc(100% - 18px);
     background-color: $Plain-colour;
     border: 1px solid #CDCDCD;
