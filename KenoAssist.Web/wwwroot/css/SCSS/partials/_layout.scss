@@ -266,7 +266,7 @@ body{
     background-color:white;
     margin-top:-40px;
     padding-top:10px;
-    height:100%;
+    height:100vh;
 }
 
 .menu_options, {
@@ -627,6 +627,13 @@ img.small-icon {
         float: left;
         width: calc(33.3% - 4px)
     }
+
+.column > img {
+    width: 100px;
+   //overflow: hidden;
+    float: left;
+    margin: 20px 0 30px 0;
+}
     /* The Modal (background) */
     .modal {
         display: none;
@@ -1409,3 +1416,92 @@ animation: water-fill 5s;
 .hidden-display {
     opacity: 0;
     display: none;}
+
+
+//progress bar
+
+.form-container {
+    height: calc(130% - 100px);
+}
+
+.progress-bar {
+    //margin-bottom: 70px;
+    bottom: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    position: fixed;
+    width: calc(100% - 40px);
+    height: 20px;
+    background-color: $bg-colour;
+
+
+
+    @include respond-to(large-screens) {
+        width: 50%;
+    }
+
+
+    @include respond-to(desktop-screens) {
+        width: 50%;
+    }
+
+    @include respond-to(wide-screens) {
+        width: 50%;
+
+    }
+}
+
+
+.progress-bar-done {
+    //margin-bottom: 70px;
+    bottom: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    position: fixed;
+    height: 20px;
+    background-color: $Plain-colour;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: block;
+
+
+    @include respond-to(large-screens) {
+        width: 50%;
+    }
+
+
+    @include respond-to(desktop-screens) {
+        width: 50%;
+    }
+
+    @include respond-to(wide-screens) {
+        width: 50%;
+    }
+}
+
+
+.progress-bar > div.complete,
+.progress-bar-done > div.complete,
+.progress-bar > div.not-complete {
+    height: 20px;
+    width: calc(25% - 6px);
+    margin: 0 8px 0 0;
+    background-color: $Primary-colour;
+    float: left;
+    display: inline-block
+
+}
+
+.progress-bar > div.not-complete {
+    background-color: $Secondary-highlight;
+}
+
+.progress-bar > div:last-child,
+.progress-bar-done > div:last-child {
+    margin: 0;
+    width: calc(25% - 8px)
+}
+
+#imageUpload {
+    margin-bottom: 70px;
+}
